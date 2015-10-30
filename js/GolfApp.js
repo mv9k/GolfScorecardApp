@@ -3,6 +3,19 @@
  */
 document.getElementById("coursename").innerHTML =  model.course.name;
 
+function numOfPlayers(num) {
+    if (num == 1){
+        document.getElementById("player1card").style.display= "block";
+        document.getElementById("player2card").style.display= "block";
+        document.getElementById("player3card").style.display= "block";
+        document.getElementById("player4card").style.display= "block";
+    }
+    if (num == 2) alert("number of players is 2");
+    if (num == 3) alert("number of players is 3");
+    if (num == 4) alert("number of players is 4");
+
+}
+
 function onload() {
 
 // Oct 29th

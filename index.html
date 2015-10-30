@@ -24,19 +24,19 @@
     <!-- Scorecard module -->
     <div class="container-fluid">
         <div class="row row-content">
-            <h4 class="text-center">Choose # of players:</h4>
+            <h4 class="text-center">Choose Player</h4>
             <div class="col-xs-12" id="numberofplayersbuttons">
-            <button class="numplayerbutton">1</button>&nbsp;<button class="numplayerbutton">2</button>&nbsp;<button class="numplayerbutton">3</button>&nbsp;<button class="numplayerbutton">4</button>
+            <button class="numplayerbutton" onclick="numOfPlayers(1)">Player 1</button>&nbsp;<button class="numplayerbutton" onclick="numOfPlayers(2)">Player 2</button>&nbsp;<button class="numplayerbutton" onclick="numOfPlayers(3)">Player 3</button>&nbsp;<button class="numplayerbutton" onclick="numOfPlayers(4)">Player 4</button>
             </div>
             <div class="col-xs-12 scorecard">
                 <!--<div class="row">-->
                     <!--<div class="col-xs-12"><h4>Score:<small>&nbsp;(handicap)</small></h4></div>-->
                 <!--</div>-->
-                <div class="row">
+                <div class="row" id="player1card">
                     <div class="col-xs-12 col-md-2">
                         <div class="player">
-                            <label for="player0">Player(s):</label>
-                            <input type="text" class="form-control input-player" id="player0" min="0" max="1000" step="5">
+                            <label for="player1">Player 1:</label>
+                            <input type="text" class="form-control input-player" id="player1">
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-9">
@@ -113,11 +113,277 @@
                             <input type="number" class="form-control input-lg" id="player1hole18" min="0" max="100" step="1">
                         </div>
                     </div>
+                    <br>
                     <div class="col-xs-12 col-md-1 total">
                             <!--<label for="total0">Total:</label>-->
-                            <h3 id="total">Total: <span class="totalnum" id="player1totalscore">99</span></h3>
+                            <h3>Total: <span class="totalnum" id="player1totalscore">99</span></h3>
                     </div>
                 </div>
+
+                <div class="row" id="player2card">
+                    <div class="col-xs-12 col-md-2">
+                        <div class="player">
+                            <label for="player2">Player 2:</label>
+                            <input type="text" class="form-control input-player" id="player2">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <div class="holes">
+                            <label for="player2hole1">Hole 1:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole1" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole2">Hole 2:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole2" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole3">Hole 3:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole3" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole4">Hole 4:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole4" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole5">Hole 5:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole5" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole6">Hole 6:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole6" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole7">Hole 7:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole7" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole8">Hole 8:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole8" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole9">Hole 9:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole9" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole10">Hole 10:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole10" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole11">Hole 11:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole11" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole12">Hole 12:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole12" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole13">Hole 13:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole13" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole14">Hole 14:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole14" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole15">Hole 15:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole15" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole16">Hole 16:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole16" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole17">Hole 17:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole17" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player2hole18">Hole 18:</label>
+                            <input type="number" class="form-control input-lg" id="player2hole18" min="0" max="100" step="1">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-12 col-md-1 total">
+                        <!--<label for="total0">Total:</label>-->
+                        <h3>Total: <span class="totalnum" id="player2totalscore">99</span></h3>
+                    </div>
+                </div>
+
+                <div class="row" id="player3card">
+                    <div class="col-xs-12 col-md-2">
+                        <div class="player">
+                            <label for="player3">Player 3:</label>
+                            <input type="text" class="form-control input-player" id="player3">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <div class="holes">
+                            <label for="player3hole1">Hole 1:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole1" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole2">Hole 2:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole2" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole3">Hole 3:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole3" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole4">Hole 4:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole4" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole5">Hole 5:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole5" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole6">Hole 6:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole6" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole7">Hole 7:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole7" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole8">Hole 8:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole8" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole9">Hole 9:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole9" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole10">Hole 10:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole10" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole11">Hole 11:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole11" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole12">Hole 12:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole12" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole13">Hole 13:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole13" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole14">Hole 14:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole14" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole15">Hole 15:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole15" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole16">Hole 16:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole16" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole17">Hole 17:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole17" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player3hole18">Hole 18:</label>
+                            <input type="number" class="form-control input-lg" id="player3hole18" min="0" max="100" step="1">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-12 col-md-1 total">
+                        <!--<label for="total0">Total:</label>-->
+                        <h3>Total: <span class="totalnum" id="player3totalscore">99</span></h3>
+                    </div>
+                </div>
+
+                <div class="row" id="player4card">
+                    <div class="col-xs-12 col-md-2">
+                        <div class="player">
+                            <label for="player4">Player 4:</label>
+                            <input type="text" class="form-control input-player" id="player4">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <div class="holes">
+                            <label for="player4hole1">Hole 1:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole1" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole2">Hole 2:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole2" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole3">Hole 3:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole3" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole4">Hole 4:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole4" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole5">Hole 5:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole5" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole6">Hole 6:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole6" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole7">Hole 7:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole7" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole8">Hole 8:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole8" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole9">Hole 9:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole9" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole10">Hole 10:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole10" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole11">Hole 11:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole11" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole12">Hole 12:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole12" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole13">Hole 13:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole13" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole14">Hole 14:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole14" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole15">Hole 15:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole15" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole16">Hole 16:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole16" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole17">Hole 17:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole17" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="player4hole18">Hole 18:</label>
+                            <input type="number" class="form-control input-lg" id="player4hole18" min="0" max="100" step="1">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-12 col-md-1 total">
+                        <!--<label for="total0">Total:</label>-->
+                        <h3>Total: <span class="totalnum" id="player4totalscore">99</span></h3>
+                    </div>
+                </div>
+
             </div>
         </div>
         <!-- Map module -->
