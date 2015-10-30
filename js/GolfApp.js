@@ -6,9 +6,9 @@ document.getElementById("coursename").innerHTML =  model.course.name;
 function numOfPlayers(num) {
     if (num == 1){
         document.getElementById("player1card").style.display= "block";
-        document.getElementById("player2card").style.display= "block";
-        document.getElementById("player3card").style.display= "block";
-        document.getElementById("player4card").style.display= "block";
+        document.getElementById("player2card").style.display= "none";
+        document.getElementById("player3card").style.display= "none";
+        document.getElementById("player4card").style.display= "none";
     }
     if (num == 2) alert("number of players is 2");
     if (num == 3) alert("number of players is 3");
@@ -94,7 +94,8 @@ function initMap(long, hole1location, tee1location) {
     var hole1 = new google.maps.Marker({
         position: hole1location,
         map: map,
-        title: 'Hole 1'
+        title: 'Hole 1',
+        icon: 'Hole.png'
     });
 
     var teehole1 = new google.maps.Marker({
