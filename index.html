@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Golf Scorecard App</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+</head>
+<body onload="onload()">
+<!-- HEADER -->
+<div class="jumbotron">
+    <div class="row text-center">
+        <h2>Golf Scorecard App<br><small id="coursename"></small></h2>
+    </div>
+</div>
+
+<div class="row row-content">
+    <!-- Scorecard module -->
+    <div class="container-fluid">
+        <div class="row row-content">
+            <h4 class="text-center">Choose # of players:</h4>
+            <div class="col-xs-12" id="numberofplayersbuttons">
+            <button class="numplayerbutton">1</button>&nbsp;<button class="numplayerbutton">2</button>&nbsp;<button class="numplayerbutton">3</button>&nbsp;<button class="numplayerbutton">4</button>
+            </div>
+            <div class="col-xs-12 scorecard">
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-12"><h4>Score:<small>&nbsp;(handicap)</small></h4></div>-->
+                <!--</div>-->
+                <div class="row">
+                    <div class="col-xs-12 col-md-2">
+                        <div class="player">
+                            <label for="player0">Player <span id="player0num"></span>:</label>
+                            <input type="text" class="form-control input-player" id="player0" min="0" max="1000" step="5">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <div class="holes">
+                            <label for="hole1">Hole 1:</label>
+                            <input type="number" class="form-control input-lg" id="hole1" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole2">Hole 2:</label>
+                            <input type="number" class="form-control input-lg" id="hole2" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole3">Hole 3:</label>
+                            <input type="number" class="form-control input-lg" id="hole3" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole4">Hole 4:</label>
+                            <input type="number" class="form-control input-lg" id="hole4" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole5">Hole 5:</label>
+                            <input type="number" class="form-control input-lg" id="hole5" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole6">Hole 6:</label>
+                            <input type="number" class="form-control input-lg" id="hole6" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole7">Hole 7:</label>
+                            <input type="number" class="form-control input-lg" id="hole7" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole8">Hole 8:</label>
+                            <input type="number" class="form-control input-lg" id="hole8" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole9">Hole 9:</label>
+                            <input type="number" class="form-control input-lg" id="hole9" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole10">Hole 10:</label>
+                            <input type="number" class="form-control input-lg" id="hole10" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole11">Hole 11:</label>
+                            <input type="number" class="form-control input-lg" id="hole11" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole12">Hole 12:</label>
+                            <input type="number" class="form-control input-lg" id="hole12" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole13">Hole 13:</label>
+                            <input type="number" class="form-control input-lg" id="hole13" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole14">Hole 14:</label>
+                            <input type="number" class="form-control input-lg" id="hole14" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole15">Hole 15:</label>
+                            <input type="number" class="form-control input-lg" id="hole15" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole16">Hole 16:</label>
+                            <input type="number" class="form-control input-lg" id="hole16" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole17">Hole 17:</label>
+                            <input type="number" class="form-control input-lg" id="hole17" min="0" max="100" step="1">
+                        </div>
+                        <div class="holes">
+                            <label for="hole18">Hole 18:</label>
+                            <input type="number" class="form-control input-lg" id="hole18" min="0" max="100" step="1">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-1 total">
+                            <!--<label for="total0">Total:</label>-->
+                            <h3 id="total0">Total: <span class="totalnum">99</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Map module -->
+        <div class="row row-content">
+            <h4 class="text-center">Course Map</h4>
+            <br>
+            <div class="col-xs-12" id="map">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/GolfApp.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeuUrtGAQ4xnOhL0MdMYRJwguDRGJe6-U&signed_in=true&callback=initMap"></script>
+
+
+<!-- TODO: fix code below
+<script>
+
+    function saveData() {
+        localStorage.setItem("squatweight0", document.getElementById("squatweight0").value);
+        localStorage.setItem("squatsets0", document.getElementById("squatsets0").value);
+
+    }
+
+</script>
+-->
+</body>
+</html>

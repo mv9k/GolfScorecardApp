@@ -1,0 +1,131 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#numberofplayersbuttons {
+    text-align: center;
+}
+.numplayerbutton {
+    color: #a4ffdb;
+    width: 70px;
+    padding: 10px;
+    font-size: x-large;
+    background-color: #1c3439;
+}
+.totalnum {
+    color: #a4ffdb;
+}
+.player {
+    font-size: larger;
+}
+.holes {
+    float: left !important;
+    font-size: larger;
+}
+
+#map {
+    min-height: 500px;
+}
+
+.total {
+    margin-top: 19px;
+    padding-bottom: 5px;
+    background-color: #1087dd;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+    text-align: center;
+    float: left !important;
+}
+
+.input-lg { padding: 2px !important; width: 75px; font-size: x-large; }
+.input-player { padding: 2px !important; height: 47px; font-size: x-large; }
+
+.scorecard {
+    border-bottom: 1px ridge black;
+    border-radius: 5px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+}
+.vidlink { color: #727272 !important; }
+a { color: #edfffc !important; }
+a:hover { color: #1087dd !important; }
+.row-header {
+    border-radius: 5px;
+    font-family: "Kaushan Script", sans-serif;
+    margin:0 auto;
+    padding:0 auto;
+}
+
+.row-content {
+    border-radius: 5px;
+    font-family: "Kaushan Script", sans-serif;
+    margin:0 auto;
+    padding: 10px 5px 5px 5px;
+    border-bottom: 1px black ridge;
+    min-height:300px;
+    background: #1c3439;
+    color: #edfffc;
+    -webkit-box-shadow: inset 0px 0px 41px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 41px -11px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 41px -11px rgba(0,0,0,0.75);
+}
+
+.row-footer {
+    border-radius: 5px;
+    font-family: "Kaushan Script", sans-serif;
+    background-color: #AfAfAf;
+    margin:0 auto;
+    padding: 20px 0 20px 0;
+}
+
+.jumbotron {
+    font-family: "Kaushan Script", sans-serif;
+    padding:10px 20px 10px 20px;
+    margin:0 auto;
+    background: #1c3439;
+    color: #a4ffdb;
+    -webkit-box-shadow: inset 0px 0px 41px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 41px -11px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 41px -11px rgba(0,0,0,0.75);
+}
+
+address {
+    font-size:80%;
+    margin:0;
+    color:#0f0f0f;
+
+}
+
+body {
+    background-color: #080808;
+    align: center;
+    z-index:0;
+}
+.navbar-inverse {
+    background: #303F9F;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+    background-color: #303F9F;
+    color: #eeeeee;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu> li
