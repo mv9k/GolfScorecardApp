@@ -3,6 +3,7 @@
  */
 document.getElementById("coursename").innerHTML =  model.course.name;
 
+
 function numOfPlayers(num) {
     if (num == 1){
         document.getElementById("player1card").style.display= "block";
@@ -22,11 +23,21 @@ function numOfPlayers(num) {
         document.getElementById("player3card").style.display= "block";
         document.getElementById("player4card").style.display= "none";
     }
-    if (num == 4) alert("number of players is 4");
+    if (num == 4) {
+        document.getElementById("player1card").style.display= "none";
+        document.getElementById("player2card").style.display= "none";
+        document.getElementById("player3card").style.display= "none";
+        document.getElementById("player4card").style.display= "block";
+    }
 
 }
 
 function onload() {
+
+    document.getElementById("player1card").style.display= "block";
+    document.getElementById("player2card").style.display= "none";
+    document.getElementById("player3card").style.display= "none";
+    document.getElementById("player4card").style.display= "none";
 
 // Oct 29th
     function newPlayer(name) {
