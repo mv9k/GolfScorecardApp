@@ -1,4 +1,54 @@
+::-webkit-input-placeholder {
+    color: #bde4f4 !important;
+}
 
+:-moz-placeholder { /* Firefox 18- */
+    color: #bde4f4 !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #bde4f4 !important;
+}
+
+:-ms-input-placeholder {
+    color: #bde4f4 !important;
+}
+#player1button, #player1label, #player1totalscore {
+    color: white;
+    text-shadow: 0 1px 13px rgb(255, 0, 61);
+}
+#player1 {
+    -webkit-box-shadow: 0 0 12px 0 rgb(255,0,61);
+    -moz-box-shadow: 0 0 12px 0 rgb(255,0,61);
+    box-shadow: 0 0 12px 0 rgb(255,0,61);
+}
+#player2button, #player2label, #player2totalscore {
+    color: white;
+    text-shadow: 0 1px 13px rgb(0, 255, 77);
+}
+#player2 {
+    -webkit-box-shadow: 0 0 12px 0 rgb(0, 255, 77);
+    -moz-box-shadow: 0 0 12px 0 rgb(0, 255, 77);
+    box-shadow: 0 0 12px 0 rgb(0, 255, 77);
+}
+#player3button, #player3label, #player3totalscore {
+    color: white;
+    text-shadow: 0 1px 13px rgb(0, 139, 255);
+}
+#player3 {
+    -webkit-box-shadow: 0 0 12px 0 rgb(0, 139, 255);
+    -moz-box-shadow: 0 0 12px 0 rgb(0, 139, 255);
+    box-shadow: 0 0 12px 0 rgb(0, 139, 255);
+}
+#player4button, #player4label, #player4totalscore{
+    color: white;
+    text-shadow: 0 1px 13px rgb(186, 0, 229);
+}
+#player4 {
+    -webkit-box-shadow: 0 0 12px 0 rgb(186, 0, 229);
+    -moz-box-shadow: 0 0 12px 0 rgb(186, 0, 229);
+    box-shadow: 0 0 12px 0 rgb(186, 0, 229);
+}
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -13,7 +63,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 73px;
     padding: 7px;
     font-size: larger;
-    background-color: #1c3439;
+    background-color: #162c2f;
 }
 .totalnum {
     color: #a4ffdb;
@@ -31,9 +81,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .total {
-    height: 50px;
+    height: 55px;
     padding-bottom: 5px;
-    background-color: #1087dd;
+    background-color: #005480;
     border-radius: 5px;
     -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
