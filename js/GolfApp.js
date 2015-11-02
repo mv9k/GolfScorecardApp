@@ -3,6 +3,113 @@
  */
 document.getElementById("coursename").innerHTML =  model.course.name;
 
+function saveData() {
+    localStorage.setItem("player1name", document.getElementById("player1").value);
+    localStorage.setItem("player1hole1", document.getElementById("player1hole1").value);
+    localStorage.setItem("player1hole2", document.getElementById("player1hole2").value);
+    localStorage.setItem("player1hole3", document.getElementById("player1hole3").value);
+    localStorage.setItem("player1hole4", document.getElementById("player1hole4").value);
+    localStorage.setItem("player1hole5", document.getElementById("player1hole5").value);
+    localStorage.setItem("player1hole6", document.getElementById("player1hole6").value);
+    localStorage.setItem("player1hole7", document.getElementById("player1hole7").value);
+    localStorage.setItem("player1hole8", document.getElementById("player1hole8").value);
+    localStorage.setItem("player1hole9", document.getElementById("player1hole9").value);
+    localStorage.setItem("player1hole10", document.getElementById("player1hole10").value);
+    localStorage.setItem("player1hole11", document.getElementById("player1hole11").value);
+    localStorage.setItem("player1hole12", document.getElementById("player1hole12").value);
+    localStorage.setItem("player1hole13", document.getElementById("player1hole13").value);
+    localStorage.setItem("player1hole14", document.getElementById("player1hole14").value);
+    localStorage.setItem("player1hole15", document.getElementById("player1hole15").value);
+    localStorage.setItem("player1hole16", document.getElementById("player1hole16").value);
+    localStorage.setItem("player1hole17", document.getElementById("player1hole17").value);
+    localStorage.setItem("player1hole18", document.getElementById("player1hole18").value);
+    localStorage.setItem("player1totalscore", document.getElementById("player1totalscore").innerText);
+
+    localStorage.setItem("player2name", document.getElementById("player2").value);
+    localStorage.setItem("player2hole1", document.getElementById("player2hole1").value);
+    localStorage.setItem("player2hole2", document.getElementById("player2hole2").value);
+    localStorage.setItem("player2hole3", document.getElementById("player2hole3").value);
+    localStorage.setItem("player2hole4", document.getElementById("player2hole4").value);
+    localStorage.setItem("player2hole5", document.getElementById("player2hole5").value);
+    localStorage.setItem("player2hole6", document.getElementById("player2hole6").value);
+    localStorage.setItem("player2hole7", document.getElementById("player2hole7").value);
+    localStorage.setItem("player2hole8", document.getElementById("player2hole8").value);
+    localStorage.setItem("player2hole9", document.getElementById("player2hole9").value);
+    localStorage.setItem("player2hole10", document.getElementById("player2hole10").value);
+    localStorage.setItem("player2hole11", document.getElementById("player2hole11").value);
+    localStorage.setItem("player2hole12", document.getElementById("player2hole12").value);
+    localStorage.setItem("player2hole13", document.getElementById("player2hole13").value);
+    localStorage.setItem("player2hole14", document.getElementById("player2hole14").value);
+    localStorage.setItem("player2hole15", document.getElementById("player2hole15").value);
+    localStorage.setItem("player2hole16", document.getElementById("player2hole16").value);
+    localStorage.setItem("player2hole17", document.getElementById("player2hole17").value);
+    localStorage.setItem("player2hole18", document.getElementById("player2hole18").value);
+    localStorage.setItem("player2totalscore", document.getElementById("player2totalscore").innerText);
+
+    localStorage.setItem("player3name", document.getElementById("player3").value);
+    localStorage.setItem("player3hole1", document.getElementById("player3hole1").value);
+    localStorage.setItem("player3hole2", document.getElementById("player3hole2").value);
+    localStorage.setItem("player3hole3", document.getElementById("player3hole3").value);
+    localStorage.setItem("player3hole4", document.getElementById("player3hole4").value);
+    localStorage.setItem("player3hole5", document.getElementById("player3hole5").value);
+    localStorage.setItem("player3hole6", document.getElementById("player3hole6").value);
+    localStorage.setItem("player3hole7", document.getElementById("player3hole7").value);
+    localStorage.setItem("player3hole8", document.getElementById("player3hole8").value);
+    localStorage.setItem("player3hole9", document.getElementById("player3hole9").value);
+    localStorage.setItem("player3hole10", document.getElementById("player3hole10").value);
+    localStorage.setItem("player3hole11", document.getElementById("player3hole11").value);
+    localStorage.setItem("player3hole12", document.getElementById("player3hole12").value);
+    localStorage.setItem("player3hole13", document.getElementById("player3hole13").value);
+    localStorage.setItem("player3hole14", document.getElementById("player3hole14").value);
+    localStorage.setItem("player3hole15", document.getElementById("player3hole15").value);
+    localStorage.setItem("player3hole16", document.getElementById("player3hole16").value);
+    localStorage.setItem("player3hole17", document.getElementById("player3hole17").value);
+    localStorage.setItem("player3hole18", document.getElementById("player3hole18").value);
+    localStorage.setItem("player3totalscore", document.getElementById("player3totalscore").innerText);
+
+    localStorage.setItem("player4name", document.getElementById("player4").value);
+    localStorage.setItem("player4hole1", document.getElementById("player4hole1").value);
+    localStorage.setItem("player4hole2", document.getElementById("player4hole2").value);
+    localStorage.setItem("player4hole3", document.getElementById("player4hole3").value);
+    localStorage.setItem("player4hole4", document.getElementById("player4hole4").value);
+    localStorage.setItem("player4hole5", document.getElementById("player4hole5").value);
+    localStorage.setItem("player4hole6", document.getElementById("player4hole6").value);
+    localStorage.setItem("player4hole7", document.getElementById("player4hole7").value);
+    localStorage.setItem("player4hole8", document.getElementById("player4hole8").value);
+    localStorage.setItem("player4hole9", document.getElementById("player4hole9").value);
+    localStorage.setItem("player4hole10", document.getElementById("player4hole10").value);
+    localStorage.setItem("player4hole11", document.getElementById("player4hole11").value);
+    localStorage.setItem("player4hole12", document.getElementById("player4hole12").value);
+    localStorage.setItem("player4hole13", document.getElementById("player4hole13").value);
+    localStorage.setItem("player4hole14", document.getElementById("player4hole14").value);
+    localStorage.setItem("player4hole15", document.getElementById("player4hole15").value);
+    localStorage.setItem("player4hole16", document.getElementById("player4hole16").value);
+    localStorage.setItem("player4hole17", document.getElementById("player4hole17").value);
+    localStorage.setItem("player4hole18", document.getElementById("player4hole18").value);
+    localStorage.setItem("player4totalscore", document.getElementById("player4totalscore").innerText);
+}
+function loadData() {
+    document.getElementById("player1").value = localStorage.getItem("player1name");
+    document.getElementById("player1hole1").value = localStorage.getItem("player1hole1");
+    document.getElementById("player1hole2").value = localStorage.getItem("player1hole2");
+    document.getElementById("player1hole3").value = localStorage.getItem("player1hole3");
+    document.getElementById("player1hole4").value = localStorage.getItem("player1hole4");
+    document.getElementById("player1hole5").value = localStorage.getItem("player1hole5");
+    document.getElementById("player1hole6").value = localStorage.getItem("player1hole6");
+    document.getElementById("player1hole7").value = localStorage.getItem("player1hole7");
+    document.getElementById("player1hole8").value = localStorage.getItem("player1hole8");
+    document.getElementById("player1hole9").value = localStorage.getItem("player1hole9");
+    document.getElementById("player1hole10").value = localStorage.getItem("player1hole10");
+    document.getElementById("player1hole11").value = localStorage.getItem("player1hole11");
+    document.getElementById("player1hole12").value = localStorage.getItem("player1hole12");
+    document.getElementById("player1hole13").value = localStorage.getItem("player1hole13");
+    document.getElementById("player1hole14").value = localStorage.getItem("player1hole14");
+    document.getElementById("player1hole15").value = localStorage.getItem("player1hole15");
+    document.getElementById("player1hole16").value = localStorage.getItem("player1hole16");
+    document.getElementById("player1hole17").value = localStorage.getItem("player1hole17");
+    document.getElementById("player1hole18").value = localStorage.getItem("player1hole18");
+}
+
 
 function numOfPlayers(num) {
     if (num == 1){
@@ -33,6 +140,8 @@ function numOfPlayers(num) {
 }
 
 function onload() {
+
+    loadData();
 
     document.getElementById("player1card").style.display= "block";
     document.getElementById("player2card").style.display= "none";

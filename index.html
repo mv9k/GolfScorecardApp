@@ -12,7 +12,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 </head>
-<body onload="onload()">
+<body onload="onload()" onclick="saveData()">
 <!-- HEADER -->
 <div class="jumbotron">
     <div class="row text-center">
@@ -379,7 +379,6 @@
                     </div>
                     <br>
                     <div class="col-xs-12 col-md-1 total">
-                        <!--<label for="total0">Total:</label>-->
                         <h3>Total: <span class="totalnum" id="player4totalscore">99</span></h3>
                     </div>
                 </div>
@@ -406,16 +405,8 @@
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeuUrtGAQ4xnOhL0MdMYRJwguDRGJe6-U&signed_in=true&callback=initMap"></script>
 
 
-<!-- TODO: fix code below
-<script>
 
-    function saveData() {
-        localStorage.setItem("squatweight0", document.getElementById("squatweight0").value);
-        localStorage.setItem("squatsets0", document.getElementById("squatsets0").value);
 
-    }
-
-</script>
--->
+<!-- TODO: use the fit bounds method to center map-->
 </body>
 </html>
