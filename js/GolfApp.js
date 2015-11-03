@@ -2,7 +2,6 @@
  * Created by kris on 10/29/15.
  */
 
-
 function saveData() {
     localStorage.setItem("player1name", document.getElementById("player1").value);
     localStorage.setItem("player1hole1", document.getElementById("player1hole1").value);
@@ -173,59 +172,6 @@ function loadData() {
     document.getElementById("player4hole18").value = localStorage.getItem("player4hole18");
     document.getElementById("player4totalscore").innerText = localStorage.getItem("player4totalscore");
 }
-
-
-
-
-
-function onload() {
-
-
-    loadData();
-
-    setPars();
-
-    document.getElementById("player1card").style.display= "block";
-    document.getElementById("player2card").style.display= "none";
-    document.getElementById("player3card").style.display= "none";
-    document.getElementById("player4card").style.display= "none";
-
-    document.getElementById("coursename").innerHTML =  model.course.name;
-
-
-
-// Oct 29th
-    function newPlayer(name) {
-    }
-
-
-    //
-
-    var redirectURI = document.URL;
-    var clientID = "81e49374-2d9e-40b6-810b-abc0726f39b1";
-    var swingBySwing = "https://api.swingbyswing.com/v2/oauth/authorize?scope=read&redirect_uri=" + encodeURI(redirectURI) + "&response_type=token&client_id=" + clientID;
-
-    accessToken = getUrlVars().access_token;
-
-    if(accessToken == null) {
-        location.replace(swingBySwing);
-    }
-    else {
-        accessToken = accessToken.replace("\n","");
-        model=loadDoc(48222);
-//        loadDoc();
-
-    }
-    function getUrlVars() {
-        var vars= {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
-            function(m,key,value) {
-                vars[key] = value;
-            });
-        return vars;
-    }
-}
-
 function numOfPlayers(num) {
     if (num == 1){
         document.getElementById("player1card").style.display= "block";
@@ -254,6 +200,47 @@ function numOfPlayers(num) {
 
 }
 
+function onload() {
+
+    numOfPlayers(1);
+    loadData();
+
+    //setPars();
+    //
+    //document.getElementById("player1card").style.display= "block";
+    //document.getElementById("player2card").style.display= "none";
+    //document.getElementById("player3card").style.display= "none";
+    //document.getElementById("player4card").style.display= "none";
+
+
+
+    var redirectURI = document.URL;
+    var clientID = "81e49374-2d9e-40b6-810b-abc0726f39b1";
+    var swingBySwing = "https://api.swingbyswing.com/v2/oauth/authorize?scope=read&redirect_uri=" + encodeURI(redirectURI) + "&response_type=token&client_id=" + clientID;
+
+    accessToken = getUrlVars().access_token;
+
+    if(accessToken == null) {
+        location.replace(swingBySwing);
+    }
+    else {
+        accessToken = accessToken.replace("\n","");
+        model=loadDoc(48222);
+//        loadDoc();
+
+    }
+    function getUrlVars() {
+        var vars= {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+            function(m,key,value) {
+                vars[key] = value;
+            });
+        return vars;
+    }
+}
+
+
+
 
 // AJAX request with swingbyswing API
 //var model;
@@ -273,10 +260,9 @@ function loadDoc() {
 //            var hole1MiddleLatLng = {"lat":hole1MiddleLat, "lng":hole1MiddleLng};
             initMap(long, hole1location, tee1location);
 
-            // TODO: oct 28th
+            //// Dom stuff
             document.getElementById("coursename").innerHTML = model.course.name;
-            console.log(long);
-            //
+            document.getElementsByName("player1hole1")[0].placeholder = "Par " + model.course.holes[0].tee_boxes[0].par;
         }
     };
     xhttp.open("GET", "https://api.swingbyswing.com/v2/courses/"+48222+"?includes=practice_area,nearby_courses,recent_media,recent_comments,recent_rounds,best_rounds,current_rounds,course_stats_month,course_stats_year&access_token=" + accessToken, true);
