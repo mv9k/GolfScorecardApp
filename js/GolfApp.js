@@ -1,7 +1,7 @@
 /**
  * Created by kris on 10/29/15.
  */
-
+//////// Saves player names, hole scores, and total scores for each player.
 function saveData() {
     localStorage.setItem("player1name", document.getElementById("player1").value);
     localStorage.setItem("player1hole1", document.getElementById("player1hole1").value);
@@ -87,6 +87,7 @@ function saveData() {
     localStorage.setItem("player4hole18", document.getElementById("player4hole18").value);
     localStorage.setItem("player4totalscore", document.getElementById("player4totalscore").innerText);
 }
+//////// Loads player names, hole scores, and total scores for each player.
 function loadData() {
     document.getElementById("player1").value = localStorage.getItem("player1name");
     document.getElementById("player1hole1").value = localStorage.getItem("player1hole1");
@@ -172,6 +173,7 @@ function loadData() {
     document.getElementById("player4hole18").value = localStorage.getItem("player4hole18");
     document.getElementById("player4totalscore").innerText = localStorage.getItem("player4totalscore");
 }
+//////// Displays or hides player cards depending on player selection.
 function numOfPlayers(num) {
     if (num == 1){
         document.getElementById("player1card").style.display= "block";
@@ -199,20 +201,32 @@ function numOfPlayers(num) {
     }
 
 }
-
+//////// Displays par number for each hole.
+function loadPars() {
+    document.getElementsByName("player1hole1")[0].placeholder = "Par: " + hole1par;
+    document.getElementsByName("player1hole2")[0].placeholder = "Par: " + hole2par;
+    document.getElementsByName("player1hole3")[0].placeholder = "Par: " + hole3par;
+    document.getElementsByName("player1hole4")[0].placeholder = "Par: " + hole4par;
+    document.getElementsByName("player1hole5")[0].placeholder = "Par: " + hole5par;
+    document.getElementsByName("player1hole6")[0].placeholder = "Par: " + hole6par;
+    document.getElementsByName("player1hole7")[0].placeholder = "Par: " + hole7par;
+    document.getElementsByName("player1hole8")[0].placeholder = "Par: " + hole8par;
+    document.getElementsByName("player1hole9")[0].placeholder = "Par: " + hole9par;
+    document.getElementsByName("player1hole10")[0].placeholder = "Par: " + hole10par;
+    document.getElementsByName("player1hole11")[0].placeholder = "Par: " + hole11par;
+    document.getElementsByName("player1hole12")[0].placeholder = "Par: " + hole12par;
+    document.getElementsByName("player1hole13")[0].placeholder = "Par: " + hole13par;
+    document.getElementsByName("player1hole14")[0].placeholder = "Par: " + hole14par;
+    document.getElementsByName("player1hole15")[0].placeholder = "Par: " + hole15par;
+    document.getElementsByName("player1hole16")[0].placeholder = "Par: " + hole16par;
+    document.getElementsByName("player1hole17")[0].placeholder = "Par: " + hole17par;
+    document.getElementsByName("player1hole18")[0].placeholder = "Par: " + hole18par;
+}
+//////// Access Token
 function onload() {
 
     numOfPlayers(1);
     loadData();
-
-    //setPars();
-    //
-    //document.getElementById("player1card").style.display= "block";
-    //document.getElementById("player2card").style.display= "none";
-    //document.getElementById("player3card").style.display= "none";
-    //document.getElementById("player4card").style.display= "none";
-
-
 
     var redirectURI = document.URL;
     var clientID = "81e49374-2d9e-40b6-810b-abc0726f39b1";
@@ -226,8 +240,6 @@ function onload() {
     else {
         accessToken = accessToken.replace("\n","");
         model=loadDoc(48222);
-//        loadDoc();
-
     }
     function getUrlVars() {
         var vars= {};
@@ -238,38 +250,50 @@ function onload() {
         return vars;
     }
 }
-
-
-
-
-// AJAX request with swingbyswing API
-//var model;
-//var long, hole1location, tee1location;
+//////// AJAX request for Swing by Swing API.
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             model = JSON.parse(xhttp.responseText);
-            // TODO: oct 28th
             var long = model.course.location;
-            //
-            hole1location = model.course.holes[0].green_location;
+            var hole1location = model.course.holes[0].green_location;
             var tee1location = model.course.holes[0].tee_boxes[0].location;
 //            var hole1MiddleLat = (tee1location.lat + hole1location.lat)/2;
 //            var hole1MiddleLng = (tee1location.lng + hole1Latlng.lng)/2;
 //            var hole1MiddleLatLng = {"lat":hole1MiddleLat, "lng":hole1MiddleLng};
             initMap(long, hole1location, tee1location);
 
-            //// Dom stuff
+            //// Display Course Name
             document.getElementById("coursename").innerHTML = model.course.name;
-            document.getElementsByName("player1hole1")[0].placeholder = "Par " + model.course.holes[0].tee_boxes[0].par;
+            ////
+            hole1par = model.course.holes[0].tee_boxes[0].par;
+            hole2par = model.course.holes[1].tee_boxes[0].par;
+            hole3par = model.course.holes[2].tee_boxes[0].par;
+            hole4par = model.course.holes[3].tee_boxes[0].par;
+            hole5par = model.course.holes[4].tee_boxes[0].par;
+            hole6par = model.course.holes[5].tee_boxes[0].par;
+            hole7par = model.course.holes[6].tee_boxes[0].par;
+            hole8par = model.course.holes[7].tee_boxes[0].par;
+            hole9par = model.course.holes[8].tee_boxes[0].par;
+            hole10par = model.course.holes[9].tee_boxes[0].par;
+            hole11par = model.course.holes[10].tee_boxes[0].par;
+            hole12par = model.course.holes[11].tee_boxes[0].par;
+            hole13par = model.course.holes[12].tee_boxes[0].par;
+            hole14par = model.course.holes[13].tee_boxes[0].par;
+            hole15par = model.course.holes[14].tee_boxes[0].par;
+            hole16par = model.course.holes[15].tee_boxes[0].par;
+            hole17par = model.course.holes[16].tee_boxes[0].par;
+            hole18par = model.course.holes[17].tee_boxes[0].par;
+
+            loadPars();
+
         }
     };
     xhttp.open("GET", "https://api.swingbyswing.com/v2/courses/"+48222+"?includes=practice_area,nearby_courses,recent_media,recent_comments,recent_rounds,best_rounds,current_rounds,course_stats_month,course_stats_year&access_token=" + accessToken, true);
     xhttp.send();
 }
-
-
+////////
 function initMap(long, hole1location, tee1location) {
     if(long==null){return}
 
@@ -282,8 +306,8 @@ function initMap(long, hole1location, tee1location) {
     var hole1 = new google.maps.Marker({
         position: hole1location,
         map: map,
-        title: 'Hole 1',
-        icon: 'Hole.png'
+        title: 'Hole 1'
+        // , icon: 'Hole.png'
     });
 
     var teehole1 = new google.maps.Marker({
@@ -294,11 +318,3 @@ function initMap(long, hole1location, tee1location) {
     });
 
 }
-
-function setPars() {
-    document.getElementsByName("player1hole1")[0].placeholder = "Par " + model.course.name;
-}
-
-
-
-

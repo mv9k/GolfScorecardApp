@@ -1,17 +1,21 @@
 ::-webkit-input-placeholder {
     color: #bde4f4 !important;
+    font-size: 20px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
     color: #bde4f4 !important;
+    font-size: 20px;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
     color: #bde4f4 !important;
+    font-size: 20px;
 }
 
 :-ms-input-placeholder {
     color: #bde4f4 !important;
+    font-size: 20px;
 }
 #player1button, #player1label, #player1totalscore {
     color: white;
