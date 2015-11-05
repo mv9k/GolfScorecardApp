@@ -76,15 +76,32 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: larger;
 }
 .holes {
+    width: 130px;
+    height: 180px;
+    padding: 15px;
     float: left !important;
-    font-size: larger;
+    font-size: 20px;
+    border: 1px solid black;
+}
+.holes:hover {
+    background-color: #316269;
+    -webkit-box-shadow: inset 0px 0px 14px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 14px -3px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 14px -3px rgba(0,0,0,0.75);
+    border: 1px solid black;
+}
+#first9, #last9 {
+    width: 220px;
+}
+#first9:hover, #last9:hover {
+    background-color: #1087dd !important;
 }
 
 #map {
     min-height: 500px;
 }
 
-.total {
+.totals {
     height: 55px;
     padding-bottom: 5px;
     background-color: #005480;
@@ -96,7 +113,7 @@ input[type=number]::-webkit-outer-spin-button {
     float: left !important;
 }
 
-.input-lg { padding: 2px !important; width: 75px; font-size: x-large; }
+.input-lg { padding: 2px !important; width: 100px; font-size: x-large; }
 .input-player { padding: 2px !important; height: 47px; font-size: x-large; }
 
 .scorecard {
