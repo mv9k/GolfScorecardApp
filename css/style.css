@@ -80,7 +80,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 280px;
 }
 .dropdown-menu a {
-    color: black !important;
+    color: #181818 !important;
 }
 .holes {
     width: 130px;

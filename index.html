@@ -10,6 +10,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
+
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 </head>
 <body onload="onload()" onclick="saveData()">
@@ -19,6 +20,7 @@
         <h2>Golf Scorecard App<br><small id="coursename"></small></h2>
     </div>
 </div>
+
 
 <div class="row row-content">
     <!-- Scorecard module -->
@@ -38,14 +40,15 @@
                         </div>
                         <br>
                         <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle teeselect" type="button" data-toggle="dropdown"><span id="p1teeselect">Choose Tee</span><span class="caret"></span></button>
+                            <button class="btn btn-primary dropdown-toggle teeselect" type="button" data-toggle="dropdown"><span id="p1teeselect">Select Tee for course</span><span class="caret"></span></button>
                             <ul class="dropdown-menu teeselect">
-                                <li><a href="#">Men's</a></li>
-                                <li><a href="#">Women's</a></li>
-                                <li><a href="#">Pro</a></li>
-                                <li><a href="#">Amateur hour</a></li>
+                                <li><a href="#" onclick="teeSelect(1)">Red Tee</a></li>
+                                <li><a href="#" onclick="teeSelect(2)">Red Tee w/ handicap</a></li>
+                                <li><a href="#" onclick="teeSelect(0)">White Tee</a></li>
+                                <li><a href="#" onclick="teeSelect(3)">White Tee w/ handicap</a></li>
                             </ul>
                         </div>
+
                     </div>
                     <div class="col-xs-12 col-md-10">
                         <div class="holes">
@@ -105,10 +108,10 @@
                         <div id="front9" class="holes">
                             <label for="front9scores">Front 9</label>
                             <div id="front9scores">
-                                <p id="p1f9hcp">HCP:</p>
-                                <p id="p1f9par">Par:</p>
-                                <p id="p1f9yards">Yards:</p>
-                                <p id="p1f9score">Score:</p>
+                                    <p id="p1f9hcp">HCP:</p>
+                                    <p id="p1f9par">Par:</p>
+                                    <p id="p1f9yards">Yards:</p>
+                                    <p id="p1f9score">Score:</p>
                             </div>
                         </div>
                     </div>
@@ -471,7 +474,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/GolfApp.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeuUrtGAQ4xnOhL0MdMYRJwguDRGJe6-U&signed_in=true&callback=initMap"></script>

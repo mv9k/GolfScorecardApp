@@ -1,6 +1,7 @@
 /**
  * Created by kris on 10/29/15.
  */
+var playerChoice, player1tee, player2tee, player3tee, player4tee, player1hcpOn, player2hcpOn, player3hcpOn, player4hcpOn;
 //////// Saves player names, hole scores, and total scores for each player.
 function saveData() {
     localStorage.setItem("player1name", document.getElementById("player1").value);
@@ -176,24 +177,28 @@ function loadData() {
 //////// Displays or hides player cards depending on player selection.
 function numOfPlayers(num) {
     if (num == 1){
+        playerChoice = 1;
         document.getElementById("player1card").style.display= "block";
         document.getElementById("player2card").style.display= "none";
         document.getElementById("player3card").style.display= "none";
         document.getElementById("player4card").style.display= "none";
     }
     if (num == 2){
+        playerChoice = 2;
         document.getElementById("player1card").style.display= "none";
         document.getElementById("player2card").style.display= "block";
         document.getElementById("player3card").style.display= "none";
         document.getElementById("player4card").style.display= "none";
     }
     if (num == 3){
+        playerChoice = 3;
         document.getElementById("player1card").style.display= "none";
         document.getElementById("player2card").style.display= "none";
         document.getElementById("player3card").style.display= "block";
         document.getElementById("player4card").style.display= "none";
     }
     if (num == 4) {
+        playerChoice = 4;
         document.getElementById("player1card").style.display= "none";
         document.getElementById("player2card").style.display= "none";
         document.getElementById("player3card").style.display= "none";
@@ -222,10 +227,41 @@ function loadPars() {
     document.getElementsByName("player1hole17")[0].placeholder = "Par: " + hole17par;
     document.getElementsByName("player1hole18")[0].placeholder = "Par: " + hole18par;
 }
+//////// Sets Tee and displays on page.
+function teeSelect(choice) {
+    // 0 - white -men -par:5 -yards:543 -hcp:2 - model.course.holes[0].tee_boxes[0]
+    // 1 - red -women -par:5 -yards:499 -hcp:1 - model.course.holes[0].tee_boxes[0]
+
+
+    /// Men's Tee select
+    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee"; }
+    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee"; }
+    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee"; }
+    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee"; }
+    /// Women's Tee select
+    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee"; }
+    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee"; }
+    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee"; }
+    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee"; }
+    // TODO tees
+    /// Men's Tee w/ select
+    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee"; }
+    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee"; }
+    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee"; }
+    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee"; }
+    /// Women's Tee w/ select
+    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee"; }
+    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee"; }
+    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee"; }
+    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee"; }
+
+
+}
 //////// Access Token
 function onload() {
 
     numOfPlayers(1);
+    playerChoice=1;
     loadData();
 
     var redirectURI = document.URL;
