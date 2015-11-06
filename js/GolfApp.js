@@ -234,26 +234,25 @@ function teeSelect(choice) {
 
 
     /// Men's Tee select
-    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee"; }
-    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee"; }
-    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee"; }
-    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee"; }
+    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee "; }
+    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee "; }
+    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee "; }
+    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee "; }
     /// Women's Tee select
-    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee"; }
-    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee"; }
-    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee"; }
-    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee"; }
-    // TODO tees
-    /// Men's Tee w/ select
-    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee"; }
-    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee"; }
-    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee"; }
-    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee"; }
-    /// Women's Tee w/ select
-    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee"; }
-    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee"; }
-    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee"; }
-    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee"; }
+    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee "; }
+    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee "; }
+    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee "; }
+    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee "; }
+    /// Men's Tee w/ Handicap select
+    if(choice==3 && playerChoice==1) { player1tee=3; document.getElementById("p1teeselect").innerHTML = "White Tee w/ handicap "; }
+    if(choice==3 && playerChoice==2) { player2tee=3; document.getElementById("p2teeselect").innerHTML = "White Tee w/ handicap "; }
+    if(choice==3 && playerChoice==3) { player3tee=3; document.getElementById("p3teeselect").innerHTML = "White Tee w/ handicap "; }
+    if(choice==3 && playerChoice==4) { player4tee=3; document.getElementById("p4teeselect").innerHTML = "White Tee w/ handicap "; }
+    /// Women's Tee w/ Handicap select
+    if(choice==2 && playerChoice==1) { player1tee=2; document.getElementById("p1teeselect").innerHTML = "Red Tee w/ handicap "; }
+    if(choice==2 && playerChoice==2) { player2tee=2; document.getElementById("p2teeselect").innerHTML = "Red Tee w/ handicap "; }
+    if(choice==2 && playerChoice==3) { player3tee=2; document.getElementById("p3teeselect").innerHTML = "Red Tee w/ handicap "; }
+    if(choice==2 && playerChoice==4) { player4tee=2; document.getElementById("p4teeselect").innerHTML = "Red Tee w/ handicap "; }
 
 
 }

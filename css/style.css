@@ -17,42 +17,21 @@
     color: #bde4f4 !important;
     font-size: 20px;
 }
-#player1button, #player1label, #player1totalscore {
-    color: white;
-    text-shadow: 0 1px 13px rgb(255, 0, 61);
+/* Player 1 styling */
+#player1button { outline: 0; -webkit-transition: background-color 0.5s, color 0.5s; transition: background-color 0.5s, color 0.5s; -webkit-transition-timing-function: ease; }
+#player1button:hover { background-color: maroon; outline: 0; color: black; }
+#player1button:active {
+    color: black;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
 }
-#player1 {
-    -webkit-box-shadow: 0 0 12px 0 rgb(255,0,61);
-    -moz-box-shadow: 0 0 12px 0 rgb(255,0,61);
-    box-shadow: 0 0 12px 0 rgb(255,0,61);
-}
-#player2button, #player2label, #player2totalscore {
-    color: white;
-    text-shadow: 0 1px 13px rgb(0, 255, 77);
-}
-#player2 {
-    -webkit-box-shadow: 0 0 12px 0 rgb(0, 255, 77);
-    -moz-box-shadow: 0 0 12px 0 rgb(0, 255, 77);
-    box-shadow: 0 0 12px 0 rgb(0, 255, 77);
-}
-#player3button, #player3label, #player3totalscore {
-    color: white;
-    text-shadow: 0 1px 13px rgb(0, 139, 255);
-}
-#player3 {
-    -webkit-box-shadow: 0 0 12px 0 rgb(0, 139, 255);
-    -moz-box-shadow: 0 0 12px 0 rgb(0, 139, 255);
-    box-shadow: 0 0 12px 0 rgb(0, 139, 255);
-}
-#player4button, #player4label, #player4totalscore{
-    color: white;
-    text-shadow: 0 1px 13px rgb(186, 0, 229);
-}
-#player4 {
-    -webkit-box-shadow: 0 0 12px 0 rgb(186, 0, 229);
-    -moz-box-shadow: 0 0 12px 0 rgb(186, 0, 229);
-    box-shadow: 0 0 12px 0 rgb(186, 0, 229);
-}
+/*#p1teebutton { background-color: maroon; outline: 0; -webkit-transition: background-color 0.5s, color 0.5s; transition: background-color 0.5s, color 0.5s; -webkit-transition-timing-function: ease; }*/
+/*#p1teebutton:hover { background-color: #9b0000; color: black; }*/
+/*#p1teebutton:active { outline: 0; }*/
+#player1 { outline: 0; font-family: "Kaushan Script", sans-serif; }
+#player1:focus, .p1input:focus { outline: 4px solid maroon !important; color: maroon; }
+
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -61,13 +40,20 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #numberofplayersbuttons {
     text-align: center;
+    margin: 10px;
 }
 .numplayerbutton {
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+    border: 0;
+    border-radius: 5px;
     color: #a4ffdb;
-    width: 73px;
-    padding: 7px;
+    width: 80px;
+    height: 60px;
+    padding: 4px;
     font-size: larger;
-    background-color: #162c2f;
+    background-color: #204d50;
 }
 .totalnum {
     color: #a4ffdb;
@@ -82,6 +68,9 @@ input[type=number]::-webkit-outer-spin-button {
 .dropdown-menu a {
     color: #181818 !important;
 }
+.hlabel {
+    background-color: maroon;
+}
 .holes {
     width: 130px;
     height: 180px;
@@ -91,11 +80,11 @@ input[type=number]::-webkit-outer-spin-button {
     border: 1px solid black;
 }
 .holes p {
-    font-size: 17px;
+    font-size: 15px;
     color: #d1d1d1;
 }
 .holes:hover {
-    background-color: #316269;
+    background-color: #2f7b82;
     -webkit-box-shadow: inset 0px 0px 14px -3px rgba(0,0,0,0.75);
     -moz-box-shadow: inset 0px 0px 14px -3px rgba(0,0,0,0.75);
     box-shadow: inset 0px 0px 14px -3px rgba(0,0,0,0.75);
@@ -119,7 +108,7 @@ label {
     padding: 6px;
     min-width: 100px;
     border-radius: 5px;
-    border-bottom: 1px solid #a4ffdb;
+    border-bottom: 1px solid black;
 }
 .subtotals {
     min-height: 55px;
@@ -158,14 +147,14 @@ a { color: #edfffc !important; }
 a:hover { color: #1087dd !important; }
 .row-header {
     border-radius: 5px;
-    font-family: "Kaushan Script", sans-serif;
+    /*font-family: "Kaushan Script", sans-serif;*/
     margin:0 auto;
     padding:0 auto;
 }
 
 .row-content {
     border-radius: 5px;
-    font-family: "Kaushan Script", sans-serif;
+    /*font-family: "Kaushan Script", sans-serif;*/
     margin:0 auto;
     padding: 10px 5px 5px 5px;
     border-bottom: 1px black ridge;
@@ -179,7 +168,7 @@ a:hover { color: #1087dd !important; }
 
 .row-footer {
     border-radius: 5px;
-    font-family: "Kaushan Script", sans-serif;
+    /*font-family: "Kaushan Script", sans-serif;*/
     background-color: #AfAfAf;
     margin:0 auto;
     padding: 20px 0 20px 0;
