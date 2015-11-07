@@ -206,54 +206,218 @@ function numOfPlayers(num) {
     }
 
 }
-//////// Displays par number for each hole.
-function loadPars() {
-    document.getElementsByName("player1hole1")[0].placeholder = "Par: " + hole1par;
-    document.getElementsByName("player1hole2")[0].placeholder = "Par: " + hole2par;
-    document.getElementsByName("player1hole3")[0].placeholder = "Par: " + hole3par;
-    document.getElementsByName("player1hole4")[0].placeholder = "Par: " + hole4par;
-    document.getElementsByName("player1hole5")[0].placeholder = "Par: " + hole5par;
-    document.getElementsByName("player1hole6")[0].placeholder = "Par: " + hole6par;
-    document.getElementsByName("player1hole7")[0].placeholder = "Par: " + hole7par;
-    document.getElementsByName("player1hole8")[0].placeholder = "Par: " + hole8par;
-    document.getElementsByName("player1hole9")[0].placeholder = "Par: " + hole9par;
-    document.getElementsByName("player1hole10")[0].placeholder = "Par: " + hole10par;
-    document.getElementsByName("player1hole11")[0].placeholder = "Par: " + hole11par;
-    document.getElementsByName("player1hole12")[0].placeholder = "Par: " + hole12par;
-    document.getElementsByName("player1hole13")[0].placeholder = "Par: " + hole13par;
-    document.getElementsByName("player1hole14")[0].placeholder = "Par: " + hole14par;
-    document.getElementsByName("player1hole15")[0].placeholder = "Par: " + hole15par;
-    document.getElementsByName("player1hole16")[0].placeholder = "Par: " + hole16par;
-    document.getElementsByName("player1hole17")[0].placeholder = "Par: " + hole17par;
-    document.getElementsByName("player1hole18")[0].placeholder = "Par: " + hole18par;
+//////// Displays par number for each hole depending on which tee and player selected.
+function loadPars(tee, player) {
+    if (tee==0 && player ==1) {
+        document.getElementsByName("player1hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[0].par;
+        document.getElementsByName("player1hole2")[0].placeholder = "Par: " + model.course.holes[1].tee_boxes[0].par;
+        document.getElementsByName("player1hole3")[0].placeholder = "Par: " + model.course.holes[2].tee_boxes[0].par;
+        document.getElementsByName("player1hole4")[0].placeholder = "Par: " + model.course.holes[3].tee_boxes[0].par;
+        document.getElementsByName("player1hole5")[0].placeholder = "Par: " + model.course.holes[4].tee_boxes[0].par;
+        document.getElementsByName("player1hole6")[0].placeholder = "Par: " + model.course.holes[5].tee_boxes[0].par;
+        document.getElementsByName("player1hole7")[0].placeholder = "Par: " + model.course.holes[6].tee_boxes[0].par;
+        document.getElementsByName("player1hole8")[0].placeholder = "Par: " + model.course.holes[7].tee_boxes[0].par;
+        document.getElementsByName("player1hole9")[0].placeholder = "Par: " + model.course.holes[8].tee_boxes[0].par;
+        document.getElementsByName("player1hole10")[0].placeholder = "Par: " + model.course.holes[9].tee_boxes[0].par;
+        document.getElementsByName("player1hole11")[0].placeholder = "Par: " + model.course.holes[10].tee_boxes[0].par;
+        document.getElementsByName("player1hole12")[0].placeholder = "Par: " + model.course.holes[11].tee_boxes[0].par;
+        document.getElementsByName("player1hole13")[0].placeholder = "Par: " + model.course.holes[12].tee_boxes[0].par;
+        document.getElementsByName("player1hole14")[0].placeholder = "Par: " + model.course.holes[13].tee_boxes[0].par;
+        document.getElementsByName("player1hole15")[0].placeholder = "Par: " + model.course.holes[14].tee_boxes[0].par;
+        document.getElementsByName("player1hole16")[0].placeholder = "Par: " + model.course.holes[15].tee_boxes[0].par;
+        document.getElementsByName("player1hole17")[0].placeholder = "Par: " + model.course.holes[16].tee_boxes[0].par;
+        document.getElementsByName("player1hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[0].par;
+    }
+    if (tee==0 && player ==2) {
+        document.getElementsByName("player2hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[0].par;
+        document.getElementsByName("player2hole2")[0].placeholder = "Par: " + model.course.holes[1].tee_boxes[0].par;
+        document.getElementsByName("player2hole3")[0].placeholder = "Par: " + model.course.holes[2].tee_boxes[0].par;
+        document.getElementsByName("player2hole4")[0].placeholder = "Par: " + model.course.holes[3].tee_boxes[0].par;
+        document.getElementsByName("player2hole5")[0].placeholder = "Par: " + model.course.holes[4].tee_boxes[0].par;
+        document.getElementsByName("player2hole6")[0].placeholder = "Par: " + model.course.holes[5].tee_boxes[0].par;
+        document.getElementsByName("player2hole7")[0].placeholder = "Par: " + model.course.holes[6].tee_boxes[0].par;
+        document.getElementsByName("player2hole8")[0].placeholder = "Par: " + model.course.holes[7].tee_boxes[0].par;
+        document.getElementsByName("player2hole9")[0].placeholder = "Par: " + model.course.holes[8].tee_boxes[0].par;
+        document.getElementsByName("player2hole10")[0].placeholder = "Par: " + model.course.holes[9].tee_boxes[0].par;
+        document.getElementsByName("player2hole11")[0].placeholder = "Par: " + model.course.holes[10].tee_boxes[0].par;
+        document.getElementsByName("player2hole12")[0].placeholder = "Par: " + model.course.holes[11].tee_boxes[0].par;
+        document.getElementsByName("player2hole13")[0].placeholder = "Par: " + model.course.holes[12].tee_boxes[0].par;
+        document.getElementsByName("player2hole14")[0].placeholder = "Par: " + model.course.holes[13].tee_boxes[0].par;
+        document.getElementsByName("player2hole15")[0].placeholder = "Par: " + model.course.holes[14].tee_boxes[0].par;
+        document.getElementsByName("player2hole16")[0].placeholder = "Par: " + model.course.holes[15].tee_boxes[0].par;
+        document.getElementsByName("player2hole17")[0].placeholder = "Par: " + model.course.holes[16].tee_boxes[0].par;
+        document.getElementsByName("player2hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[0].par;
+    }
+    if (tee==0 && player ==3) {
+        document.getElementsByName("player3hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[0].par;
+        document.getElementsByName("player3hole2")[0].placeholder = "Par: " + model.course.holes[1].tee_boxes[0].par;
+        document.getElementsByName("player3hole3")[0].placeholder = "Par: " + model.course.holes[2].tee_boxes[0].par;
+        document.getElementsByName("player3hole4")[0].placeholder = "Par: " + model.course.holes[3].tee_boxes[0].par;
+        document.getElementsByName("player3hole5")[0].placeholder = "Par: " + model.course.holes[4].tee_boxes[0].par;
+        document.getElementsByName("player3hole6")[0].placeholder = "Par: " + model.course.holes[5].tee_boxes[0].par;
+        document.getElementsByName("player3hole7")[0].placeholder = "Par: " + model.course.holes[6].tee_boxes[0].par;
+        document.getElementsByName("player3hole8")[0].placeholder = "Par: " + model.course.holes[7].tee_boxes[0].par;
+        document.getElementsByName("player3hole9")[0].placeholder = "Par: " + model.course.holes[8].tee_boxes[0].par;
+        document.getElementsByName("player3hole10")[0].placeholder = "Par: " + model.course.holes[9].tee_boxes[0].par;
+        document.getElementsByName("player3hole11")[0].placeholder = "Par: " + model.course.holes[10].tee_boxes[0].par;
+        document.getElementsByName("player3hole12")[0].placeholder = "Par: " + model.course.holes[11].tee_boxes[0].par;
+        document.getElementsByName("player3hole13")[0].placeholder = "Par: " + model.course.holes[12].tee_boxes[0].par;
+        document.getElementsByName("player3hole14")[0].placeholder = "Par: " + model.course.holes[13].tee_boxes[0].par;
+        document.getElementsByName("player3hole15")[0].placeholder = "Par: " + model.course.holes[14].tee_boxes[0].par;
+        document.getElementsByName("player3hole16")[0].placeholder = "Par: " + model.course.holes[15].tee_boxes[0].par;
+        document.getElementsByName("player3hole17")[0].placeholder = "Par: " + model.course.holes[16].tee_boxes[0].par;
+        document.getElementsByName("player3hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[0].par;
+    }
+    if (tee==0 && player ==4) {
+        document.getElementsByName("player4hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[0].par;
+        document.getElementsByName("player4hole2")[0].placeholder = "Par: " + model.course.holes[1].tee_boxes[0].par;
+        document.getElementsByName("player4hole3")[0].placeholder = "Par: " + model.course.holes[2].tee_boxes[0].par;
+        document.getElementsByName("player4hole4")[0].placeholder = "Par: " + model.course.holes[3].tee_boxes[0].par;
+        document.getElementsByName("player4hole5")[0].placeholder = "Par: " + model.course.holes[4].tee_boxes[0].par;
+        document.getElementsByName("player4hole6")[0].placeholder = "Par: " + model.course.holes[5].tee_boxes[0].par;
+        document.getElementsByName("player4hole7")[0].placeholder = "Par: " + model.course.holes[6].tee_boxes[0].par;
+        document.getElementsByName("player4hole8")[0].placeholder = "Par: " + model.course.holes[7].tee_boxes[0].par;
+        document.getElementsByName("player4hole9")[0].placeholder = "Par: " + model.course.holes[8].tee_boxes[0].par;
+        document.getElementsByName("player4hole10")[0].placeholder = "Par: " + model.course.holes[9].tee_boxes[0].par;
+        document.getElementsByName("player4hole11")[0].placeholder = "Par: " + model.course.holes[10].tee_boxes[0].par;
+        document.getElementsByName("player4hole12")[0].placeholder = "Par: " + model.course.holes[11].tee_boxes[0].par;
+        document.getElementsByName("player4hole13")[0].placeholder = "Par: " + model.course.holes[12].tee_boxes[0].par;
+        document.getElementsByName("player4hole14")[0].placeholder = "Par: " + model.course.holes[13].tee_boxes[0].par;
+        document.getElementsByName("player4hole15")[0].placeholder = "Par: " + model.course.holes[14].tee_boxes[0].par;
+        document.getElementsByName("player4hole16")[0].placeholder = "Par: " + model.course.holes[15].tee_boxes[0].par;
+        document.getElementsByName("player4hole17")[0].placeholder = "Par: " + model.course.holes[16].tee_boxes[0].par;
+        document.getElementsByName("player4hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[0].par;
+    }
+    if (tee==1 && player ==1) {
+        document.getElementsByName("player1hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[1].par;
+        document.getElementsByName("player1hole2")[0].placeholder = "Par: " + model.course.holes[1].tee_boxes[1].par;
+        document.getElementsByName("player1hole3")[0].placeholder = "Par: " + model.course.holes[2].tee_boxes[1].par;
+        document.getElementsByName("player1hole4")[0].placeholder = "Par: " + model.course.holes[3].tee_boxes[1].par;
+        document.getElementsByName("player1hole5")[0].placeholder = "Par: " + model.course.holes[4].tee_boxes[1].par;
+        document.getElementsByName("player1hole6")[0].placeholder = "Par: " + model.course.holes[5].tee_boxes[1].par;
+        document.getElementsByName("player1hole7")[0].placeholder = "Par: " + model.course.holes[6].tee_boxes[1].par;
+        document.getElementsByName("player1hole8")[0].placeholder = "Par: " + model.course.holes[7].tee_boxes[1].par;
+        document.getElementsByName("player1hole9")[0].placeholder = "Par: " + model.course.holes[8].tee_boxes[1].par;
+        document.getElementsByName("player1hole10")[0].placeholder = "Par: " + model.course.holes[9].tee_boxes[1].par;
+        document.getElementsByName("player1hole11")[0].placeholder = "Par: " + model.course.holes[10].tee_boxes[1].par;
+        document.getElementsByName("player1hole12")[0].placeholder = "Par: " + model.course.holes[11].tee_boxes[1].par;
+        document.getElementsByName("player1hole13")[0].placeholder = "Par: " + model.course.holes[12].tee_boxes[1].par;
+        document.getElementsByName("player1hole14")[0].placeholder = "Par: " + model.course.holes[13].tee_boxes[1].par;
+        document.getElementsByName("player1hole15")[0].placeholder = "Par: " + model.course.holes[14].tee_boxes[1].par;
+        document.getElementsByName("player1hole16")[0].placeholder = "Par: " + model.course.holes[15].tee_boxes[1].par;
+        document.getElementsByName("player1hole17")[0].placeholder = "Par: " + model.course.holes[16].tee_boxes[1].par;
+        document.getElementsByName("player1hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[1].par;
+    }
+    if (tee==1 && player ==2) {
+        document.getElementsByName("player2hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[1].par;
+        document.getElementsByName("player2hole2")[0].placeholder = "Par: " + model.course.holes[1].tee_boxes[1].par;
+        document.getElementsByName("player2hole3")[0].placeholder = "Par: " + model.course.holes[2].tee_boxes[1].par;
+        document.getElementsByName("player2hole4")[0].placeholder = "Par: " + model.course.holes[3].tee_boxes[1].par;
+        document.getElementsByName("player2hole5")[0].placeholder = "Par: " + model.course.holes[4].tee_boxes[1].par;
+        document.getElementsByName("player2hole6")[0].placeholder = "Par: " + model.course.holes[5].tee_boxes[1].par;
+        document.getElementsByName("player2hole7")[0].placeholder = "Par: " + model.course.holes[6].tee_boxes[1].par;
+        document.getElementsByName("player2hole8")[0].placeholder = "Par: " + model.course.holes[7].tee_boxes[1].par;
+        document.getElementsByName("player2hole9")[0].placeholder = "Par: " + model.course.holes[8].tee_boxes[1].par;
+        document.getElementsByName("player2hole10")[0].placeholder = "Par: " + model.course.holes[9].tee_boxes[1].par;
+        document.getElementsByName("player2hole11")[0].placeholder = "Par: " + model.course.holes[10].tee_boxes[1].par;
+        document.getElementsByName("player2hole12")[0].placeholder = "Par: " + model.course.holes[11].tee_boxes[1].par;
+        document.getElementsByName("player2hole13")[0].placeholder = "Par: " + model.course.holes[12].tee_boxes[1].par;
+        document.getElementsByName("player2hole14")[0].placeholder = "Par: " + model.course.holes[13].tee_boxes[1].par;
+        document.getElementsByName("player2hole15")[0].placeholder = "Par: " + model.course.holes[14].tee_boxes[1].par;
+        document.getElementsByName("player2hole16")[0].placeholder = "Par: " + model.course.holes[15].tee_boxes[1].par;
+        document.getElementsByName("player2hole17")[0].placeholder = "Par: " + model.course.holes[16].tee_boxes[1].par;
+        document.getElementsByName("player2hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[1].par;
+    }
+    if (tee==1 && player ==3) {
+        document.getElementsByName("player3hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[1].par;
+        document.getElementsByName("player3hole2")[0].placeholder = "Par: " + model.course.holes[1].tee_boxes[1].par;
+        document.getElementsByName("player3hole3")[0].placeholder = "Par: " + model.course.holes[2].tee_boxes[1].par;
+        document.getElementsByName("player3hole4")[0].placeholder = "Par: " + model.course.holes[3].tee_boxes[1].par;
+        document.getElementsByName("player3hole5")[0].placeholder = "Par: " + model.course.holes[4].tee_boxes[1].par;
+        document.getElementsByName("player3hole6")[0].placeholder = "Par: " + model.course.holes[5].tee_boxes[1].par;
+        document.getElementsByName("player3hole7")[0].placeholder = "Par: " + model.course.holes[6].tee_boxes[1].par;
+        document.getElementsByName("player3hole8")[0].placeholder = "Par: " + model.course.holes[7].tee_boxes[1].par;
+        document.getElementsByName("player3hole9")[0].placeholder = "Par: " + model.course.holes[8].tee_boxes[1].par;
+        document.getElementsByName("player3hole10")[0].placeholder = "Par: " + model.course.holes[9].tee_boxes[1].par;
+        document.getElementsByName("player3hole11")[0].placeholder = "Par: " + model.course.holes[10].tee_boxes[1].par;
+        document.getElementsByName("player3hole12")[0].placeholder = "Par: " + model.course.holes[11].tee_boxes[1].par;
+        document.getElementsByName("player3hole13")[0].placeholder = "Par: " + model.course.holes[12].tee_boxes[1].par;
+        document.getElementsByName("player3hole14")[0].placeholder = "Par: " + model.course.holes[13].tee_boxes[1].par;
+        document.getElementsByName("player3hole15")[0].placeholder = "Par: " + model.course.holes[14].tee_boxes[1].par;
+        document.getElementsByName("player3hole16")[0].placeholder = "Par: " + model.course.holes[15].tee_boxes[1].par;
+        document.getElementsByName("player3hole17")[0].placeholder = "Par: " + model.course.holes[16].tee_boxes[1].par;
+        document.getElementsByName("player3hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[1].par;
+    }
+    if (tee==1 && player ==4) {
+        document.getElementsByName("player4hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[1].par;
+        document.getElementsByName("player4hole2")[0].placeholder = "Par: " + model.course.holes[1].tee_boxes[1].par;
+        document.getElementsByName("player4hole3")[0].placeholder = "Par: " + model.course.holes[2].tee_boxes[1].par;
+        document.getElementsByName("player4hole4")[0].placeholder = "Par: " + model.course.holes[3].tee_boxes[1].par;
+        document.getElementsByName("player4hole5")[0].placeholder = "Par: " + model.course.holes[4].tee_boxes[1].par;
+        document.getElementsByName("player4hole6")[0].placeholder = "Par: " + model.course.holes[5].tee_boxes[1].par;
+        document.getElementsByName("player4hole7")[0].placeholder = "Par: " + model.course.holes[6].tee_boxes[1].par;
+        document.getElementsByName("player4hole8")[0].placeholder = "Par: " + model.course.holes[7].tee_boxes[1].par;
+        document.getElementsByName("player4hole9")[0].placeholder = "Par: " + model.course.holes[8].tee_boxes[1].par;
+        document.getElementsByName("player4hole10")[0].placeholder = "Par: " + model.course.holes[9].tee_boxes[1].par;
+        document.getElementsByName("player4hole11")[0].placeholder = "Par: " + model.course.holes[10].tee_boxes[1].par;
+        document.getElementsByName("player4hole12")[0].placeholder = "Par: " + model.course.holes[11].tee_boxes[1].par;
+        document.getElementsByName("player4hole13")[0].placeholder = "Par: " + model.course.holes[12].tee_boxes[1].par;
+        document.getElementsByName("player4hole14")[0].placeholder = "Par: " + model.course.holes[13].tee_boxes[1].par;
+        document.getElementsByName("player4hole15")[0].placeholder = "Par: " + model.course.holes[14].tee_boxes[1].par;
+        document.getElementsByName("player4hole16")[0].placeholder = "Par: " + model.course.holes[15].tee_boxes[1].par;
+        document.getElementsByName("player4hole17")[0].placeholder = "Par: " + model.course.holes[16].tee_boxes[1].par;
+        document.getElementsByName("player4hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[1].par;
+    }
 }
 //////// Sets Tee and displays on page.
+function loadHCP(tee, player) {
+    if (tee == 2 && player == 1) {
+        document.getElementById("p1h1hcp").innerHTML = "HDCP: " + model.course.holes[0].tee_boxes[1].hcp;
+        document.getElementById("p1h2hcp").innerHTML = "HDCP: " + model.course.holes[1].tee_boxes[1].hcp;
+        document.getElementById("p1h3hcp").innerHTML = "HDCP: " + model.course.holes[2].tee_boxes[1].hcp;
+        document.getElementById("p1h4hcp").innerHTML = "HDCP: " + model.course.holes[3].tee_boxes[1].hcp;
+        document.getElementById("p1h5hcp").innerHTML = "HDCP: " + model.course.holes[4].tee_boxes[1].hcp;
+        document.getElementById("p1h6hcp").innerHTML = "HDCP: " + model.course.holes[5].tee_boxes[1].hcp;
+        document.getElementById("p1h7hcp").innerHTML = "HDCP: " + model.course.holes[6].tee_boxes[1].hcp;
+        document.getElementById("p1h8hcp").innerHTML = "HDCP: " + model.course.holes[7].tee_boxes[1].hcp;
+        document.getElementById("p1h9hcp").innerHTML = "HDCP: " + model.course.holes[8].tee_boxes[1].hcp;
+        document.getElementById("p1h10hcp").innerHTML = "HDCP: " + model.course.holes[9].tee_boxes[1].hcp;
+        document.getElementById("p1h11hcp").innerHTML = "HDCP: " + model.course.holes[10].tee_boxes[1].hcp;
+        document.getElementById("p1h12hcp").innerHTML = "HDCP: " + model.course.holes[11].tee_boxes[1].hcp;
+        document.getElementById("p1h13hcp").innerHTML = "HDCP: " + model.course.holes[12].tee_boxes[1].hcp;
+        document.getElementById("p1h14hcp").innerHTML = "HDCP: " + model.course.holes[13].tee_boxes[1].hcp;
+        document.getElementById("p1h15hcp").innerHTML = "HDCP: " + model.course.holes[14].tee_boxes[1].hcp;
+        document.getElementById("p1h16hcp").innerHTML = "HDCP: " + model.course.holes[15].tee_boxes[1].hcp;
+        document.getElementById("p1h17hcp").innerHTML = "HDCP: " + model.course.holes[16].tee_boxes[1].hcp;
+        document.getElementById("p1h18hcp").innerHTML = "HDCP: " + model.course.holes[17].tee_boxes[1].hcp;
+    }
+}
 function teeSelect(choice) {
     // 0 - white -men -par:5 -yards:543 -hcp:2 - model.course.holes[0].tee_boxes[0]
     // 1 - red -women -par:5 -yards:499 -hcp:1 - model.course.holes[0].tee_boxes[0]
-
+    // 2 - red w/handicap
+    // 3 - white w/handicap
 
     /// Men's Tee select
-    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee "; }
-    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee "; }
-    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee "; }
-    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee "; }
+    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee "; loadPars(0, 1); }
+    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee "; loadPars(0, 2); }
+    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee "; loadPars(0, 3); }
+    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee "; loadPars(0, 4); }
     /// Women's Tee select
-    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee "; }
-    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee "; }
-    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee "; }
-    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee "; }
+    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee "; loadPars(1, 1); }
+    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee "; loadPars(1, 2); }
+    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee "; loadPars(1, 3); }
+    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee "; loadPars(1, 4); }
     /// Men's Tee w/ Handicap select
-    if(choice==3 && playerChoice==1) { player1tee=3; document.getElementById("p1teeselect").innerHTML = "White Tee w/ handicap "; }
-    if(choice==3 && playerChoice==2) { player2tee=3; document.getElementById("p2teeselect").innerHTML = "White Tee w/ handicap "; }
-    if(choice==3 && playerChoice==3) { player3tee=3; document.getElementById("p3teeselect").innerHTML = "White Tee w/ handicap "; }
-    if(choice==3 && playerChoice==4) { player4tee=3; document.getElementById("p4teeselect").innerHTML = "White Tee w/ handicap "; }
+    if(choice==3 && playerChoice==1) { player1tee=3; document.getElementById("p1teeselect").innerHTML = "White Tee w/ handicap "; loadPars(0, 1); loadHCP(3, 1); }
+    if(choice==3 && playerChoice==2) { player2tee=3; document.getElementById("p2teeselect").innerHTML = "White Tee w/ handicap "; loadPars(0, 2); loadHCP(3, 2); }
+    if(choice==3 && playerChoice==3) { player3tee=3; document.getElementById("p3teeselect").innerHTML = "White Tee w/ handicap "; loadPars(0, 3); loadHCP(3, 3); }
+    if(choice==3 && playerChoice==4) { player4tee=3; document.getElementById("p4teeselect").innerHTML = "White Tee w/ handicap "; loadPars(0, 4); loadHCP(3, 4); }
     /// Women's Tee w/ Handicap select
-    if(choice==2 && playerChoice==1) { player1tee=2; document.getElementById("p1teeselect").innerHTML = "Red Tee w/ handicap "; }
-    if(choice==2 && playerChoice==2) { player2tee=2; document.getElementById("p2teeselect").innerHTML = "Red Tee w/ handicap "; }
-    if(choice==2 && playerChoice==3) { player3tee=2; document.getElementById("p3teeselect").innerHTML = "Red Tee w/ handicap "; }
-    if(choice==2 && playerChoice==4) { player4tee=2; document.getElementById("p4teeselect").innerHTML = "Red Tee w/ handicap "; }
-
+    if(choice==2 && playerChoice==1) { player1tee=2; document.getElementById("p1teeselect").innerHTML = "Red Tee w/ handicap "; loadPars(1, 1); loadHCP(2, 1); }
+    if(choice==2 && playerChoice==2) { player2tee=2; document.getElementById("p2teeselect").innerHTML = "Red Tee w/ handicap "; loadPars(1, 2); loadHCP(2, 2); }
+    if(choice==2 && playerChoice==3) { player3tee=2; document.getElementById("p3teeselect").innerHTML = "Red Tee w/ handicap "; loadPars(1, 3); loadHCP(2, 3); }
+    if(choice==2 && playerChoice==4) { player4tee=2; document.getElementById("p4teeselect").innerHTML = "Red Tee w/ handicap "; loadPars(1, 4); loadHCP(2, 4); }
 
 }
 //////// Access Token
@@ -301,27 +465,6 @@ function loadDoc() {
 
             //// Display Course Name
             document.getElementById("coursename").innerHTML = model.course.name;
-            ////
-            hole1par = model.course.holes[0].tee_boxes[0].par;
-            hole2par = model.course.holes[1].tee_boxes[0].par;
-            hole3par = model.course.holes[2].tee_boxes[0].par;
-            hole4par = model.course.holes[3].tee_boxes[0].par;
-            hole5par = model.course.holes[4].tee_boxes[0].par;
-            hole6par = model.course.holes[5].tee_boxes[0].par;
-            hole7par = model.course.holes[6].tee_boxes[0].par;
-            hole8par = model.course.holes[7].tee_boxes[0].par;
-            hole9par = model.course.holes[8].tee_boxes[0].par;
-            hole10par = model.course.holes[9].tee_boxes[0].par;
-            hole11par = model.course.holes[10].tee_boxes[0].par;
-            hole12par = model.course.holes[11].tee_boxes[0].par;
-            hole13par = model.course.holes[12].tee_boxes[0].par;
-            hole14par = model.course.holes[13].tee_boxes[0].par;
-            hole15par = model.course.holes[14].tee_boxes[0].par;
-            hole16par = model.course.holes[15].tee_boxes[0].par;
-            hole17par = model.course.holes[16].tee_boxes[0].par;
-            hole18par = model.course.holes[17].tee_boxes[0].par;
-
-            loadPars();
 
         }
     };
