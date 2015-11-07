@@ -209,6 +209,7 @@ function numOfPlayers(num) {
 //////// Displays par number for each hole depending on which tee and player selected.
 function loadPar(tee, player) {
     if (tee==0 && player ==1) {
+        document.getElementById("player1totalpar").innerHTML = model.course.tee_types[0].par;
         document.getElementById("p1f9par").innerHTML = "Par: " + model.course.tee_types[0].front_nine_par;
         document.getElementById("p1b9par").innerHTML = "Par: " + model.course.tee_types[0].back_nine_par;
         document.getElementsByName("player1hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[0].par;
@@ -231,6 +232,7 @@ function loadPar(tee, player) {
         document.getElementsByName("player1hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[0].par;
     }
     if (tee==0 && player ==2) {
+        document.getElementById("player2totalpar").innerHTML = model.course.tee_types[0].par;
         document.getElementById("p2f9par").innerHTML = "Par: " + model.course.tee_types[0].front_nine_par;
         document.getElementById("p2b9par").innerHTML = "Par: " + model.course.tee_types[0].back_nine_par;
         document.getElementsByName("player2hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[0].par;
@@ -253,6 +255,7 @@ function loadPar(tee, player) {
         document.getElementsByName("player2hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[0].par;
     }
     if (tee==0 && player ==3) {
+        document.getElementById("player3totalpar").innerHTML = model.course.tee_types[0].par;
         document.getElementById("p3f9par").innerHTML = "Par: " + model.course.tee_types[0].front_nine_par;
         document.getElementById("p3b9par").innerHTML = "Par: " + model.course.tee_types[0].back_nine_par;
         document.getElementsByName("player3hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[0].par;
@@ -275,6 +278,7 @@ function loadPar(tee, player) {
         document.getElementsByName("player3hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[0].par;
     }
     if (tee==0 && player ==4) {
+        document.getElementById("player4totalpar").innerHTML = model.course.tee_types[0].par;
         document.getElementById("p4f9par").innerHTML = "Par: " + model.course.tee_types[0].front_nine_par;
         document.getElementById("p4b9par").innerHTML = "Par: " + model.course.tee_types[0].back_nine_par;
         document.getElementsByName("player4hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[0].par;
@@ -297,6 +301,7 @@ function loadPar(tee, player) {
         document.getElementsByName("player4hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[0].par;
     }
     if (tee==1 && player ==1) {
+        document.getElementById("player1totalpar").innerHTML = model.course.tee_types[1].par;
         document.getElementById("p1f9par").innerHTML = "Par: " + model.course.tee_types[1].front_nine_par;
         document.getElementById("p1b9par").innerHTML = "Par: " + model.course.tee_types[1].back_nine_par;
         document.getElementsByName("player1hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[1].par;
@@ -319,6 +324,7 @@ function loadPar(tee, player) {
         document.getElementsByName("player1hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[1].par;
     }
     if (tee==1 && player ==2) {
+        document.getElementById("player2totalpar").innerHTML = model.course.tee_types[1].par;
         document.getElementById("p2f9par").innerHTML = "Par: " + model.course.tee_types[1].front_nine_par;
         document.getElementById("p2b9par").innerHTML = "Par: " + model.course.tee_types[1].back_nine_par;
         document.getElementsByName("player2hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[1].par;
@@ -341,6 +347,7 @@ function loadPar(tee, player) {
         document.getElementsByName("player2hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[1].par;
     }
     if (tee==1 && player ==3) {
+        document.getElementById("player3totalpar").innerHTML = model.course.tee_types[1].par;
         document.getElementById("p3f9par").innerHTML = "Par: " + model.course.tee_types[1].front_nine_par;
         document.getElementById("p3b9par").innerHTML = "Par: " + model.course.tee_types[1].back_nine_par;
         document.getElementsByName("player3hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[1].par;
@@ -363,6 +370,7 @@ function loadPar(tee, player) {
         document.getElementsByName("player3hole18")[0].placeholder = "Par: " + model.course.holes[17].tee_boxes[1].par;
     }
     if (tee==1 && player ==4) {
+        document.getElementById("player4totalpar").innerHTML = model.course.tee_types[1].par;
         document.getElementById("p4f9par").innerHTML = "Par: " + model.course.tee_types[1].front_nine_par;
         document.getElementById("p4b9par").innerHTML = "Par: " + model.course.tee_types[1].back_nine_par;
         document.getElementsByName("player4hole1")[0].placeholder = "Par: " + model.course.holes[0].tee_boxes[1].par;
@@ -643,6 +651,7 @@ function loadHCP(tee, player) {
 //////// Displays Yardage for each hole depending on which tee and player is selected.
 function loadYards(tee, player) {
     if (tee == 0 && player == 1) {
+        document.getElementById("player1totalyards")
         document.getElementById("p1f9yards").innerHTML = "Yards: " + model.course.tee_types[0].front_nine_yards;
         document.getElementById("p1b9yards").innerHTML = "Yards: " + model.course.tee_types[0].back_nine_yards;
         document.getElementById("p1h1yards").innerHTML = "Yards: " + model.course.holes[0].tee_boxes[0].yards;
@@ -731,8 +740,8 @@ function loadYards(tee, player) {
         document.getElementById("p4h18yards").innerHTML = "Yards: " + model.course.holes[17].tee_boxes[0].yards;
     }
     if (tee == 1 && player == 1) {
-        document.getElementById("p1f9yards").innerHTML = "Yards: " + model.course.tee_types[0].front_nine_yards;
-        document.getElementById("p1b9yards").innerHTML = "Yards: " + model.course.tee_types[0].back_nine_yards;
+        document.getElementById("p1f9yards").innerHTML = "Yards: " + model.course.tee_types[1].front_nine_yards;
+        document.getElementById("p1b9yards").innerHTML = "Yards: " + model.course.tee_types[1].back_nine_yards;
         document.getElementById("p1h1yards").innerHTML = "Yards: " + model.course.holes[0].tee_boxes[1].yards;
         document.getElementById("p1h2yards").innerHTML = "Yards: " + model.course.holes[1].tee_boxes[1].yards;
         document.getElementById("p1h3yards").innerHTML = "Yards: " + model.course.holes[2].tee_boxes[1].yards;
@@ -753,8 +762,8 @@ function loadYards(tee, player) {
         document.getElementById("p1h18yards").innerHTML = "Yards: " + model.course.holes[17].tee_boxes[1].yards;
     }
     if (tee == 1 && player == 2) {
-        document.getElementById("p2f9yards").innerHTML = "Yards: " + model.course.tee_types[0].front_nine_yards;
-        document.getElementById("p2b9yards").innerHTML = "Yards: " + model.course.tee_types[0].back_nine_yards;
+        document.getElementById("p2f9yards").innerHTML = "Yards: " + model.course.tee_types[1].front_nine_yards;
+        document.getElementById("p2b9yards").innerHTML = "Yards: " + model.course.tee_types[1].back_nine_yards;
         document.getElementById("p2h1yards").innerHTML = "Yards: " + model.course.holes[0].tee_boxes[1].yards;
         document.getElementById("p2h2yards").innerHTML = "Yards: " + model.course.holes[1].tee_boxes[1].yards;
         document.getElementById("p2h3yards").innerHTML = "Yards: " + model.course.holes[2].tee_boxes[1].yards;
@@ -775,8 +784,8 @@ function loadYards(tee, player) {
         document.getElementById("p2h18yards").innerHTML = "Yards: " + model.course.holes[17].tee_boxes[1].yards;
     }
     if (tee == 1 && player == 3) {
-        document.getElementById("p3f9yards").innerHTML = "Yards: " + model.course.tee_types[0].front_nine_yards;
-        document.getElementById("p3b9yards").innerHTML = "Yards: " + model.course.tee_types[0].back_nine_yards;
+        document.getElementById("p3f9yards").innerHTML = "Yards: " + model.course.tee_types[1].front_nine_yards;
+        document.getElementById("p3b9yards").innerHTML = "Yards: " + model.course.tee_types[1].back_nine_yards;
         document.getElementById("p3h1yards").innerHTML = "Yards: " + model.course.holes[0].tee_boxes[1].yards;
         document.getElementById("p3h2yards").innerHTML = "Yards: " + model.course.holes[1].tee_boxes[1].yards;
         document.getElementById("p3h3yards").innerHTML = "Yards: " + model.course.holes[2].tee_boxes[1].yards;
@@ -797,8 +806,8 @@ function loadYards(tee, player) {
         document.getElementById("p3h18yards").innerHTML = "Yards: " + model.course.holes[17].tee_boxes[1].yards;
     }
     if (tee == 1 && player == 4) {
-        document.getElementById("p4f9yards").innerHTML = "Yards: " + model.course.tee_types[0].front_nine_yards;
-        document.getElementById("p4b9yards").innerHTML = "Yards: " + model.course.tee_types[0].back_nine_yards;
+        document.getElementById("p4f9yards").innerHTML = "Yards: " + model.course.tee_types[1].front_nine_yards;
+        document.getElementById("p4b9yards").innerHTML = "Yards: " + model.course.tee_types[1].back_nine_yards;
         document.getElementById("p4h1yards").innerHTML = "Yards: " + model.course.holes[0].tee_boxes[1].yards;
         document.getElementById("p4h2yards").innerHTML = "Yards: " + model.course.holes[1].tee_boxes[1].yards;
         document.getElementById("p4h3yards").innerHTML = "Yards: " + model.course.holes[2].tee_boxes[1].yards;

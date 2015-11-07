@@ -1,20 +1,20 @@
 ::-webkit-input-placeholder {
-    color: #afd6e6 !important;
+    color: #93b4c1 !important;
     font-size: 20px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-    color: #afd6e6 !important;
+    color: #93b4c1 !important;
     font-size: 20px;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-    color: #afd6e6 !important;
+    color: #93b4c1 !important;
     font-size: 20px;
 }
 
 :-ms-input-placeholder {
-    color: #afd6e6 !important;
+    color: #93b4c1 !important;
     font-size: 20px;
 }
 /* Player 1 styling */
@@ -90,13 +90,6 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: inset 0px 0px 14px -3px rgba(0,0,0,0.75);
     border: 1px solid black;
 }
-#first9, #last9 {
-    width: 220px;
-}
-#first9:hover, #last9:hover {
-    background-color: #1087dd !important;
-}
-
 #map {
     min-height: 500px;
 }
@@ -119,6 +112,12 @@ label {
     box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
     text-align: center;
     float: left !important;
+}
+.tabletotal {
+    font-size: 19px !important;
+}
+.back9, .front9 {
+    min-width: 200px;
 }
 .totals {
     min-height: 55px;
