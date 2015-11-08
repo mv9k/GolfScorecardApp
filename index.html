@@ -16,6 +16,7 @@
 <div class="jumbotron">
     <div class="row text-center">
         <h2>Golf Scorecard App<br><small id="coursename"></small></h2>
+        <br><button id="loadbutton" onclick="loadData()">Load</button>&nbsp;&nbsp;<button id="resetbutton" onclick="reset()">Reset</button>
     </div>
 </div>
 
@@ -27,7 +28,6 @@
             <h4 class="text-center">Player Scorecards</h4>
             <div class="col-xs-12" id="numberofplayersbuttons">
             <button class="numplayerbutton" id="player1button" onclick="numOfPlayers(1)">Player 1</button>&nbsp;<button class="numplayerbutton" id="player2button" onclick="numOfPlayers(2)">Player 2</button>&nbsp;<button class="numplayerbutton" id="player3button" onclick="numOfPlayers(3)">Player 3</button>&nbsp;<button class="numplayerbutton" id="player4button" onclick="numOfPlayers(4)">Player 4</button>
-                <br><br><button id="resetbutton" onclick="reset()">Reset</button>
             </div>
             <div class="col-xs-12 scorecard">
                 <div class="row" id="player1card">
@@ -508,7 +508,7 @@
                     <div class="col-xs-12 col-md-3 col-lg-2">
                         <br>
                         <div class="player">
-                            <label for="player4" id="player4label" class="hlabel">Player 4:</label>
+                            <label for="player4" id="player4label" class="p4hlabel">Player 4:</label>
                             <input type="text" class="form-control input-player" id="player4" placeholder="Input Name">
                         </div>
                         <br>
@@ -523,61 +523,61 @@
                     </div>
                     <div class="col-xs-12 col-md-10">
                         <div class="holes">
-                            <label for="player4hole1" class="hlabel">Hole 1:</label>
+                            <label for="player4hole1" class="p4hlabel">Hole 1:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole1" min="0" max="100" step="1" name="player4hole1">
                             <p id="p4h1hcp">HDCP:</p>
                             <p id="p4h1yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole2" class="hlabel">Hole 2:</label>
+                            <label for="player4hole2" class="p4hlabel">Hole 2:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole2" min="0" max="100" step="1" name="player4hole2">
                             <p id="p4h2hcp">HDCP:</p>
                             <p id="p4h2yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole3" class="hlabel">Hole 3:</label>
+                            <label for="player4hole3" class="p4hlabel">Hole 3:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole3" min="0" max="100" step="1" name="player4hole3">
                             <p id="p4h3hcp">HDCP:</p>
                             <p id="p4h3yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole4" class="hlabel">Hole 4:</label>
+                            <label for="player4hole4" class="p4hlabel">Hole 4:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole4" min="0" max="100" step="1" name="player4hole4">
                             <p id="p4h4hcp">HDCP:</p>
                             <p id="p4h4yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole5" class="hlabel">Hole 5:</label>
+                            <label for="player4hole5" class="p4hlabel">Hole 5:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole5" min="0" max="100" step="1" name="player4hole5">
                             <p id="p4h5hcp">HDCP:</p>
                             <p id="p4h5yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole6" class="hlabel">Hole 6:</label>
+                            <label for="player4hole6" class="p4hlabel">Hole 6:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole6" min="0" max="100" step="1" name="player4hole6">
                             <p id="p4h6hcp">HDCP:</p>
                             <p id="p4h6yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole7" class="hlabel">Hole 7:</label>
+                            <label for="player4hole7" class="p4hlabel">Hole 7:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole7" min="0" max="100" step="1" name="player4hole7">
                             <p id="p4h7hcp">HDCP:</p>
                             <p id="p4h7yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole8" class="hlabel">Hole 8:</label>
+                            <label for="player4hole8" class="p4hlabel">Hole 8:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole8" min="0" max="100" step="1" name="player4hole8">
                             <p id="p4h8hcp">HDCP:</p>
                             <p id="p4h8yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole9" class="hlabel">Hole 9:</label>
+                            <label for="player4hole9" class="p4hlabel">Hole 9:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole9" min="0" max="100" step="1" name="player4hole9">
                             <p id="p4h9hcp">HDCP:</p>
                             <p id="p4h9yards">Yards:</p>
                         </div>
                         <div class="front9 holes">
-                            <label for="p4front9scores" class="hlabel">Front 9</label>
+                            <label for="p4front9scores" class="p4hlabel">Front 9</label>
                             <div id="p4front9scores">
                                 <p id="p4f9par" class="strong tabletotal">Par:</p>
                                 <p id="p4f9yards" class="strong tabletotal">Yards:</p>
@@ -588,61 +588,61 @@
 
                     <div class="col-xs-12 col-md-10 col-md-push-2">
                         <div class="holes">
-                            <label for="player4hole10" class="hlabel">Hole 10:</label>
+                            <label for="player4hole10" class="p4hlabel">Hole 10:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole10" min="0" max="100" step="1" name="player4hole10">
                             <p id="p4h10hcp">HDCP:</p>
                             <p id="p4h10yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole11" class="hlabel">Hole 11:</label>
+                            <label for="player4hole11" class="p4hlabel">Hole 11:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole11" min="0" max="100" step="1" name="player4hole11">
                             <p id="p4h11hcp">HDCP:</p>
                             <p id="p4h11yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole12" class="hlabel">Hole 12:</label>
+                            <label for="player4hole12" class="p4hlabel">Hole 12:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole12" min="0" max="100" step="1" name="player4hole12">
                             <p id="p4h12hcp">HDCP:</p>
                             <p id="p4h12yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole13" class="hlabel">Hole 13:</label>
+                            <label for="player4hole13" class="p4hlabel">Hole 13:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole13" min="0" max="100" step="1" name="player4hole13">
                             <p id="p4h13hcp">HDCP:</p>
                             <p id="p4h13yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole14" class="hlabel">Hole 14:</label>
+                            <label for="player4hole14" class="p4hlabel">Hole 14:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole14" min="0" max="100" step="1" name="player4hole14">
                             <p id="p4h14hcp">HDCP:</p>
                             <p id="p4h14yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole15" class="hlabel">Hole 15:</label>
+                            <label for="player4hole15" class="p4hlabel">Hole 15:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole15" min="0" max="100" step="1" name="player4hole15">
                             <p id="p4h15hcp">HDCP:</p>
                             <p id="p4h15yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole16" class="hlabel">Hole 16:</label>
+                            <label for="player4hole16" class="p4hlabel">Hole 16:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole16" min="0" max="100" step="1" name="player4hole16">
                             <p id="p4h16hcp">HDCP:</p>
                             <p id="p4h16yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole17" class="hlabel">Hole 17:</label>
+                            <label for="player4hole17" class="p4hlabel">Hole 17:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole17" min="0" max="100" step="1" name="player4hole17">
                             <p id="p4h17hcp">HDCP:</p>
                             <p id="p4h17yards">Yards:</p>
                         </div>
                         <div class="holes">
-                            <label for="player4hole18" class="hlabel">Hole 18:</label>
+                            <label for="player4hole18" class="p4hlabel">Hole 18:</label>
                             <input type="number" class="form-control input-lg p4input" id="player4hole18" min="0" max="100" step="1" name="player4hole18">
                             <p id="p4h18hcp">HDCP:</p>
                             <p id="p4h18yards">Yards:</p>
                         </div>
                         <div class="back9 holes">
-                            <label for="p4back9scores" class="hlabel">Back 9</label>
+                            <label for="p4back9scores" class="p4hlabel">Back 9</label>
                             <div id="p4back9scores">
                                 <p id="p4b9par" class="strong tabletotal">Par:</p>
                                 <p id="p4b9yards" class="strong tabletotal">Yards:</p>

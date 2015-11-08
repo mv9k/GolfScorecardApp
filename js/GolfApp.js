@@ -303,7 +303,7 @@ function loadData() {
 }
 //////// Clears local storage and reloads page.
 function reset() {
-    localStorage.clear();
+    window.localStorage.clear();
     window.open("index.html", "_self");
 }
 //////// Displays or hides player cards depending on player selection.
@@ -904,7 +904,6 @@ function onload() {
 
     numOfPlayers(1);
 
-
     var redirectURI = document.URL;
     var clientID = "81e49374-2d9e-40b6-810b-abc0726f39b1";
     var swingBySwing = "https://api.swingbyswing.com/v2/oauth/authorize?scope=read&redirect_uri=" + encodeURI(redirectURI) + "&response_type=token&client_id=" + clientID;
@@ -926,7 +925,7 @@ function onload() {
             });
         return vars;
     }
-    loadData();
+
 }
 //////// AJAX request for Swing by Swing API.
 function loadDoc() {

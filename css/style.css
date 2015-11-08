@@ -57,7 +57,7 @@
 #player3 { outline: 0; font-family: "Kaushan Script", sans-serif; }
 #player3:focus, .p3input:focus { outline: 4px solid #803500 !important; color: #803500; }
 .p3hlabel {
-    background-color: #008014;
+    background-color: #803500;
 }
 
 #player4button { outline: 0; -webkit-transition: background-color 0.5s, color 0.5s; transition: background-color 0.5s, color 0.5s; -webkit-transition-timing-function: ease; }
@@ -71,7 +71,7 @@
 #player4 { outline: 0; font-family: "Kaushan Script", sans-serif; }
 #player4:focus, .p4input:focus { outline: 4px solid #447280 !important; color: #447280; }
 .p4hlabel {
-    background-color: #008014;
+    background-color: #447280;
 }
 
 
@@ -244,13 +244,13 @@ body {
     font-size: 25px;
     padding-top: 0;
 }
-#resetbutton {
+#resetbutton, #loadbutton {
     -webkit-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
     border: 0;
     border-radius: 5px;
-    color: #a4ffdb;
+    color: #070e0b;
     width: 120px;
     height: 30px;
     padding: 4px;
