@@ -993,6 +993,7 @@ function setMarkers(num, player){
     if(scoringEnabled==true){
         if(num==0){
             holeLoc=model.course.holes[0].green_location;
+            document.getElementById("holedisplay").innerHTML="Hole: 1";
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[0].tee_boxes[0].location;}
                 if(player1tee==1){teeLoc=model.course.holes[0].tee_boxes[1].location;}
@@ -1019,6 +1020,7 @@ function setMarkers(num, player){
             }
         }
         if(num==1){
+            document.getElementById("holedisplay").innerHTML="Hole: 2";
             holeLoc=model.course.holes[1].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[1].tee_boxes[0].location;}
@@ -1046,6 +1048,7 @@ function setMarkers(num, player){
             }
         }
         if(num==2){
+            document.getElementById("holedisplay").innerHTML="Hole: 3";
             holeLoc=model.course.holes[2].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[2].tee_boxes[0].location;}
@@ -1073,6 +1076,7 @@ function setMarkers(num, player){
             }
         }
         if(num==3){
+            document.getElementById("holedisplay").innerHTML="Hole: 4";
             holeLoc=model.course.holes[3].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[3].tee_boxes[0].location;}
@@ -1100,6 +1104,7 @@ function setMarkers(num, player){
             }
         }
         if(num==4){
+            document.getElementById("holedisplay").innerHTML="Hole: 5";
             holeLoc=model.course.holes[4].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[4].tee_boxes[0].location;}
@@ -1127,6 +1132,7 @@ function setMarkers(num, player){
             }
         }
         if(num==5){
+            document.getElementById("holedisplay").innerHTML="Hole: 6";
             holeLoc=model.course.holes[5].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[5].tee_boxes[0].location;}
@@ -1154,6 +1160,7 @@ function setMarkers(num, player){
             }
         }
         if(num==6){
+            document.getElementById("holedisplay").innerHTML="Hole: 7";
             holeLoc=model.course.holes[6].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[6].tee_boxes[0].location;}
@@ -1180,6 +1187,7 @@ function setMarkers(num, player){
                 initMap(center, holeLoc, teeLoc);
             }}
         if(num==7){
+            document.getElementById("holedisplay").innerHTML="Hole: 8";
             holeLoc=model.course.holes[7].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[7].tee_boxes[0].location;}
@@ -1207,6 +1215,7 @@ function setMarkers(num, player){
             }
         }
         if(num==8){
+            document.getElementById("holedisplay").innerHTML="Hole: 9";
             holeLoc=model.course.holes[8].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[8].tee_boxes[0].location;}
@@ -1234,6 +1243,7 @@ function setMarkers(num, player){
             }
         }
         if(num==9){
+            document.getElementById("holedisplay").innerHTML="Hole: 10";
             holeLoc=model.course.holes[9].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[9].tee_boxes[0].location;}
@@ -1261,6 +1271,7 @@ function setMarkers(num, player){
             }
         }
         if(num==10){
+            document.getElementById("holedisplay").innerHTML="Hole: 11";
             holeLoc=model.course.holes[10].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[10].tee_boxes[0].location;}
@@ -1288,6 +1299,7 @@ function setMarkers(num, player){
             }
         }
         if(num==11){
+            document.getElementById("holedisplay").innerHTML="Hole: 12";
             holeLoc=model.course.holes[11].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[11].tee_boxes[0].location;}
@@ -1315,6 +1327,7 @@ function setMarkers(num, player){
             }
         }
         if(num==12){
+            document.getElementById("holedisplay").innerHTML="Hole: 13";
             holeLoc=model.course.holes[12].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[12].tee_boxes[0].location;}
@@ -1342,6 +1355,7 @@ function setMarkers(num, player){
             }
         }
         if(num==13){
+            document.getElementById("holedisplay").innerHTML="Hole: 14";
             holeLoc=model.course.holes[13].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[13].tee_boxes[0].location;}
@@ -1369,6 +1383,7 @@ function setMarkers(num, player){
             }
         }
         if(num==14){
+            document.getElementById("holedisplay").innerHTML="Hole: 15";
             holeLoc=model.course.holes[14].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[14].tee_boxes[0].location;}
@@ -1396,6 +1411,7 @@ function setMarkers(num, player){
             }
         }
         if(num==15){
+            document.getElementById("holedisplay").innerHTML="Hole: 16";
             holeLoc=model.course.holes[15].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[15].tee_boxes[0].location;}
@@ -1423,6 +1439,7 @@ function setMarkers(num, player){
             }
         }
         if(num==16){
+            document.getElementById("holedisplay").innerHTML="Hole: 17";
             holeLoc=model.course.holes[16].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[16].tee_boxes[0].location;}
@@ -1450,6 +1467,7 @@ function setMarkers(num, player){
             }
         }
         if(num==17){
+            document.getElementById("holedisplay").innerHTML="Hole: 18";
             holeLoc=model.course.holes[17].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[17].tee_boxes[0].location;}

@@ -257,3 +257,9 @@ body {
     font-size: larger;
     background-color: #00ce68;
 }
+#holedisplay {
+    text-align: center;
+    color: #a4ffdb;
+    font-family: "Kaushan Script", sans-serif !important;
+    font-size: 22px;
+}
