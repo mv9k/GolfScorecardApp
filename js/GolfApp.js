@@ -6,6 +6,7 @@ var scoringEnabled=false, playerChoice, player1tee, player2tee, player3tee, play
 //////// calls loadScore() depending on player and tee selected, displays totals then calls saveData()
 function onClick() {
     if(scoringEnabled){
+        // player 1
         if(playerChoice==1 && player1tee==0){
             loadScore(0, 1);
             loadScore(0, 1);
@@ -19,6 +20,51 @@ function onClick() {
             document.getElementById("p1f9score").innerHTML= "Score: " + p1scoreArr[0];
             document.getElementById("p1b9score").innerHTML= "Score: " + p1scoreArr[1];
             document.getElementById("player1totalscore").innerHTML= p1totalscore;
+        }
+        // player 2
+        if(playerChoice==2 && player2tee==0){
+            loadScore(0, 2);
+            loadScore(0, 2);
+            document.getElementById("p2f9score").innerHTML= "Score: " + p2scoreArr[0];
+            document.getElementById("p2b9score").innerHTML= "Score: " + p2scoreArr[1];
+            document.getElementById("player2totalscore").innerHTML= p2totalscore;
+        }
+        if(playerChoice==2 && player2tee==1){
+            loadScore(1, 2);
+            loadScore(1, 2);
+            document.getElementById("p2f9score").innerHTML= "Score: " + p2scoreArr[0];
+            document.getElementById("p2b9score").innerHTML= "Score: " + p2scoreArr[1];
+            document.getElementById("player2totalscore").innerHTML= p2totalscore;
+        }
+        // player 3
+        if(playerChoice==3 && player3tee==0){
+            loadScore(0, 3);
+            loadScore(0, 3);
+            document.getElementById("p3f9score").innerHTML= "Score: " + p3scoreArr[0];
+            document.getElementById("p3b9score").innerHTML= "Score: " + p3scoreArr[1];
+            document.getElementById("player3totalscore").innerHTML= p3totalscore;
+        }
+        if(playerChoice==3 && player3tee==1){
+            loadScore(1, 3);
+            loadScore(1, 3);
+            document.getElementById("p3f9score").innerHTML= "Score: " + p3scoreArr[0];
+            document.getElementById("p3b9score").innerHTML= "Score: " + p3scoreArr[1];
+            document.getElementById("player3totalscore").innerHTML= p3totalscore;
+        }
+        // player 4
+        if(playerChoice==4 && player4tee==0){
+            loadScore(0, 4);
+            loadScore(0, 4);
+            document.getElementById("p2f9score").innerHTML= "Score: " + p2scoreArr[0];
+            document.getElementById("p2b9score").innerHTML= "Score: " + p2scoreArr[1];
+            document.getElementById("player2totalscore").innerHTML= p2totalscore;
+        }
+        if(playerChoice==4 && player4tee==1){
+            loadScore(1, 4);
+            loadScore(1, 4);
+            document.getElementById("p4f9score").innerHTML= "Score: " + p4scoreArr[0];
+            document.getElementById("p4b9score").innerHTML= "Score: " + p4scoreArr[1];
+            document.getElementById("player4totalscore").innerHTML= p4totalscore;
         }
 
         saveData();
@@ -40,6 +86,35 @@ function loadScore(tee, player) {
         p1scoreArr[1]=p1back9score;
         p1scoreArr[2]=p1totalscore;
     }
+    /// player 2 scoring
+    if((tee==0 || tee==1) && player==2) {
+
+        p2front9score = ((parseInt(document.getElementById("player2hole1").value, 10) || 0) + (parseInt(document.getElementById("player2hole2").value, 10) || 0) + (parseInt(document.getElementById("player2hole3").value, 10) || 0) + (parseInt(document.getElementById("player2hole4").value, 10) || 0) +
+            (parseInt(document.getElementById("player2hole5").value, 10) || 0) + (parseInt(document.getElementById("player2hole6").value, 10) || 0) + (parseInt(document.getElementById("player2hole7").value, 10) || 0) + (parseInt(document.getElementById("player2hole8").value, 10) || 0) +
+            (parseInt(document.getElementById("player2hole9").value, 10) || 0)) - model.course.tee_types[0].front_nine_par;
+        p2back9score = ((parseInt(document.getElementById("player2hole10").value, 10) || 0) + (parseInt(document.getElementById("player2hole11").value, 10) || 0) + (parseInt(document.getElementById("player2hole12").value, 10) || 0) + (parseInt(document.getElementById("player2hole13").value, 10) || 0) +
+            (parseInt(document.getElementById("player2hole14").value, 10) || 0) + (parseInt(document.getElementById("player2hole15").value, 10) || 0) + (parseInt(document.getElementById("player2hole16").value, 10) || 0) + (parseInt(document.getElementById("player2hole17").value, 10) || 0) +
+            (parseInt(document.getElementById("player2hole18").value, 10) || 0)) - model.course.tee_types[0].back_nine_par;
+        p2totalscore = parseInt(p2front9score + p2back9score);
+        p2scoreArr[0] = p2front9score;
+        p2scoreArr[1] = p2back9score;
+        p2scoreArr[2] = p2totalscore;
+    }
+    /// player 3 scoring
+    if((tee==0 || tee==1) && player==3) {
+
+        p3front9score = ((parseInt(document.getElementById("player3hole1").value, 10) || 0) + (parseInt(document.getElementById("player3hole2").value, 10) || 0) + (parseInt(document.getElementById("player3hole3").value, 10) || 0) + (parseInt(document.getElementById("player3hole4").value, 10) || 0) +
+            (parseInt(document.getElementById("player3hole5").value, 10) || 0) + (parseInt(document.getElementById("player3hole6").value, 10) || 0) + (parseInt(document.getElementById("player3hole7").value, 10) || 0) + (parseInt(document.getElementById("player3hole8").value, 10) || 0) +
+            (parseInt(document.getElementById("player3hole9").value, 10) || 0)) - model.course.tee_types[0].front_nine_par;
+        p3back9score = ((parseInt(document.getElementById("player3hole10").value, 10) || 0) + (parseInt(document.getElementById("player3hole11").value, 10) || 0) + (parseInt(document.getElementById("player3hole12").value, 10) || 0) + (parseInt(document.getElementById("player3hole13").value, 10) || 0) +
+            (parseInt(document.getElementById("player3hole14").value, 10) || 0) + (parseInt(document.getElementById("player3hole15").value, 10) || 0) + (parseInt(document.getElementById("player3hole16").value, 10) || 0) + (parseInt(document.getElementById("player3hole17").value, 10) || 0) +
+            (parseInt(document.getElementById("player3hole18").value, 10) || 0)) - model.course.tee_types[0].back_nine_par;
+        p3totalscore = parseInt(p3front9score + p3back9score);
+        p3scoreArr[0] = p3front9score;
+        p3scoreArr[1] = p3back9score;
+        p3scoreArr[2] = p3totalscore;
+    }
+
 
 
 
