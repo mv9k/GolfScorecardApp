@@ -12,686 +12,672 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 </head>
 <body onload="onload()" onclick="onClick()">
-<!-- HEADER -->
 <div class="jumbotron">
     <div class="row text-center">
         <h2>Golf Scorecard App<br><small id="coursename"></small></h2>
         <br><button id="loadbutton" onclick="loadData()">Load</button>&nbsp;&nbsp;<button id="resetbutton" onclick="reset()">Clear</button>
     </div>
 </div>
-
-
 <div class="row row-content">
-    <!-- Scorecard module -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-9">
-        <div class="row row-content">
-            <h4 class="text-center">Player Scorecards</h4>
-            <div class="col-xs-12" id="numberofplayersbuttons">
-            <button class="numplayerbutton" id="player1button" onclick="numOfPlayers(1)">Player 1</button>&nbsp;<button class="numplayerbutton" id="player2button" onclick="numOfPlayers(2)">Player 2</button>&nbsp;<button class="numplayerbutton" id="player3button" onclick="numOfPlayers(3)">Player 3</button>&nbsp;<button class="numplayerbutton" id="player4button" onclick="numOfPlayers(4)">Player 4</button>
+                <div class="row row-content">
+                    <h4 class="text-center">Player Scorecards</h4>
+                    <div class="col-xs-12" id="numberofplayersbuttons">
+                    <button class="numplayerbutton" id="player1button" onclick="numOfPlayers(1)">Player 1</button>&nbsp;<button class="numplayerbutton" id="player2button" onclick="numOfPlayers(2)">Player 2</button>&nbsp;<button class="numplayerbutton" id="player3button" onclick="numOfPlayers(3)">Player 3</button>&nbsp;<button class="numplayerbutton" id="player4button" onclick="numOfPlayers(4)">Player 4</button>
+                    </div>
+                    <div class="col-xs-12 scorecard">
+                        <div class="row" id="player1card">
+                            <div class="col-xs-12 col-md-3 col-lg-2">
+                                <br>
+                                <div class="player">
+                                    <label for="player1" id="player1label" class="p1hlabel">Player 1:</label>
+                                    <input type="text" class="form-control input-player" id="player1" placeholder="Input Name">
+                                </div>
+                                <br>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle teeselect" id="p1teebutton" type="button" data-toggle="dropdown"><span id="p1teeselect">Select Tee </span><span class="caret"></span></button>
+                                    <ul class="dropdown-menu teeselect">
+                                        <li><a href="#" onclick="teeSelect(1)">Red Tee</a></li>
+                                        <li><a href="#" onclick="teeSelect(0)">White Tee</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 col-md-10">
+                                <div class="holes" onclick="setMarkers(0, 1)">
+                                    <label for="player1hole1" class="p1hlabel">Hole 1:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole1" min="0" max="100" step="1" name="player1hole1">
+                                    <p id="p1h1hcp">HDCP:</p>
+                                    <p id="p1h1yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(1, 1)">
+                                    <label for="player1hole2" class="p1hlabel">Hole 2:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole2" min="0" max="100" step="1" name="player1hole2">
+                                    <p id="p1h2hcp">HDCP:</p>
+                                    <p id="p1h2yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(2, 1)">
+                                    <label for="player1hole3" class="p1hlabel">Hole 3:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole3" min="0" max="100" step="1" name="player1hole3">
+                                    <p id="p1h3hcp">HDCP:</p>
+                                    <p id="p1h3yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(3, 1)">
+                                    <label for="player1hole4" class="p1hlabel">Hole 4:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole4" min="0" max="100" step="1" name="player1hole4">
+                                    <p id="p1h4hcp">HDCP:</p>
+                                    <p id="p1h4yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(4, 1)">
+                                    <label for="player1hole5" class="p1hlabel">Hole 5:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole5" min="0" max="100" step="1" name="player1hole5">
+                                    <p id="p1h5hcp">HDCP:</p>
+                                    <p id="p1h5yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(5, 1)">
+                                    <label for="player1hole6" class="p1hlabel">Hole 6:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole6" min="0" max="100" step="1" name="player1hole6">
+                                    <p id="p1h6hcp">HDCP:</p>
+                                    <p id="p1h6yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(6, 1)">
+                                    <label for="player1hole7" class="p1hlabel">Hole 7:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole7" min="0" max="100" step="1" name="player1hole7">
+                                    <p id="p1h7hcp">HDCP:</p>
+                                    <p id="p1h7yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(7, 1)">
+                                    <label for="player1hole8" class="p1hlabel">Hole 8:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole8" min="0" max="100" step="1" name="player1hole8">
+                                    <p id="p1h8hcp">HDCP:</p>
+                                    <p id="p1h8yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(8, 1)">
+                                    <label for="player1hole9" class="p1hlabel">Hole 9:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole9" min="0" max="100" step="1" name="player1hole9">
+                                    <p id="p1h9hcp">HDCP:</p>
+                                    <p id="p1h9yards">Yards:</p>
+                                </div>
+                                <div class="front9 holes">
+                                    <label for="p1front9scores" class="p1hlabel">Front 9</label>
+                                    <div id="p1front9scores">
+                                            <p id="p1f9par" class="strong tabletotal">Par:</p>
+                                            <p id="p1f9yards" class="strong tabletotal">Yards:</p>
+                                            <p id="p1f9score" class="strong tabletotal">Score:</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-10 col-md-push-2">
+                                <div class="holes" onclick="setMarkers(9, 1)">
+                                    <label for="player1hole10" class="p1hlabel">Hole 10:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole10" min="0" max="100" step="1" name="player1hole10">
+                                    <p id="p1h10hcp">HDCP:</p>
+                                    <p id="p1h10yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(10, 1)">
+                                    <label for="player1hole11" class="p1hlabel">Hole 11:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole11" min="0" max="100" step="1" name="player1hole11">
+                                    <p id="p1h11hcp">HDCP:</p>
+                                    <p id="p1h11yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(11, 1)">
+                                    <label for="player1hole12" class="p1hlabel">Hole 12:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole12" min="0" max="100" step="1" name="player1hole12">
+                                    <p id="p1h12hcp">HDCP:</p>
+                                    <p id="p1h12yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(12, 1)">
+                                    <label for="player1hole13" class="p1hlabel">Hole 13:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole13" min="0" max="100" step="1" name="player1hole13">
+                                    <p id="p1h13hcp">HDCP:</p>
+                                    <p id="p1h13yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(13, 1)">
+                                    <label for="player1hole14" class="p1hlabel">Hole 14:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole14" min="0" max="100" step="1" name="player1hole14">
+                                    <p id="p1h14hcp">HDCP:</p>
+                                    <p id="p1h14yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(14, 1)">
+                                    <label for="player1hole15" class="p1hlabel">Hole 15:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole15" min="0" max="100" step="1" name="player1hole15">
+                                    <p id="p1h15hcp">HDCP:</p>
+                                    <p id="p1h15yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(15, 1)">
+                                    <label for="player1hole16" class="p1hlabel">Hole 16:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole16" min="0" max="100" step="1" name="player1hole16">
+                                    <p id="p1h16hcp">HDCP:</p>
+                                    <p id="p1h16yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(16, 1)">
+                                    <label for="player1hole17" class="p1hlabel">Hole 17:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole17" min="0" max="100" step="1" name="player1hole17">
+                                    <p id="p1h17hcp">HDCP:</p>
+                                    <p id="p1h17yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(17, 1)">
+                                    <label for="player1hole18" class="p1hlabel">Hole 18:</label>
+                                    <input type="number" class="form-control input-lg p1input" id="player1hole18" min="0" max="100" step="1" name="player1hole18">
+                                    <p id="p1h18hcp">HDCP:</p>
+                                    <p id="p1h18yards">Yards:</p>
+                                </div>
+                                <div class="back9 holes">
+                                    <label for="p1back9scores" class="p1hlabel">Back 9</label>
+                                    <div id="p1back9scores">
+                                        <p id="p1b9par" class="strong tabletotal">Par:</p>
+                                        <p id="p1b9yards" class="strong tabletotal">Yards:</p>
+                                        <p id="p1b9score" class="strong tabletotal">Score:</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-content">
+                                <div class="col-xs-12 col-md-4 subtotals">
+                                    <h3>Total Par: <span class="totalnum" id="player1totalpar"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="col-xs-12 col-md-4 subtotals">
+                                    <h3>Total Yards: <span class="totalnum" id="player1totalyards"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="col-xs-12 col-md-4 totals">
+                                    <h3>Total Score: <span class="totalnum" id="player1totalscore"></span></h3><span id="p1feedback"> Good Luck!</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="player2card">
+                            <div class="col-xs-12 col-md-3 col-lg-2">
+                                <br>
+                                <div class="player">
+                                    <label for="player2" id="player2label" class="p2hlabel">Player 2:</label>
+                                    <input type="text" class="form-control input-player" id="player2" placeholder="Input Name">
+                                </div>
+                                <br>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle teeselect" id="p2teebutton" type="button" data-toggle="dropdown"><span id="p2teeselect">Select Tee </span><span class="caret"></span></button>
+                                    <ul class="dropdown-menu teeselect">
+                                        <li><a href="#" onclick="teeSelect(1)">Red Tee</a></li>
+                                        <li><a href="#" onclick="teeSelect(0)">White Tee</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 col-md-10">
+                                <div class="holes"  onclick="setMarkers(0, 2)">
+                                    <label for="player2hole1" class="p2hlabel">Hole 1:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole1" min="0" max="100" step="1" name="player2hole1">
+                                    <p id="p2h1hcp">HDCP:</p>
+                                    <p id="p2h1yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(1, 2)">
+                                    <label for="player2hole2" class="p2hlabel">Hole 2:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole2" min="0" max="100" step="1" name="player2hole2">
+                                    <p id="p2h2hcp">HDCP:</p>
+                                    <p id="p2h2yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(2, 2)">
+                                    <label for="player2hole3" class="p2hlabel">Hole 3:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole3" min="0" max="100" step="1" name="player2hole3">
+                                    <p id="p2h3hcp">HDCP:</p>
+                                    <p id="p2h3yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(3, 2)">
+                                    <label for="player2hole4" class="p2hlabel">Hole 4:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole4" min="0" max="100" step="1" name="player2hole4">
+                                    <p id="p2h4hcp">HDCP:</p>
+                                    <p id="p2h4yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(4, 2)">
+                                    <label for="player2hole5" class="p2hlabel">Hole 5:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole5" min="0" max="100" step="1" name="player2hole5">
+                                    <p id="p2h5hcp">HDCP:</p>
+                                    <p id="p2h5yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(5, 2)">
+                                    <label for="player2hole6" class="p2hlabel">Hole 6:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole6" min="0" max="100" step="1" name="player2hole6">
+                                    <p id="p2h6hcp">HDCP:</p>
+                                    <p id="p2h6yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(6, 2)">
+                                    <label for="player2hole7" class="p2hlabel">Hole 7:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole7" min="0" max="100" step="1" name="player2hole7">
+                                    <p id="p2h7hcp">HDCP:</p>
+                                    <p id="p2h7yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(7, 2)">
+                                    <label for="player2hole8" class="p2hlabel">Hole 8:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole8" min="0" max="100" step="1" name="player2hole8">
+                                    <p id="p2h8hcp">HDCP:</p>
+                                    <p id="p2h8yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(8, 2)">
+                                    <label for="player2hole9" class="p2hlabel">Hole 9:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole9" min="0" max="100" step="1" name="player2hole9">
+                                    <p id="p2h9hcp">HDCP:</p>
+                                    <p id="p2h9yards">Yards:</p>
+                                </div>
+                                <div class="front9 holes">
+                                    <label for="p2front9scores" class="p2hlabel">Front 9</label>
+                                    <div id="p2front9scores">
+                                        <p id="p2f9par" class="strong tabletotal">Par:</p>
+                                        <p id="p2f9yards" class="strong tabletotal">Yards:</p>
+                                        <p id="p2f9score" class="strong tabletotal">Score:</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-10 col-md-push-2">
+                                <div class="holes"  onclick="setMarkers(9, 2)">
+                                    <label for="player2hole10" class="p2hlabel">Hole 10:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole10" min="0" max="100" step="1" name="player2hole10">
+                                    <p id="p2h10hcp">HDCP:</p>
+                                    <p id="p2h10yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(10, 2)">
+                                    <label for="player2hole11" class="p2hlabel">Hole 11:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole11" min="0" max="100" step="1" name="player2hole11">
+                                    <p id="p2h11hcp">HDCP:</p>
+                                    <p id="p2h11yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(11, 2)">
+                                    <label for="player2hole12" class="p2hlabel">Hole 12:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole12" min="0" max="100" step="1" name="player2hole12">
+                                    <p id="p2h12hcp">HDCP:</p>
+                                    <p id="p2h12yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(12, 2)">
+                                    <label for="player2hole13" class="p2hlabel">Hole 13:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole13" min="0" max="100" step="1" name="player2hole13">
+                                    <p id="p2h13hcp">HDCP:</p>
+                                    <p id="p2h13yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(13, 2)">
+                                    <label for="player2hole14" class="p2hlabel">Hole 14:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole14" min="0" max="100" step="1" name="player2hole14">
+                                    <p id="p2h14hcp">HDCP:</p>
+                                    <p id="p2h14yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(14, 2)">
+                                    <label for="player2hole15" class="p2hlabel">Hole 15:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole15" min="0" max="100" step="1" name="player2hole15">
+                                    <p id="p2h15hcp">HDCP:</p>
+                                    <p id="p2h15yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(15, 2)">
+                                    <label for="player2hole16" class="p2hlabel">Hole 16:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole16" min="0" max="100" step="1" name="player2hole16">
+                                    <p id="p2h16hcp">HDCP:</p>
+                                    <p id="p2h16yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(16, 2)">
+                                    <label for="player2hole17" class="p2hlabel">Hole 17:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole17" min="0" max="100" step="1" name="player2hole17">
+                                    <p id="p2h17hcp">HDCP:</p>
+                                    <p id="p2h17yards">Yards:</p>
+                                </div>
+                                <div class="holes"  onclick="setMarkers(17, 2)">
+                                    <label for="player2hole18" class="p2hlabel">Hole 18:</label>
+                                    <input type="number" class="form-control input-lg p2input" id="player2hole18" min="0" max="100" step="1" name="player2hole18">
+                                    <p id="p2h18hcp">HDCP:</p>
+                                    <p id="p2h18yards">Yards:</p>
+                                </div>
+                                <div class="back9 holes">
+                                    <label for="p2back9scores" class="p2hlabel">Back 9</label>
+                                    <div id="p2back9scores">
+                                        <p id="p2b9par" class="strong tabletotal">Par:</p>
+                                        <p id="p2b9yards" class="strong tabletotal">Yards:</p>
+                                        <p id="p2b9score" class="strong tabletotal">Score:</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-content">
+                                <div class="col-xs-12 col-md-4 subtotals">
+                                    <h3>Total Par: <span class="totalnum" id="player2totalpar"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="col-xs-12 col-md-4 subtotals">
+                                    <h3>Total Yards: <span class="totalnum" id="player2totalyards"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="col-xs-12 col-md-4 totals">
+                                    <h3>Total Score: <span class="totalnum" id="player2totalscore"></span></h3><span id="p2feedback"> Good Luck!</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="player3card">
+                            <div class="col-xs-12 col-md-3 col-lg-2">
+                                <br>
+                                <div class="player">
+                                    <label for="player3" id="player3label" class="p3hlabel">Player 3:</label>
+                                    <input type="text" class="form-control input-player" id="player3" placeholder="Input Name">
+                                </div>
+                                <br>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle teeselect" id="p3teebutton" type="button" data-toggle="dropdown"><span id="p3teeselect">Select Tee </span><span class="caret"></span></button>
+                                    <ul class="dropdown-menu teeselect">
+                                        <li><a href="#" onclick="teeSelect(1)">Red Tee</a></li>
+                                        <li><a href="#" onclick="teeSelect(0)">White Tee</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 col-md-10">
+                                <div class="holes" onclick="setMarkers(0, 3)">
+                                    <label for="player3hole1" class="p3hlabel">Hole 1:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole1" min="0" max="100" step="1" name="player3hole1">
+                                    <p id="p3h1hcp">HDCP:</p>
+                                    <p id="p3h1yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(1, 3)">
+                                    <label for="player3hole2" class="p3hlabel">Hole 2:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole2" min="0" max="100" step="1" name="player3hole2">
+                                    <p id="p3h2hcp">HDCP:</p>
+                                    <p id="p3h2yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(2, 3)">
+                                    <label for="player3hole3" class="p3hlabel">Hole 3:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole3" min="0" max="100" step="1" name="player3hole3">
+                                    <p id="p3h3hcp">HDCP:</p>
+                                    <p id="p3h3yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(3, 3)">
+                                    <label for="player3hole4" class="p3hlabel">Hole 4:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole4" min="0" max="100" step="1" name="player3hole4">
+                                    <p id="p3h4hcp">HDCP:</p>
+                                    <p id="p3h4yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(4, 3)">
+                                    <label for="player3hole5" class="p3hlabel">Hole 5:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole5" min="0" max="100" step="1" name="player3hole5">
+                                    <p id="p3h5hcp">HDCP:</p>
+                                    <p id="p3h5yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(5, 3)">
+                                    <label for="player3hole6" class="p3hlabel">Hole 6:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole6" min="0" max="100" step="1" name="player3hole6">
+                                    <p id="p3h6hcp">HDCP:</p>
+                                    <p id="p3h6yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(6, 3)">
+                                    <label for="player3hole7" class="p3hlabel">Hole 7:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole7" min="0" max="100" step="1" name="player3hole7">
+                                    <p id="p3h7hcp">HDCP:</p>
+                                    <p id="p3h7yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(7, 3)">
+                                    <label for="player3hole8" class="p3hlabel">Hole 8:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole8" min="0" max="100" step="1" name="player3hole8">
+                                    <p id="p3h8hcp">HDCP:</p>
+                                    <p id="p3h8yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(8, 3)">
+                                    <label for="player3hole9" class="p3hlabel">Hole 9:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole9" min="0" max="100" step="1" name="player3hole9">
+                                    <p id="p3h9hcp">HDCP:</p>
+                                    <p id="p3h9yards">Yards:</p>
+                                </div>
+                                <div class="front9 holes">
+                                    <label for="p3front9scores" class="p3hlabel">Front 9</label>
+                                    <div id="p3front9scores">
+                                        <p id="p3f9par" class="strong tabletotal">Par:</p>
+                                        <p id="p3f9yards" class="strong tabletotal">Yards:</p>
+                                        <p id="p3f9score" class="strong tabletotal">Score:</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-10 col-md-push-2">
+                                <div class="holes" onclick="setMarkers(9, 3)">
+                                    <label for="player3hole10" class="p3hlabel">Hole 10:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole10" min="0" max="100" step="1" name="player3hole10">
+                                    <p id="p3h10hcp">HDCP:</p>
+                                    <p id="p3h10yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(10, 3)">
+                                    <label for="player3hole11" class="p3hlabel">Hole 11:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole11" min="0" max="100" step="1" name="player3hole11">
+                                    <p id="p3h11hcp">HDCP:</p>
+                                    <p id="p3h11yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(11, 3)">
+                                    <label for="player3hole12" class="p3hlabel">Hole 12:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole12" min="0" max="100" step="1" name="player3hole12">
+                                    <p id="p3h12hcp">HDCP:</p>
+                                    <p id="p3h12yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(12, 3)">
+                                    <label for="player3hole13" class="p3hlabel">Hole 13:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole13" min="0" max="100" step="1" name="player3hole13">
+                                    <p id="p3h13hcp">HDCP:</p>
+                                    <p id="p3h13yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(13, 3)">
+                                    <label for="player3hole14" class="p3hlabel">Hole 14:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole14" min="0" max="100" step="1" name="player3hole14">
+                                    <p id="p3h14hcp">HDCP:</p>
+                                    <p id="p3h14yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(14, 3)">
+                                    <label for="player3hole15" class="p3hlabel">Hole 15:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole15" min="0" max="100" step="1" name="player3hole15">
+                                    <p id="p3h15hcp">HDCP:</p>
+                                    <p id="p3h15yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(15, 3)">
+                                    <label for="player3hole16" class="p3hlabel">Hole 16:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole16" min="0" max="100" step="1" name="player3hole16">
+                                    <p id="p3h16hcp">HDCP:</p>
+                                    <p id="p3h16yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(16, 3)">
+                                    <label for="player3hole17" class="p3hlabel">Hole 17:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole17" min="0" max="100" step="1" name="player3hole17">
+                                    <p id="p3h17hcp">HDCP:</p>
+                                    <p id="p3h17yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(17, 3)">
+                                    <label for="player3hole18" class="p3hlabel">Hole 18:</label>
+                                    <input type="number" class="form-control input-lg p3input" id="player3hole18" min="0" max="100" step="1" name="player3hole18">
+                                    <p id="p3h18hcp">HDCP:</p>
+                                    <p id="p3h18yards">Yards:</p>
+                                </div>
+                                <div class="back9 holes">
+                                    <label for="p3back9scores" class="p3hlabel">Back 9</label>
+                                    <div id="p3back9scores">
+                                        <p id="p3b9par" class="strong tabletotal">Par:</p>
+                                        <p id="p3b9yards" class="strong tabletotal">Yards:</p>
+                                        <p id="p3b9score" class="strong tabletotal">Score:</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-content">
+                                <div class="col-xs-12 col-md-4 subtotals">
+                                    <h3>Total Par: <span class="totalnum" id="player3totalpar"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="col-xs-12 col-md-4 subtotals">
+                                    <h3>Total Yards: <span class="totalnum" id="player3totalyards"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="col-xs-12 col-md-4 totals">
+                                    <h3>Total Score: <span class="totalnum" id="player3totalscore"></span></h3><span id="p3feedback"> Good Luck!</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="player4card">
+                            <div class="col-xs-12 col-md-3 col-lg-2">
+                                <br>
+                                <div class="player">
+                                    <label for="player4" id="player4label" class="p4hlabel">Player 4:</label>
+                                    <input type="text" class="form-control input-player" id="player4" placeholder="Input Name">
+                                </div>
+                                <br>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle teeselect" id="p4teebutton" type="button" data-toggle="dropdown"><span id="p4teeselect">Select Tee </span><span class="caret"></span></button>
+                                    <ul class="dropdown-menu teeselect">
+                                        <li><a href="#" onclick="teeSelect(1)">Red Tee</a></li>
+                                        <li><a href="#" onclick="teeSelect(0)">White Tee</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 col-md-10">
+                                <div class="holes" onclick="setMarkers(0, 4)">
+                                    <label for="player4hole1" class="p4hlabel">Hole 1:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole1" min="0" max="100" step="1" name="player4hole1">
+                                    <p id="p4h1hcp">HDCP:</p>
+                                    <p id="p4h1yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(1, 4)">
+                                    <label for="player4hole2" class="p4hlabel">Hole 2:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole2" min="0" max="100" step="1" name="player4hole2">
+                                    <p id="p4h2hcp">HDCP:</p>
+                                    <p id="p4h2yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(2, 4)">
+                                    <label for="player4hole3" class="p4hlabel">Hole 3:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole3" min="0" max="100" step="1" name="player4hole3">
+                                    <p id="p4h3hcp">HDCP:</p>
+                                    <p id="p4h3yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(3, 4)">
+                                    <label for="player4hole4" class="p4hlabel">Hole 4:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole4" min="0" max="100" step="1" name="player4hole4">
+                                    <p id="p4h4hcp">HDCP:</p>
+                                    <p id="p4h4yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(4, 4)">
+                                    <label for="player4hole5" class="p4hlabel">Hole 5:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole5" min="0" max="100" step="1" name="player4hole5">
+                                    <p id="p4h5hcp">HDCP:</p>
+                                    <p id="p4h5yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(5, 4)">
+                                    <label for="player4hole6" class="p4hlabel">Hole 6:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole6" min="0" max="100" step="1" name="player4hole6">
+                                    <p id="p4h6hcp">HDCP:</p>
+                                    <p id="p4h6yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(6, 4)">
+                                    <label for="player4hole7" class="p4hlabel">Hole 7:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole7" min="0" max="100" step="1" name="player4hole7">
+                                    <p id="p4h7hcp">HDCP:</p>
+                                    <p id="p4h7yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(7, 4)">
+                                    <label for="player4hole8" class="p4hlabel">Hole 8:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole8" min="0" max="100" step="1" name="player4hole8">
+                                    <p id="p4h8hcp">HDCP:</p>
+                                    <p id="p4h8yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(8, 4)">
+                                    <label for="player4hole9" class="p4hlabel">Hole 9:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole9" min="0" max="100" step="1" name="player4hole9">
+                                    <p id="p4h9hcp">HDCP:</p>
+                                    <p id="p4h9yards">Yards:</p>
+                                </div>
+                                <div class="front9 holes">
+                                    <label for="p4front9scores" class="p4hlabel">Front 9</label>
+                                    <div id="p4front9scores">
+                                        <p id="p4f9par" class="strong tabletotal">Par:</p>
+                                        <p id="p4f9yards" class="strong tabletotal">Yards:</p>
+                                        <p id="p4f9score" class="strong tabletotal">Score:</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-10 col-md-push-2">
+                                <div class="holes" onclick="setMarkers(9, 4)">
+                                    <label for="player4hole10" class="p4hlabel">Hole 10:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole10" min="0" max="100" step="1" name="player4hole10">
+                                    <p id="p4h10hcp">HDCP:</p>
+                                    <p id="p4h10yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(10, 4)">
+                                    <label for="player4hole11" class="p4hlabel">Hole 11:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole11" min="0" max="100" step="1" name="player4hole11">
+                                    <p id="p4h11hcp">HDCP:</p>
+                                    <p id="p4h11yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(11, 4)">
+                                    <label for="player4hole12" class="p4hlabel">Hole 12:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole12" min="0" max="100" step="1" name="player4hole12">
+                                    <p id="p4h12hcp">HDCP:</p>
+                                    <p id="p4h12yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(12, 4)">
+                                    <label for="player4hole13" class="p4hlabel">Hole 13:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole13" min="0" max="100" step="1" name="player4hole13">
+                                    <p id="p4h13hcp">HDCP:</p>
+                                    <p id="p4h13yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(13, 4)">
+                                    <label for="player4hole14" class="p4hlabel">Hole 14:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole14" min="0" max="100" step="1" name="player4hole14">
+                                    <p id="p4h14hcp">HDCP:</p>
+                                    <p id="p4h14yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(14, 4)">
+                                    <label for="player4hole15" class="p4hlabel">Hole 15:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole15" min="0" max="100" step="1" name="player4hole15">
+                                    <p id="p4h15hcp">HDCP:</p>
+                                    <p id="p4h15yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(15, 4)">
+                                    <label for="player4hole16" class="p4hlabel">Hole 16:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole16" min="0" max="100" step="1" name="player4hole16">
+                                    <p id="p4h16hcp">HDCP:</p>
+                                    <p id="p4h16yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(16, 4)">
+                                    <label for="player4hole17" class="p4hlabel">Hole 17:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole17" min="0" max="100" step="1" name="player4hole17">
+                                    <p id="p4h17hcp">HDCP:</p>
+                                    <p id="p4h17yards">Yards:</p>
+                                </div>
+                                <div class="holes" onclick="setMarkers(17, 4)">
+                                    <label for="player4hole18" class="p4hlabel">Hole 18:</label>
+                                    <input type="number" class="form-control input-lg p4input" id="player4hole18" min="0" max="100" step="1" name="player4hole18">
+                                    <p id="p4h18hcp">HDCP:</p>
+                                    <p id="p4h18yards">Yards:</p>
+                                </div>
+                                <div class="back9 holes">
+                                    <label for="p4back9scores" class="p4hlabel">Back 9</label>
+                                    <div id="p4back9scores">
+                                        <p id="p4b9par" class="strong tabletotal">Par:</p>
+                                        <p id="p4b9yards" class="strong tabletotal">Yards:</p>
+                                        <p id="p4b9score" class="strong tabletotal">Score:</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-content">
+                                <div class="col-xs-12 col-md-4 subtotals">
+                                    <h3>Total Par: <span class="totalnum" id="player4totalpar"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="col-xs-12 col-md-4 subtotals">
+                                    <h3>Total Yards: <span class="totalnum" id="player4totalyards"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="col-xs-12 col-md-4 totals">
+                                    <h3>Total Score: <span class="totalnum" id="player4totalscore"></span></h3><span id="p4feedback"> Good Luck!</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-12 scorecard">
-                <div class="row" id="player1card">
-                    <div class="col-xs-12 col-md-3 col-lg-2">
-                        <br>
-                        <div class="player">
-                            <label for="player1" id="player1label" class="p1hlabel">Player 1:</label>
-                            <input type="text" class="form-control input-player" id="player1" placeholder="Input Name">
-                        </div>
-                        <br>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle teeselect" id="p1teebutton" type="button" data-toggle="dropdown"><span id="p1teeselect">Select Tee </span><span class="caret"></span></button>
-                            <ul class="dropdown-menu teeselect">
-                                <li><a href="#" onclick="teeSelect(1)">Red Tee</a></li>
-                                <li><a href="#" onclick="teeSelect(0)">White Tee</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="col-xs-12 col-md-10">
-                        <div class="holes" onclick="setMarkers(0, 1)">
-                            <label for="player1hole1" class="p1hlabel">Hole 1:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole1" min="0" max="100" step="1" name="player1hole1">
-                            <p id="p1h1hcp">HDCP:</p>
-                            <p id="p1h1yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole2" class="p1hlabel">Hole 2:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole2" min="0" max="100" step="1" name="player1hole2">
-                            <p id="p1h2hcp">HDCP:</p>
-                            <p id="p1h2yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole3" class="p1hlabel">Hole 3:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole3" min="0" max="100" step="1" name="player1hole3">
-                            <p id="p1h3hcp">HDCP:</p>
-                            <p id="p1h3yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole4" class="p1hlabel">Hole 4:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole4" min="0" max="100" step="1" name="player1hole4">
-                            <p id="p1h4hcp">HDCP:</p>
-                            <p id="p1h4yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole5" class="p1hlabel">Hole 5:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole5" min="0" max="100" step="1" name="player1hole5">
-                            <p id="p1h5hcp">HDCP:</p>
-                            <p id="p1h5yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole6" class="p1hlabel">Hole 6:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole6" min="0" max="100" step="1" name="player1hole6">
-                            <p id="p1h6hcp">HDCP:</p>
-                            <p id="p1h6yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole7" class="p1hlabel">Hole 7:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole7" min="0" max="100" step="1" name="player1hole7">
-                            <p id="p1h7hcp">HDCP:</p>
-                            <p id="p1h7yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole8" class="p1hlabel">Hole 8:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole8" min="0" max="100" step="1" name="player1hole8">
-                            <p id="p1h8hcp">HDCP:</p>
-                            <p id="p1h8yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole9" class="p1hlabel">Hole 9:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole9" min="0" max="100" step="1" name="player1hole9">
-                            <p id="p1h9hcp">HDCP:</p>
-                            <p id="p1h9yards">Yards:</p>
-                        </div>
-                        <div class="front9 holes">
-                            <label for="p1front9scores" class="p1hlabel">Front 9</label>
-                            <div id="p1front9scores">
-                                    <p id="p1f9par" class="strong tabletotal">Par:</p>
-                                    <p id="p1f9yards" class="strong tabletotal">Yards:</p>
-                                    <p id="p1f9score" class="strong tabletotal">Score:</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-10 col-md-push-2">
-                        <div class="holes">
-                            <label for="player1hole10" class="p1hlabel">Hole 10:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole10" min="0" max="100" step="1" name="player1hole10">
-                            <p id="p1h10hcp">HDCP:</p>
-                            <p id="p1h10yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole11" class="p1hlabel">Hole 11:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole11" min="0" max="100" step="1" name="player1hole11">
-                            <p id="p1h11hcp">HDCP:</p>
-                            <p id="p1h11yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole12" class="p1hlabel">Hole 12:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole12" min="0" max="100" step="1" name="player1hole12">
-                            <p id="p1h12hcp">HDCP:</p>
-                            <p id="p1h12yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole13" class="p1hlabel">Hole 13:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole13" min="0" max="100" step="1" name="player1hole13">
-                            <p id="p1h13hcp">HDCP:</p>
-                            <p id="p1h13yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole14" class="p1hlabel">Hole 14:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole14" min="0" max="100" step="1" name="player1hole14">
-                            <p id="p1h14hcp">HDCP:</p>
-                            <p id="p1h14yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole15" class="p1hlabel">Hole 15:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole15" min="0" max="100" step="1" name="player1hole15">
-                            <p id="p1h15hcp">HDCP:</p>
-                            <p id="p1h15yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole16" class="p1hlabel">Hole 16:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole16" min="0" max="100" step="1" name="player1hole16">
-                            <p id="p1h16hcp">HDCP:</p>
-                            <p id="p1h16yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole17" class="p1hlabel">Hole 17:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole17" min="0" max="100" step="1" name="player1hole17">
-                            <p id="p1h17hcp">HDCP:</p>
-                            <p id="p1h17yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player1hole18" class="p1hlabel">Hole 18:</label>
-                            <input type="number" class="form-control input-lg p1input" id="player1hole18" min="0" max="100" step="1" name="player1hole18">
-                            <p id="p1h18hcp">HDCP:</p>
-                            <p id="p1h18yards">Yards:</p>
-                        </div>
-                        <div class="back9 holes">
-                            <label for="p1back9scores" class="p1hlabel">Back 9</label>
-                            <div id="p1back9scores">
-                                <p id="p1b9par" class="strong tabletotal">Par:</p>
-                                <p id="p1b9yards" class="strong tabletotal">Yards:</p>
-                                <p id="p1b9score" class="strong tabletotal">Score:</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-content">
-                        <div class="col-xs-12 col-md-4 subtotals">
-                            <h3>Total Par: <span class="totalnum" id="player1totalpar"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                        <div class="col-xs-12 col-md-4 subtotals">
-                            <h3>Total Yards: <span class="totalnum" id="player1totalyards"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                        <div class="col-xs-12 col-md-4 totals">
-                            <h3>Total Score: <span class="totalnum" id="player1totalscore"></span></h3><span id="p1feedback"> Good Luck!</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                    </div>
-                </div>
-                <div class="row" id="player2card">
-                    <div class="col-xs-12 col-md-3 col-lg-2">
-                        <br>
-                        <div class="player">
-                            <label for="player2" id="player2label" class="p2hlabel">Player 2:</label>
-                            <input type="text" class="form-control input-player" id="player2" placeholder="Input Name">
-                        </div>
-                        <br>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle teeselect" id="p2teebutton" type="button" data-toggle="dropdown"><span id="p2teeselect">Select Tee for course </span><span class="caret"></span></button>
-                            <ul class="dropdown-menu teeselect">
-                                <li><a href="#" onclick="teeSelect(1)">Red Tee</a></li>
-                                <li><a href="#" onclick="teeSelect(0)">White Tee</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="col-xs-12 col-md-10">
-                        <div class="holes">
-                            <label for="player2hole1" class="p2hlabel">Hole 1:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole1" min="0" max="100" step="1" name="player2hole1">
-                            <p id="p2h1hcp">HDCP:</p>
-                            <p id="p2h1yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole2" class="p2hlabel">Hole 2:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole2" min="0" max="100" step="1" name="player2hole2">
-                            <p id="p2h2hcp">HDCP:</p>
-                            <p id="p2h2yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole3" class="p2hlabel">Hole 3:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole3" min="0" max="100" step="1" name="player2hole3">
-                            <p id="p2h3hcp">HDCP:</p>
-                            <p id="p2h3yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole4" class="p2hlabel">Hole 4:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole4" min="0" max="100" step="1" name="player2hole4">
-                            <p id="p2h4hcp">HDCP:</p>
-                            <p id="p2h4yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole5" class="p2hlabel">Hole 5:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole5" min="0" max="100" step="1" name="player2hole5">
-                            <p id="p2h5hcp">HDCP:</p>
-                            <p id="p2h5yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole6" class="p2hlabel">Hole 6:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole6" min="0" max="100" step="1" name="player2hole6">
-                            <p id="p2h6hcp">HDCP:</p>
-                            <p id="p2h6yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole7" class="p2hlabel">Hole 7:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole7" min="0" max="100" step="1" name="player2hole7">
-                            <p id="p2h7hcp">HDCP:</p>
-                            <p id="p2h7yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole8" class="p2hlabel">Hole 8:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole8" min="0" max="100" step="1" name="player2hole8">
-                            <p id="p2h8hcp">HDCP:</p>
-                            <p id="p2h8yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole9" class="p2hlabel">Hole 9:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole9" min="0" max="100" step="1" name="player2hole9">
-                            <p id="p2h9hcp">HDCP:</p>
-                            <p id="p2h9yards">Yards:</p>
-                        </div>
-                        <div class="front9 holes">
-                            <label for="p2front9scores" class="p2hlabel">Front 9</label>
-                            <div id="p2front9scores">
-                                <p id="p2f9par" class="strong tabletotal">Par:</p>
-                                <p id="p2f9yards" class="strong tabletotal">Yards:</p>
-                                <p id="p2f9score" class="strong tabletotal">Score:</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-10 col-md-push-2">
-                        <div class="holes">
-                            <label for="player2hole10" class="p2hlabel">Hole 10:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole10" min="0" max="100" step="1" name="player2hole10">
-                            <p id="p2h10hcp">HDCP:</p>
-                            <p id="p2h10yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole11" class="p2hlabel">Hole 11:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole11" min="0" max="100" step="1" name="player2hole11">
-                            <p id="p2h11hcp">HDCP:</p>
-                            <p id="p2h11yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole12" class="p2hlabel">Hole 12:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole12" min="0" max="100" step="1" name="player2hole12">
-                            <p id="p2h12hcp">HDCP:</p>
-                            <p id="p2h12yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole13" class="p2hlabel">Hole 13:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole13" min="0" max="100" step="1" name="player2hole13">
-                            <p id="p2h13hcp">HDCP:</p>
-                            <p id="p2h13yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole14" class="p2hlabel">Hole 14:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole14" min="0" max="100" step="1" name="player2hole14">
-                            <p id="p2h14hcp">HDCP:</p>
-                            <p id="p2h14yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole15" class="p2hlabel">Hole 15:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole15" min="0" max="100" step="1" name="player2hole15">
-                            <p id="p2h15hcp">HDCP:</p>
-                            <p id="p2h15yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole16" class="p2hlabel">Hole 16:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole16" min="0" max="100" step="1" name="player2hole16">
-                            <p id="p2h16hcp">HDCP:</p>
-                            <p id="p2h16yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole17" class="p2hlabel">Hole 17:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole17" min="0" max="100" step="1" name="player2hole17">
-                            <p id="p2h17hcp">HDCP:</p>
-                            <p id="p2h17yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player2hole18" class="p2hlabel">Hole 18:</label>
-                            <input type="number" class="form-control input-lg p2input" id="player2hole18" min="0" max="100" step="1" name="player2hole18">
-                            <p id="p2h18hcp">HDCP:</p>
-                            <p id="p2h18yards">Yards:</p>
-                        </div>
-                        <div class="back9 holes">
-                            <label for="p2back9scores" class="p2hlabel">Back 9</label>
-                            <div id="p2back9scores">
-                                <p id="p2b9par" class="strong tabletotal">Par:</p>
-                                <p id="p2b9yards" class="strong tabletotal">Yards:</p>
-                                <p id="p2b9score" class="strong tabletotal">Score:</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-content">
-                        <div class="col-xs-12 col-md-4 subtotals">
-                            <h3>Total Par: <span class="totalnum" id="player2totalpar"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                        <div class="col-xs-12 col-md-4 subtotals">
-                            <h3>Total Yards: <span class="totalnum" id="player2totalyards"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                        <div class="col-xs-12 col-md-4 totals">
-                            <h3>Total Score: <span class="totalnum" id="player2totalscore"></span></h3><span id="p2feedback"> Good Luck!</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                    </div>
-                </div>
-                <div class="row" id="player3card">
-                    <div class="col-xs-12 col-md-3 col-lg-2">
-                        <br>
-                        <div class="player">
-                            <label for="player3" id="player3label" class="p3hlabel">Player 3:</label>
-                            <input type="text" class="form-control input-player" id="player3" placeholder="Input Name">
-                        </div>
-                        <br>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle teeselect" id="p3teebutton" type="button" data-toggle="dropdown"><span id="p3teeselect">Select Tee for course </span><span class="caret"></span></button>
-                            <ul class="dropdown-menu teeselect">
-                                <li><a href="#" onclick="teeSelect(1)">Red Tee</a></li>
-                                <li><a href="#" onclick="teeSelect(0)">White Tee</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="col-xs-12 col-md-10">
-                        <div class="holes">
-                            <label for="player3hole1" class="p3hlabel">Hole 1:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole1" min="0" max="100" step="1" name="player3hole1">
-                            <p id="p3h1hcp">HDCP:</p>
-                            <p id="p3h1yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole2" class="p3hlabel">Hole 2:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole2" min="0" max="100" step="1" name="player3hole2">
-                            <p id="p3h2hcp">HDCP:</p>
-                            <p id="p3h2yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole3" class="p3hlabel">Hole 3:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole3" min="0" max="100" step="1" name="player3hole3">
-                            <p id="p3h3hcp">HDCP:</p>
-                            <p id="p3h3yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole4" class="p3hlabel">Hole 4:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole4" min="0" max="100" step="1" name="player3hole4">
-                            <p id="p3h4hcp">HDCP:</p>
-                            <p id="p3h4yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole5" class="p3hlabel">Hole 5:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole5" min="0" max="100" step="1" name="player3hole5">
-                            <p id="p3h5hcp">HDCP:</p>
-                            <p id="p3h5yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole6" class="p3hlabel">Hole 6:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole6" min="0" max="100" step="1" name="player3hole6">
-                            <p id="p3h6hcp">HDCP:</p>
-                            <p id="p3h6yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole7" class="p3hlabel">Hole 7:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole7" min="0" max="100" step="1" name="player3hole7">
-                            <p id="p3h7hcp">HDCP:</p>
-                            <p id="p3h7yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole8" class="p3hlabel">Hole 8:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole8" min="0" max="100" step="1" name="player3hole8">
-                            <p id="p3h8hcp">HDCP:</p>
-                            <p id="p3h8yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole9" class="p3hlabel">Hole 9:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole9" min="0" max="100" step="1" name="player3hole9">
-                            <p id="p3h9hcp">HDCP:</p>
-                            <p id="p3h9yards">Yards:</p>
-                        </div>
-                        <div class="front9 holes">
-                            <label for="p3front9scores" class="p3hlabel">Front 9</label>
-                            <div id="p3front9scores">
-                                <p id="p3f9par" class="strong tabletotal">Par:</p>
-                                <p id="p3f9yards" class="strong tabletotal">Yards:</p>
-                                <p id="p3f9score" class="strong tabletotal">Score:</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-10 col-md-push-2">
-                        <div class="holes">
-                            <label for="player3hole10" class="p3hlabel">Hole 10:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole10" min="0" max="100" step="1" name="player3hole10">
-                            <p id="p3h10hcp">HDCP:</p>
-                            <p id="p3h10yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole11" class="p3hlabel">Hole 11:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole11" min="0" max="100" step="1" name="player3hole11">
-                            <p id="p3h11hcp">HDCP:</p>
-                            <p id="p3h11yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole12" class="p3hlabel">Hole 12:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole12" min="0" max="100" step="1" name="player3hole12">
-                            <p id="p3h12hcp">HDCP:</p>
-                            <p id="p3h12yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole13" class="p3hlabel">Hole 13:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole13" min="0" max="100" step="1" name="player3hole13">
-                            <p id="p3h13hcp">HDCP:</p>
-                            <p id="p3h13yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole14" class="p3hlabel">Hole 14:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole14" min="0" max="100" step="1" name="player3hole14">
-                            <p id="p3h14hcp">HDCP:</p>
-                            <p id="p3h14yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole15" class="p3hlabel">Hole 15:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole15" min="0" max="100" step="1" name="player3hole15">
-                            <p id="p3h15hcp">HDCP:</p>
-                            <p id="p3h15yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole16" class="p3hlabel">Hole 16:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole16" min="0" max="100" step="1" name="player3hole16">
-                            <p id="p3h16hcp">HDCP:</p>
-                            <p id="p3h16yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole17" class="p3hlabel">Hole 17:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole17" min="0" max="100" step="1" name="player3hole17">
-                            <p id="p3h17hcp">HDCP:</p>
-                            <p id="p3h17yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player3hole18" class="p3hlabel">Hole 18:</label>
-                            <input type="number" class="form-control input-lg p3input" id="player3hole18" min="0" max="100" step="1" name="player3hole18">
-                            <p id="p3h18hcp">HDCP:</p>
-                            <p id="p3h18yards">Yards:</p>
-                        </div>
-                        <div class="back9 holes">
-                            <label for="p3back9scores" class="p3hlabel">Back 9</label>
-                            <div id="p3back9scores">
-                                <p id="p3b9par" class="strong tabletotal">Par:</p>
-                                <p id="p3b9yards" class="strong tabletotal">Yards:</p>
-                                <p id="p3b9score" class="strong tabletotal">Score:</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-content">
-                        <div class="col-xs-12 col-md-4 subtotals">
-                            <h3>Total Par: <span class="totalnum" id="player3totalpar"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                        <div class="col-xs-12 col-md-4 subtotals">
-                            <h3>Total Yards: <span class="totalnum" id="player3totalyards"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                        <div class="col-xs-12 col-md-4 totals">
-                            <h3>Total Score: <span class="totalnum" id="player3totalscore"></span></h3><span id="p3feedback"> Good Luck!</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                    </div>
-                </div>
-                <div class="row" id="player4card">
-                    <div class="col-xs-12 col-md-3 col-lg-2">
-                        <br>
-                        <div class="player">
-                            <label for="player4" id="player4label" class="p4hlabel">Player 4:</label>
-                            <input type="text" class="form-control input-player" id="player4" placeholder="Input Name">
-                        </div>
-                        <br>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle teeselect" id="p4teebutton" type="button" data-toggle="dropdown"><span id="p4teeselect">Select Tee for course </span><span class="caret"></span></button>
-                            <ul class="dropdown-menu teeselect">
-                                <li><a href="#" onclick="teeSelect(1)">Red Tee</a></li>
-                                <li><a href="#" onclick="teeSelect(0)">White Tee</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="col-xs-12 col-md-10">
-                        <div class="holes">
-                            <label for="player4hole1" class="p4hlabel">Hole 1:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole1" min="0" max="100" step="1" name="player4hole1">
-                            <p id="p4h1hcp">HDCP:</p>
-                            <p id="p4h1yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole2" class="p4hlabel">Hole 2:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole2" min="0" max="100" step="1" name="player4hole2">
-                            <p id="p4h2hcp">HDCP:</p>
-                            <p id="p4h2yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole3" class="p4hlabel">Hole 3:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole3" min="0" max="100" step="1" name="player4hole3">
-                            <p id="p4h3hcp">HDCP:</p>
-                            <p id="p4h3yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole4" class="p4hlabel">Hole 4:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole4" min="0" max="100" step="1" name="player4hole4">
-                            <p id="p4h4hcp">HDCP:</p>
-                            <p id="p4h4yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole5" class="p4hlabel">Hole 5:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole5" min="0" max="100" step="1" name="player4hole5">
-                            <p id="p4h5hcp">HDCP:</p>
-                            <p id="p4h5yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole6" class="p4hlabel">Hole 6:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole6" min="0" max="100" step="1" name="player4hole6">
-                            <p id="p4h6hcp">HDCP:</p>
-                            <p id="p4h6yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole7" class="p4hlabel">Hole 7:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole7" min="0" max="100" step="1" name="player4hole7">
-                            <p id="p4h7hcp">HDCP:</p>
-                            <p id="p4h7yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole8" class="p4hlabel">Hole 8:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole8" min="0" max="100" step="1" name="player4hole8">
-                            <p id="p4h8hcp">HDCP:</p>
-                            <p id="p4h8yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole9" class="p4hlabel">Hole 9:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole9" min="0" max="100" step="1" name="player4hole9">
-                            <p id="p4h9hcp">HDCP:</p>
-                            <p id="p4h9yards">Yards:</p>
-                        </div>
-                        <div class="front9 holes">
-                            <label for="p4front9scores" class="p4hlabel">Front 9</label>
-                            <div id="p4front9scores">
-                                <p id="p4f9par" class="strong tabletotal">Par:</p>
-                                <p id="p4f9yards" class="strong tabletotal">Yards:</p>
-                                <p id="p4f9score" class="strong tabletotal">Score:</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-10 col-md-push-2">
-                        <div class="holes">
-                            <label for="player4hole10" class="p4hlabel">Hole 10:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole10" min="0" max="100" step="1" name="player4hole10">
-                            <p id="p4h10hcp">HDCP:</p>
-                            <p id="p4h10yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole11" class="p4hlabel">Hole 11:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole11" min="0" max="100" step="1" name="player4hole11">
-                            <p id="p4h11hcp">HDCP:</p>
-                            <p id="p4h11yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole12" class="p4hlabel">Hole 12:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole12" min="0" max="100" step="1" name="player4hole12">
-                            <p id="p4h12hcp">HDCP:</p>
-                            <p id="p4h12yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole13" class="p4hlabel">Hole 13:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole13" min="0" max="100" step="1" name="player4hole13">
-                            <p id="p4h13hcp">HDCP:</p>
-                            <p id="p4h13yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole14" class="p4hlabel">Hole 14:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole14" min="0" max="100" step="1" name="player4hole14">
-                            <p id="p4h14hcp">HDCP:</p>
-                            <p id="p4h14yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole15" class="p4hlabel">Hole 15:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole15" min="0" max="100" step="1" name="player4hole15">
-                            <p id="p4h15hcp">HDCP:</p>
-                            <p id="p4h15yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole16" class="p4hlabel">Hole 16:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole16" min="0" max="100" step="1" name="player4hole16">
-                            <p id="p4h16hcp">HDCP:</p>
-                            <p id="p4h16yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole17" class="p4hlabel">Hole 17:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole17" min="0" max="100" step="1" name="player4hole17">
-                            <p id="p4h17hcp">HDCP:</p>
-                            <p id="p4h17yards">Yards:</p>
-                        </div>
-                        <div class="holes">
-                            <label for="player4hole18" class="p4hlabel">Hole 18:</label>
-                            <input type="number" class="form-control input-lg p4input" id="player4hole18" min="0" max="100" step="1" name="player4hole18">
-                            <p id="p4h18hcp">HDCP:</p>
-                            <p id="p4h18yards">Yards:</p>
-                        </div>
-                        <div class="back9 holes">
-                            <label for="p4back9scores" class="p4hlabel">Back 9</label>
-                            <div id="p4back9scores">
-                                <p id="p4b9par" class="strong tabletotal">Par:</p>
-                                <p id="p4b9yards" class="strong tabletotal">Yards:</p>
-                                <p id="p4b9score" class="strong tabletotal">Score:</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-content">
-                        <div class="col-xs-12 col-md-4 subtotals">
-                            <h3>Total Par: <span class="totalnum" id="player4totalpar"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                        <div class="col-xs-12 col-md-4 subtotals">
-                            <h3>Total Yards: <span class="totalnum" id="player4totalyards"></span></h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                        <div class="col-xs-12 col-md-4 totals">
-                            <h3>Total Score: <span class="totalnum" id="player4totalscore"></span></h3><span id="p4feedback"> Good Luck!</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            </div>
-        <!-- Map module -->
             <div class="col-xs-3">
-        <div class="row row-content">
-            <h4 class="text-center">Course Map</h4>
-            <br>
-            <div class="col-xs-12" id="map">
+                <div class="row row-content">
+                    <h4 class="text-center">Course Map</h4>
+                    <br>
+                    <div class="col-xs-12" id="map">
 
-            </div>
-        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
 <script src="js/bootstrap.min.js"></script>
 <script src="js/GolfApp.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeuUrtGAQ4xnOhL0MdMYRJwguDRGJe6-U&signed_in=true&callback=initMap"></script>
-
-
-
-
-<!-- TODO: use the fit bounds method to center map-->
 </body>
 </html>

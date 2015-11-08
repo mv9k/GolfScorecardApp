@@ -1,7 +1,7 @@
 /**
  * Created by kris on 10/29/15.
  */
-var scoringEnabled=false, setHole, setTee, holeLoc, teeLoc, playerChoice, player1tee, player2tee, player3tee, player4tee, player1hcpOn=false, player2hcpOn=false, player3hcpOn=false, player4hcpOn=false, p1front9score=0, p2front9score=0, p3front9score=0, p4front9score=0, p1back9score=0, p2back9score=0, p3back9score, p4back9score, p1totalscore, p2totalscore, p3totalscore, p4totalscore,
+var scoringEnabled=false, holeLoc, teeLoc, playerChoice, player1tee, player2tee, player3tee, player4tee, player1hcpOn=false, player2hcpOn=false, player3hcpOn=false, player4hcpOn=false, p1front9score=0, p2front9score=0, p3front9score=0, p4front9score=0, p1back9score=0, p2back9score=0, p3back9score, p4back9score, p1totalscore, p2totalscore, p3totalscore, p4totalscore,
     p1scoreArr=[p1front9score, p1back9score, p1totalscore], p2scoreArr=[p2front9score, p2back9score, p2totalscore], p3scoreArr=[p3front9score, p3back9score, p3totalscore], p4scoreArr=[p4front9score, p4back9score, p3totalscore];
 //////// calls loadScore() depending on player and tee selected, displays totals then calls saveData()
 function onClick() {
@@ -66,7 +66,6 @@ function onClick() {
             document.getElementById("p4b9score").innerHTML= "Score: " + p4scoreArr[1];
             document.getElementById("player4totalscore").innerHTML= p4totalscore;
         }
-
         saveData();
     }
 }
@@ -151,6 +150,7 @@ function saveData() {
     localStorage.setItem("player1hole17", document.getElementById("player1hole17").value);
     localStorage.setItem("player1hole18", document.getElementById("player1hole18").value);
     localStorage.setItem("player1totalscore", document.getElementById("player1totalscore").innerText);
+    localStorage.setItem("player1tee", player1tee);
 
     localStorage.setItem("player2name", document.getElementById("player2").value);
     localStorage.setItem("player2hole1", document.getElementById("player2hole1").value);
@@ -172,6 +172,7 @@ function saveData() {
     localStorage.setItem("player2hole17", document.getElementById("player2hole17").value);
     localStorage.setItem("player2hole18", document.getElementById("player2hole18").value);
     localStorage.setItem("player2totalscore", document.getElementById("player2totalscore").innerText);
+    localStorage.setItem("player2tee", player2tee);
 
     localStorage.setItem("player3name", document.getElementById("player3").value);
     localStorage.setItem("player3hole1", document.getElementById("player3hole1").value);
@@ -193,6 +194,7 @@ function saveData() {
     localStorage.setItem("player3hole17", document.getElementById("player3hole17").value);
     localStorage.setItem("player3hole18", document.getElementById("player3hole18").value);
     localStorage.setItem("player3totalscore", document.getElementById("player3totalscore").innerText);
+    localStorage.setItem("player3tee", player3tee);
 
     localStorage.setItem("player4name", document.getElementById("player4").value);
     localStorage.setItem("player4hole1", document.getElementById("player4hole1").value);
@@ -214,6 +216,7 @@ function saveData() {
     localStorage.setItem("player4hole17", document.getElementById("player4hole17").value);
     localStorage.setItem("player4hole18", document.getElementById("player4hole18").value);
     localStorage.setItem("player4totalscore", document.getElementById("player4totalscore").innerText);
+    localStorage.setItem("player4tee", player4tee);
 }
 //////// Loads player names, hole scores, and total scores for each player.
 function loadData() {
@@ -237,6 +240,9 @@ function loadData() {
     document.getElementById("player1hole17").value = localStorage.getItem("player1hole17");
     document.getElementById("player1hole18").value = localStorage.getItem("player1hole18");
     document.getElementById("player1totalscore").innerText = localStorage.getItem("player1totalscore");
+    player1tee = localStorage.getItem("player1tee");
+    numOfPlayers(1);
+    teeSelect(player1tee);
 
     document.getElementById("player2").value = localStorage.getItem("player2name");
     document.getElementById("player2hole1").value = localStorage.getItem("player2hole1");
@@ -258,6 +264,9 @@ function loadData() {
     document.getElementById("player2hole17").value = localStorage.getItem("player2hole17");
     document.getElementById("player2hole18").value = localStorage.getItem("player2hole18");
     document.getElementById("player2totalscore").innerText = localStorage.getItem("player2totalscore");
+    player2tee = localStorage.getItem("player2tee");
+    numOfPlayers(2);
+    teeSelect(player2tee);
 
     document.getElementById("player3").value = localStorage.getItem("player3name");
     document.getElementById("player3hole1").value = localStorage.getItem("player3hole1");
@@ -279,6 +288,9 @@ function loadData() {
     document.getElementById("player3hole17").value = localStorage.getItem("player3hole17");
     document.getElementById("player3hole18").value = localStorage.getItem("player3hole18");
     document.getElementById("player3totalscore").innerText = localStorage.getItem("player3totalscore");
+    player3tee = localStorage.getItem("player3tee");
+    numOfPlayers(3);
+    teeSelect(player3tee);
 
     document.getElementById("player4").value = localStorage.getItem("player4name");
     document.getElementById("player4hole1").value = localStorage.getItem("player4hole1");
@@ -300,6 +312,10 @@ function loadData() {
     document.getElementById("player4hole17").value = localStorage.getItem("player4hole17");
     document.getElementById("player4hole18").value = localStorage.getItem("player4hole18");
     document.getElementById("player4totalscore").innerText = localStorage.getItem("player4totalscore");
+    player4tee = localStorage.getItem("player4tee");
+    numOfPlayers(4);
+    teeSelect(player4tee);
+    numOfPlayers(1);
 }
 //////// Clears local storage and reloads page.
 function reset() {
@@ -925,7 +941,6 @@ function onload() {
             });
         return vars;
     }
-
 }
 //////// AJAX request for Swing by Swing API.
 function loadDoc() {
@@ -950,10 +965,10 @@ function loadDoc() {
     xhttp.open("GET", "https://api.swingbyswing.com/v2/courses/"+48222+"?includes=practice_area,nearby_courses,recent_media,recent_comments,recent_rounds,best_rounds,current_rounds,course_stats_month,course_stats_year&access_token=" + accessToken, true);
     xhttp.send();
 }
-////////
+//////// Gets called every time a hole is selected, loads map with hole marker, tee marker, and centers map between the two.
 function initMap(center, holeLoc, teeLoc) {
-    //if(center==null){return}
     var map = new google.maps.Map(document.getElementById('map'), {
+        draggable:false,
         disableDefaultUI:true,
         zoom: 17,
         center: center,
@@ -972,14 +987,6 @@ function initMap(center, holeLoc, teeLoc) {
         title: 'Tee',
         icon: 'teemarker.png'
     });
-
-
-    //bound = new google.maps.LatLngBounds();
-    //bound.extend(holeLoc);
-    //bound.extend(teeLoc);
-    //map.fitBounds(bound);
-
-
 }
 function setMarkers(num, player){
     var center;
@@ -1471,3 +1478,4 @@ function setMarkers(num, player){
         }
     }
 }
+
