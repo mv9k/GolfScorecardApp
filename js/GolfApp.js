@@ -1,7 +1,28 @@
 /**
  * Created by kris on 10/29/15.
  */
-var playerChoice, player1tee, player2tee, player3tee, player4tee, player1hcpOn=false, player2hcpOn=false, player3hcpOn=false, player4hcpOn=false;
+var scoringEnabled=false, playerChoice, player1tee, player2tee, player3tee, player4tee, player1hcpOn=false, player2hcpOn=false, player3hcpOn=false, player4hcpOn=false, p1front9score=0, p2front9score, p3front9score, p4front9score, p1back9score, p2back9score, p3back9score, p4back9score, p1totalscore, p2totalscore, p3totalscore, p4totalscore;
+//////// calls loadScore() depending on player and tee selected, displays totals then calls saveData()
+function onClick() {
+    if(scoringEnabled){
+        if(playerChoice==1 && player1tee==0){
+            document.getElementById("p1f9score").innerHTML= "Score: " + loadScore(0, 1);
+            document.getElementById("p1b9score").innerHTML= "Score: " + loadScore(0, 1);
+        }
+
+        saveData();
+    }
+}
+//////// returns score depending on player and handicap.
+function loadScore(tee, player) {
+    if(tee==0 && player==1) {
+
+        p1front9score= ((parseInt(document.getElementById("player1hole1").value, 10)||0) + (parseInt(document.getElementById("player1hole2").value, 10)||0) + (parseInt(document.getElementById("player1hole3").value, 10)||0) + (parseInt(document.getElementById("player1hole4").value, 10)||0) +
+                        (parseInt(document.getElementById("player1hole5").value, 10)||0) + (parseInt(document.getElementById("player1hole6").value, 10)||0) + (parseInt(document.getElementById("player1hole7").value, 10)||0) + (parseInt(document.getElementById("player1hole8").value, 10)||0) +
+                        (parseInt(document.getElementById("player1hole9").value, 10)||0));
+        return p1front9score;
+    }
+}
 //////// Saves player names, hole scores, and total scores for each player.
 function saveData() {
     localStorage.setItem("player1name", document.getElementById("player1").value);
@@ -841,7 +862,7 @@ function teeSelect(choice) {
     // 1 - red -women -yards:499 - model.course.holes[0].tee_boxes[1]
     // 2 - red w/handicap
     // 3 - white w/handicap
-
+    scoringEnabled=true;
     /// Men's Tee select
     if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee "; loadPar(0, 1); loadHCP("clear", 1); loadYards(0, 1); }
     if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee "; loadPar(0, 2); loadHCP("clear", 2); loadYards(0, 2); }
