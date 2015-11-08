@@ -6,22 +6,24 @@ var scoringEnabled=false, playerChoice, player1tee, player2tee, player3tee, play
 function onClick() {
     if(scoringEnabled){
         if(playerChoice==1 && player1tee==0){
-            document.getElementById("p1f9score").innerHTML= "Score: " + loadScore(0, 1);
-            document.getElementById("p1b9score").innerHTML= "Score: " + loadScore(0, 1);
+            document.getElementById("p1f9score").innerHTML= "Score: " + loadScore("f9", 0, 1);
+            document.getElementById("p1b9score").innerHTML= "Score: " + loadScore("b9", 0, 1);
         }
 
         saveData();
     }
 }
 //////// returns score depending on player and handicap.
-function loadScore(tee, player) {
-    if(tee==0 && player==1) {
+function loadScore(fob, tee, player) {
+    /// Front 9 scoring
+    if(fob=="f9" && tee==0 && player==1) {
 
         p1front9score= ((parseInt(document.getElementById("player1hole1").value, 10)||0) + (parseInt(document.getElementById("player1hole2").value, 10)||0) + (parseInt(document.getElementById("player1hole3").value, 10)||0) + (parseInt(document.getElementById("player1hole4").value, 10)||0) +
                         (parseInt(document.getElementById("player1hole5").value, 10)||0) + (parseInt(document.getElementById("player1hole6").value, 10)||0) + (parseInt(document.getElementById("player1hole7").value, 10)||0) + (parseInt(document.getElementById("player1hole8").value, 10)||0) +
                         (parseInt(document.getElementById("player1hole9").value, 10)||0));
-        return p1front9score;
+        return (p1front9score - model.course.tee_types[0].front_nine_par);
     }
+    /// Back 9 scoring
 }
 //////// Saves player names, hole scores, and total scores for each player.
 function saveData() {
