@@ -56,8 +56,8 @@
       <file leaf-file-name="GolfApp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/GolfApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.666666">
-              <caret line="1468" column="19" selection-start-line="1468" selection-start-column="19" selection-end-line="1468" selection-end-column="19" />
+            <state vertical-scroll-proportion="-14.444445">
+              <caret line="902" column="27" selection-start-line="902" selection-start-column="27" selection-end-line="902" selection-end-column="27" />
               <folding>
                 <element signature="e#783#3850#0" expanded="false" />
                 <element signature="n#!!block;n#loadScore#0" expanded="false" />
@@ -80,6 +80,7 @@
                 <element signature="n#!!block;n#onload#0" expanded="false" />
                 <element signature="n#!!block;n#loadDoc#0" expanded="false" />
                 <element signature="n#!!block;n#initMap#0" expanded="false" />
+                <element signature="n#!!block;n#setMarkers#0" expanded="false" />
                 <element signature="e#87330#88935#0" expanded="false" />
                 <element signature="e#88954#90559#0" expanded="false" />
                 <element signature="e#90578#92183#0" expanded="false" />
@@ -120,8 +121,8 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/css/switch.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/js/GolfApp.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/GolfApp.js" />
       </list>
     </option>
   </component>
@@ -418,6 +419,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -495,6 +497,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -572,6 +575,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -649,6 +653,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -726,6 +731,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -803,6 +809,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -880,6 +887,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -957,6 +965,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -1034,6 +1043,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -1111,6 +1121,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -1188,6 +1199,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
@@ -1249,8 +1261,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/GolfApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.666666">
-          <caret line="1468" column="19" selection-start-line="1468" selection-start-column="19" selection-end-line="1468" selection-end-column="19" />
+        <state vertical-scroll-proportion="-14.444445">
+          <caret line="902" column="27" selection-start-line="902" selection-start-column="27" selection-end-line="902" selection-end-column="27" />
           <folding>
             <element signature="e#783#3850#0" expanded="false" />
             <element signature="n#!!block;n#loadScore#0" expanded="false" />
@@ -1273,6 +1285,7 @@
             <element signature="n#!!block;n#onload#0" expanded="false" />
             <element signature="n#!!block;n#loadDoc#0" expanded="false" />
             <element signature="n#!!block;n#initMap#0" expanded="false" />
+            <element signature="n#!!block;n#setMarkers#0" expanded="false" />
             <element signature="e#87330#88935#0" expanded="false" />
             <element signature="e#88954#90559#0" expanded="false" />
             <element signature="e#90578#92183#0" expanded="false" />
