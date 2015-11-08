@@ -982,32 +982,492 @@ function initMap(center, holeLoc, teeLoc) {
 
 }
 function setMarkers(num, player){
+    var center;
     if(scoringEnabled==true){
         if(num==0){
             holeLoc=model.course.holes[0].green_location;
             if(player==1) {
                 if(player1tee==0){teeLoc=model.course.holes[0].tee_boxes[0].location;}
                 if(player1tee==1){teeLoc=model.course.holes[0].tee_boxes[1].location;}
-                var center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[0].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[0].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[0].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[0].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[0].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[0].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
                 initMap(center, holeLoc, teeLoc);
             }
         }
-        if(num==1){ holeLoc=model.course.holes[1].green_location; }
-        if(num==2){ holeLoc=model.course.holes[2].green_location; }
-        if(num==3){ holeLoc=model.course.holes[3].green_location; }
-        if(num==4){ holeLoc=model.course.holes[4].green_location; }
-        if(num==5){ holeLoc=model.course.holes[5].green_location; }
-        if(num==6){ holeLoc=model.course.holes[6].green_location; }
-        if(num==7){ holeLoc=model.course.holes[7].green_location; }
-        if(num==8){ holeLoc=model.course.holes[8].green_location; }
-        if(num==9){ holeLoc=model.course.holes[9].green_location; }
-        if(num==10){ holeLoc=model.course.holes[10].green_location; }
-        if(num==11){ holeLoc=model.course.holes[11].green_location; }
-        if(num==12){ holeLoc=model.course.holes[12].green_location; }
-        if(num==13){ holeLoc=model.course.holes[13].green_location; }
-        if(num==14){ holeLoc=model.course.holes[14].green_location; }
-        if(num==15){ holeLoc=model.course.holes[15].green_location; }
-        if(num==16){ holeLoc=model.course.holes[16].green_location; }
-        if(num==17){ holeLoc=model.course.holes[17].green_location; }
+        if(num==1){
+            holeLoc=model.course.holes[1].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[1].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[1].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[1].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[1].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[1].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[1].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[1].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[1].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==2){
+            holeLoc=model.course.holes[2].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[2].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[2].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[2].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[2].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[2].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[2].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[2].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[2].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==3){
+            holeLoc=model.course.holes[3].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[3].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[3].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[3].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[3].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[3].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[3].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[3].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[3].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==4){
+            holeLoc=model.course.holes[4].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[4].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[4].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[4].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[4].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[4].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[4].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[4].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[4].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==5){
+            holeLoc=model.course.holes[5].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[5].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[5].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[5].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[5].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[5].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[5].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[5].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[5].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==6){
+            holeLoc=model.course.holes[6].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[6].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[6].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[6].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[6].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[6].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[6].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[6].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[6].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }}
+        if(num==7){
+            holeLoc=model.course.holes[7].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[7].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[7].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[7].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[7].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[7].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[7].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[7].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[7].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==8){
+            holeLoc=model.course.holes[8].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[8].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[8].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[8].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[8].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[8].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[8].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[8].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[8].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==9){
+            holeLoc=model.course.holes[9].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[9].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[9].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[9].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[9].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[9].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[9].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[9].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[9].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==10){
+            holeLoc=model.course.holes[10].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[10].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[10].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[10].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[10].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[10].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[10].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[10].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[10].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==11){
+            holeLoc=model.course.holes[11].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[11].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[11].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[11].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[11].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[11].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[11].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[11].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[11].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==12){
+            holeLoc=model.course.holes[12].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[12].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[12].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[12].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[12].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[12].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[12].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[12].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[12].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==13){
+            holeLoc=model.course.holes[13].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[13].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[13].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[13].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[13].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[13].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[13].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[13].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[13].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==14){
+            holeLoc=model.course.holes[14].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[14].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[14].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[14].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[14].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[14].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[14].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[14].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[14].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==15){
+            holeLoc=model.course.holes[15].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[15].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[15].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[15].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[15].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[15].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[15].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[15].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[15].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==16){
+            holeLoc=model.course.holes[16].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[16].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[16].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[16].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[16].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[16].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[16].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[16].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[16].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==17){
+            holeLoc=model.course.holes[17].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[17].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[17].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==2) {
+                if(player2tee==0){teeLoc=model.course.holes[17].tee_boxes[0].location;}
+                if(player2tee==1){teeLoc=model.course.holes[17].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==3) {
+                if(player3tee==0){teeLoc=model.course.holes[17].tee_boxes[0].location;}
+                if(player3tee==1){teeLoc=model.course.holes[17].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+            if(player==4) {
+                if(player4tee==0){teeLoc=model.course.holes[17].tee_boxes[0].location;}
+                if(player4tee==1){teeLoc=model.course.holes[17].tee_boxes[1].location;}
+                center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
     }
 }
