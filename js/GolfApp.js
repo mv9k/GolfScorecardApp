@@ -1486,22 +1486,22 @@ function playerFeedback(){
     if(p1totalscore > 0 && p1totalscore < 15){document.getElementById("p1feedback").innerHTML="Doin...not so Good!"}
     if(p1totalscore > 15){document.getElementById("p1feedback").innerHTML=". . ."}
     /// player 2
-    if(p2totalscore > parseInt(-73) && p1totalscore < parseInt(-36)){document.getElementById("p2feedback").innerHTML="So good, you're gonna break the game!"}
-    if(p2totalscore > parseInt(-36) && p1totalscore < parseInt(-10)){document.getElementById("p2feedback").innerHTML="Doin Real Good!"}
-    if(p2totalscore > parseInt(-10) && p1totalscore < 0){document.getElementById("p2feedback").innerHTML="Nice!"}
-    if(p2totalscore > 0 && p1totalscore < 15){document.getElementById("p2feedback").innerHTML="Doin...not so Good!"}
+    if(p2totalscore > parseInt(-73) && p2totalscore < parseInt(-36)){document.getElementById("p2feedback").innerHTML="So good, you're gonna break the game!"}
+    if(p2totalscore > parseInt(-36) && p2totalscore < parseInt(-10)){document.getElementById("p2feedback").innerHTML="Doin Real Good!"}
+    if(p2totalscore > parseInt(-10) && p2totalscore < 0){document.getElementById("p2feedback").innerHTML="Nice!"}
+    if(p2totalscore > 0 && p2totalscore < 15){document.getElementById("p2feedback").innerHTML="Doin...not so Good!"}
     if(p2totalscore > 15){document.getElementById("p2feedback").innerHTML=". . ."}
     /// player 3
-    if(p3totalscore > parseInt(-73) && p1totalscore < parseInt(-36)){document.getElementById("p3feedback").innerHTML="So good, you're gonna break the game!"}
-    if(p3totalscore > parseInt(-36) && p1totalscore < parseInt(-10)){document.getElementById("p3feedback").innerHTML="Doin Real Good!"}
-    if(p3totalscore > parseInt(-10) && p1totalscore < 0){document.getElementById("p3feedback").innerHTML="Nice!"}
-    if(p3totalscore > 0 && p1totalscore < 15){document.getElementById("p3feedback").innerHTML="Doin...not so Good!"}
+    if(p3totalscore > parseInt(-73) && p3totalscore < parseInt(-36)){document.getElementById("p3feedback").innerHTML="So good, you're gonna break the game!"}
+    if(p3totalscore > parseInt(-36) && p3totalscore < parseInt(-10)){document.getElementById("p3feedback").innerHTML="Doin Real Good!"}
+    if(p3totalscore > parseInt(-10) && p3totalscore < 0){document.getElementById("p3feedback").innerHTML="Nice!"}
+    if(p3totalscore > 0 && p3totalscore < 15){document.getElementById("p3feedback").innerHTML="Doin...not so Good!"}
     if(p3totalscore > 15){document.getElementById("p3feedback").innerHTML=". . ."}
     /// player 4
-    if(p4totalscore > parseInt(-73) && p1totalscore < parseInt(-36)){document.getElementById("p4feedback").innerHTML="So good, you're gonna break the game!"}
-    if(p4totalscore > parseInt(-36) && p1totalscore < parseInt(-10)){document.getElementById("p4feedback").innerHTML="Doin Real Good!"}
-    if(p4totalscore > parseInt(-10) && p1totalscore < 0){document.getElementById("p4feedback").innerHTML="Nice!"}
-    if(p4totalscore > 0 && p1totalscore < 15){document.getElementById("p4feedback").innerHTML="Doin...not so Good!"}
+    if(p4totalscore > parseInt(-73) && p4totalscore < parseInt(-36)){document.getElementById("p4feedback").innerHTML="So good, you're gonna break the game!"}
+    if(p4totalscore > parseInt(-36) && p4totalscore < parseInt(-10)){document.getElementById("p4feedback").innerHTML="Doin Real Good!"}
+    if(p4totalscore > parseInt(-10) && p4totalscore < 0){document.getElementById("p4feedback").innerHTML="Nice!"}
+    if(p4totalscore > 0 && p4totalscore < 15){document.getElementById("p4feedback").innerHTML="Doin...not so Good!"}
     if(p4totalscore > 15){document.getElementById("p4feedback").innerHTML=". . ."}
 }
 window.setInterval(function(){playerFeedback();},3000);
