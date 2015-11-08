@@ -114,12 +114,20 @@ function loadScore(tee, player) {
         p3scoreArr[1] = p3back9score;
         p3scoreArr[2] = p3totalscore;
     }
+    /// player 4 scoring
+    if((tee==0 || tee==1) && player==4) {
 
-
-
-
-
-
+        p4front9score = ((parseInt(document.getElementById("player4hole1").value, 10) || 0) + (parseInt(document.getElementById("player4hole2").value, 10) || 0) + (parseInt(document.getElementById("player4hole3").value, 10) || 0) + (parseInt(document.getElementById("player4hole4").value, 10) || 0) +
+            (parseInt(document.getElementById("player4hole5").value, 10) || 0) + (parseInt(document.getElementById("player4hole6").value, 10) || 0) + (parseInt(document.getElementById("player4hole7").value, 10) || 0) + (parseInt(document.getElementById("player4hole8").value, 10) || 0) +
+            (parseInt(document.getElementById("player4hole9").value, 10) || 0)) - model.course.tee_types[0].front_nine_par;
+        p4back9score = ((parseInt(document.getElementById("player4hole10").value, 10) || 0) + (parseInt(document.getElementById("player4hole11").value, 10) || 0) + (parseInt(document.getElementById("player4hole12").value, 10) || 0) + (parseInt(document.getElementById("player4hole13").value, 10) || 0) +
+            (parseInt(document.getElementById("player4hole14").value, 10) || 0) + (parseInt(document.getElementById("player4hole15").value, 10) || 0) + (parseInt(document.getElementById("player4hole16").value, 10) || 0) + (parseInt(document.getElementById("player4hole17").value, 10) || 0) +
+            (parseInt(document.getElementById("player4hole18").value, 10) || 0)) - model.course.tee_types[0].back_nine_par;
+        p4totalscore = parseInt(p4front9score + p4back9score);
+        p4scoreArr[0] = p4front9score;
+        p4scoreArr[1] = p4back9score;
+        p4scoreArr[2] = p4totalscore;
+    }
 }
 //////// Saves player names, hole scores, and total scores for each player.
 function saveData() {
