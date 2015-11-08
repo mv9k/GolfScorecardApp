@@ -301,6 +301,11 @@ function loadData() {
     document.getElementById("player4hole18").value = localStorage.getItem("player4hole18");
     document.getElementById("player4totalscore").innerText = localStorage.getItem("player4totalscore");
 }
+//////// Clears local storage and reloads page.
+function reset() {
+    localStorage.clear();
+    window.open("index.html", "_self");
+}
 //////// Displays or hides player cards depending on player selection.
 function numOfPlayers(num) {
     if (num == 1){
@@ -690,90 +695,6 @@ function loadHCP(tee, player) {
         document.getElementById("p4h17hcp").innerHTML = "HDCP: " + model.course.holes[16].tee_boxes[0].hcp;
         document.getElementById("p4h18hcp").innerHTML = "HDCP: " + model.course.holes[17].tee_boxes[0].hcp;
     }
-    if (tee == "clear" && player == 1) {
-        player1hcpOn=false;
-        document.getElementById("p1h1hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h2hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h3hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h4hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h5hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h6hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h7hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h8hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h9hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h10hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h11hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h12hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h13hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h14hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h15hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h16hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h17hcp").innerHTML = "HDCP: ";
-        document.getElementById("p1h18hcp").innerHTML = "HDCP: ";
-    }
-    if (tee == "clear" && player == 2) {
-        player2hcpOn=false;
-        document.getElementById("p2h1hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h2hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h3hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h4hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h5hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h6hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h7hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h8hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h9hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h10hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h11hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h12hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h13hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h14hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h15hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h16hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h17hcp").innerHTML = "HDCP: ";
-        document.getElementById("p2h18hcp").innerHTML = "HDCP: ";
-    }
-    if (tee == "clear" && player == 3) {
-        player3hcpOn=false;
-        document.getElementById("p3h1hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h2hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h3hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h4hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h5hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h6hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h7hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h8hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h9hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h10hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h11hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h12hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h13hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h14hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h15hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h16hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h17hcp").innerHTML = "HDCP: ";
-        document.getElementById("p3h18hcp").innerHTML = "HDCP: ";
-    }
-    if (tee == "clear" && player == 4) {
-        player4hcpOn=false;
-        document.getElementById("p4h1hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h2hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h3hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h4hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h5hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h6hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h7hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h8hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h9hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h10hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h11hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h12hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h13hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h14hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h15hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h16hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h17hcp").innerHTML = "HDCP: ";
-        document.getElementById("p4h18hcp").innerHTML = "HDCP: ";
-    }
 }
 //////// Displays Yardage for each hole depending on which tee and player is selected.
 function loadYards(tee, player) {
@@ -966,37 +887,23 @@ function loadYards(tee, player) {
 function teeSelect(choice) {
     // 0 - white -men -yards:543 - model.course.holes[0].tee_boxes[0]
     // 1 - red -women -yards:499 - model.course.holes[0].tee_boxes[1]
-    // 2 - red w/handicap
-    // 3 - white w/handicap
     scoringEnabled=true;
     /// Men's Tee select
-    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee "; loadPar(0, 1); loadHCP("clear", 1); loadYards(0, 1); }
-    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee "; loadPar(0, 2); loadHCP("clear", 2); loadYards(0, 2); }
-    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee "; loadPar(0, 3); loadHCP("clear", 3); loadYards(0, 3); }
-    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee "; loadPar(0, 4); loadHCP("clear", 4); loadYards(0, 4); }
+    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee "; loadPar(0, 1); loadHCP(0, 1); loadYards(0, 1); }
+    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee "; loadPar(0, 2); loadHCP(0, 2); loadYards(0, 2); }
+    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee "; loadPar(0, 3); loadHCP(0, 3); loadYards(0, 3); }
+    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee "; loadPar(0, 4); loadHCP(0, 4); loadYards(0, 4); }
     /// Women's Tee select
-    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee "; loadPar(1, 1); loadHCP("clear", 1); loadYards(1, 1); }
-    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee "; loadPar(1, 2); loadHCP("clear", 2); loadYards(1, 2); }
-    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee "; loadPar(1, 3); loadHCP("clear", 3); loadYards(1, 3); }
-    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee "; loadPar(1, 4); loadHCP("clear", 4); loadYards(1, 4); }
-    /// Men's Tee w/ Handicap select
-    if(choice==3 && playerChoice==1) { player1tee=3; document.getElementById("p1teeselect").innerHTML = "White Tee w/ handicap "; loadPar(0, 1); loadHCP(0, 1); loadYards(0, 1); }
-    if(choice==3 && playerChoice==2) { player2tee=3; document.getElementById("p2teeselect").innerHTML = "White Tee w/ handicap "; loadPar(0, 2); loadHCP(0, 2); loadYards(0, 2); }
-    if(choice==3 && playerChoice==3) { player3tee=3; document.getElementById("p3teeselect").innerHTML = "White Tee w/ handicap "; loadPar(0, 3); loadHCP(0, 3); loadYards(0, 3); }
-    if(choice==3 && playerChoice==4) { player4tee=3; document.getElementById("p4teeselect").innerHTML = "White Tee w/ handicap "; loadPar(0, 4); loadHCP(0, 4); loadYards(0, 4); }
-    /// Women's Tee w/ Handicap select
-    if(choice==2 && playerChoice==1) { player1tee=2; document.getElementById("p1teeselect").innerHTML = "Red Tee w/ handicap "; loadPar(1, 1); loadHCP(1, 1); loadYards(1, 1); }
-    if(choice==2 && playerChoice==2) { player2tee=2; document.getElementById("p2teeselect").innerHTML = "Red Tee w/ handicap "; loadPar(1, 2); loadHCP(1, 2); loadYards(1, 2); }
-    if(choice==2 && playerChoice==3) { player3tee=2; document.getElementById("p3teeselect").innerHTML = "Red Tee w/ handicap "; loadPar(1, 3); loadHCP(1, 3); loadYards(1, 3); }
-    if(choice==2 && playerChoice==4) { player4tee=2; document.getElementById("p4teeselect").innerHTML = "Red Tee w/ handicap "; loadPar(1, 4); loadHCP(1, 4); loadYards(1, 4); }
-
+    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee "; loadPar(1, 1); loadHCP(1, 1); loadYards(1, 1); }
+    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee "; loadPar(1, 2); loadHCP(1, 2); loadYards(1, 2); }
+    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee "; loadPar(1, 3); loadHCP(1, 3); loadYards(1, 3); }
+    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee "; loadPar(1, 4); loadHCP(1, 4); loadYards(1, 4); }
 }
 //////// Access Token
 function onload() {
 
     numOfPlayers(1);
-    playerChoice=1;
-    loadData();
+
 
     var redirectURI = document.URL;
     var clientID = "81e49374-2d9e-40b6-810b-abc0726f39b1";
@@ -1019,6 +926,7 @@ function onload() {
             });
         return vars;
     }
+    loadData();
 }
 //////// AJAX request for Swing by Swing API.
 function loadDoc() {
