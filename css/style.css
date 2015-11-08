@@ -107,15 +107,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .teeselect {
     font-size: 20px;
-    width: 280px;
+    width: 180px;
 }
 .dropdown-menu a {
     color: #181818 !important;
 }
 .holes {
-    width: 130px;
+    width: 105px;
     height: 180px;
-    padding: 15px;
+    padding: 5px;
     float: left !important;
     font-size: 20px;
     border: 1px solid black;
@@ -132,7 +132,11 @@ input[type=number]::-webkit-outer-spin-button {
     border: 1px solid black;
 }
 #map {
+    text-align: center;
+    margin: 0 auto;
     min-height: 500px;
+    width: 435px;
+
 }
 label {
     background-color: #316269;
@@ -140,7 +144,7 @@ label {
     -moz-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
     padding: 6px;
-    min-width: 100px;
+    min-width: 60px;
     border-radius: 5px;
     border-bottom: 1px solid black;
 }
@@ -159,7 +163,7 @@ label {
     font-size: 19px !important;
 }
 .back9, .front9 {
-    min-width: 200px;
+    min-width: 180px;
 }
 .totals {
     min-height: 55px;
@@ -172,16 +176,12 @@ label {
     float: left !important;
 }
 
-.input-lg { padding: 2px !important; width: 100px; font-size: x-large; }
+.input-lg { padding: 2px !important; width: 90px; font-size: x-large; }
 .input-player { padding: 2px !important; height: 47px; font-size: x-large; }
 
 .scorecard {
-    border-bottom: 1px ridge black;
     border-radius: 5px;
     padding: 10px;
-    -webkit-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
 }
 .vidlink { color: #727272 !important; }
 a { color: #edfffc !important; }
@@ -198,7 +198,6 @@ a:hover { color: #1087dd !important; }
     /*font-family: "Kaushan Script", sans-serif;*/
     margin:0 auto;
     padding: 10px 5px 5px 5px;
-    border-bottom: 1px black ridge;
     min-height:300px;
     background: #1c3439;
     color: #edfffc;

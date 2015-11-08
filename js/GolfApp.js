@@ -1,7 +1,7 @@
 /**
  * Created by kris on 10/29/15.
  */
-var scoringEnabled=false, playerChoice, player1tee, player2tee, player3tee, player4tee, player1hcpOn=false, player2hcpOn=false, player3hcpOn=false, player4hcpOn=false, p1front9score=0, p2front9score=0, p3front9score=0, p4front9score=0, p1back9score=0, p2back9score=0, p3back9score, p4back9score, p1totalscore, p2totalscore, p3totalscore, p4totalscore,
+var scoringEnabled=false, setHole, setTee, holeLoc, teeLoc, playerChoice, player1tee, player2tee, player3tee, player4tee, player1hcpOn=false, player2hcpOn=false, player3hcpOn=false, player4hcpOn=false, p1front9score=0, p2front9score=0, p3front9score=0, p4front9score=0, p1back9score=0, p2back9score=0, p3back9score, p4back9score, p1totalscore, p2totalscore, p3totalscore, p4totalscore,
     p1scoreArr=[p1front9score, p1back9score, p1totalscore], p2scoreArr=[p2front9score, p2back9score, p2totalscore], p3scoreArr=[p3front9score, p3back9score, p3totalscore], p4scoreArr=[p4front9score, p4back9score, p3totalscore];
 //////// calls loadScore() depending on player and tee selected, displays totals then calls saveData()
 function onClick() {
@@ -934,12 +934,13 @@ function loadDoc() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             model = JSON.parse(xhttp.responseText);
             var long = model.course.location;
-            var hole1location = model.course.holes[0].green_location;
-            var tee1location = model.course.holes[0].tee_boxes[0].location;
+
+            //var hole1location = model.course.holes[0].green_location;
+            //var tee1location = model.course.holes[0].tee_boxes[0].location;
 //            var hole1MiddleLat = (tee1location.lat + hole1location.lat)/2;
 //            var hole1MiddleLng = (tee1location.lng + hole1Latlng.lng)/2;
 //            var hole1MiddleLatLng = {"lat":hole1MiddleLat, "lng":hole1MiddleLng};
-            initMap(long, hole1location, tee1location);
+            initMap(long);
 
             //// Display Course Name
             document.getElementById("coursename").innerHTML = model.course.name;
@@ -950,27 +951,63 @@ function loadDoc() {
     xhttp.send();
 }
 ////////
-function initMap(long, hole1location, tee1location) {
-    if(long==null){return}
-
+function initMap(center, holeLoc, teeLoc) {
+    //if(center==null){return}
     var map = new google.maps.Map(document.getElementById('map'), {
+        disableDefaultUI:true,
         zoom: 17,
-        center: long,
+        center: center,
         mapTypeId: google.maps.MapTypeId.SATELLITE
     });
-
-    var hole1 = new google.maps.Marker({
-        position: hole1location,
+    var holemarker = new google.maps.Marker({
+        position: holeLoc,
         map: map,
-        title: 'Hole 1'
-        // , icon: 'Hole.png'
+        title: 'Hole',
+        icon: 'flagmarker.png'
+    });
+    var teemarker = new google.maps.Marker({
+        position: teeLoc,
+        animation:google.maps.Animation.BOUNCE,
+        map: map,
+        title: 'Tee',
+        icon: 'teemarker.png'
     });
 
-    var teehole1 = new google.maps.Marker({
-        position: tee1location,
-        map: map,
-        title: 'Tee 1'
 
-    });
+    //bound = new google.maps.LatLngBounds();
+    //bound.extend(holeLoc);
+    //bound.extend(teeLoc);
+    //map.fitBounds(bound);
 
+
+}
+function setMarkers(num, player){
+    if(scoringEnabled==true){
+        if(num==0){
+            holeLoc=model.course.holes[0].green_location;
+            if(player==1) {
+                if(player1tee==0){teeLoc=model.course.holes[0].tee_boxes[0].location;}
+                if(player1tee==1){teeLoc=model.course.holes[0].tee_boxes[1].location;}
+                var center={'lat': ((holeLoc.lat+teeLoc.lat)/2), 'lng': ((holeLoc.lng+teeLoc.lng)/2) };
+                initMap(center, holeLoc, teeLoc);
+            }
+        }
+        if(num==1){ holeLoc=model.course.holes[1].green_location; }
+        if(num==2){ holeLoc=model.course.holes[2].green_location; }
+        if(num==3){ holeLoc=model.course.holes[3].green_location; }
+        if(num==4){ holeLoc=model.course.holes[4].green_location; }
+        if(num==5){ holeLoc=model.course.holes[5].green_location; }
+        if(num==6){ holeLoc=model.course.holes[6].green_location; }
+        if(num==7){ holeLoc=model.course.holes[7].green_location; }
+        if(num==8){ holeLoc=model.course.holes[8].green_location; }
+        if(num==9){ holeLoc=model.course.holes[9].green_location; }
+        if(num==10){ holeLoc=model.course.holes[10].green_location; }
+        if(num==11){ holeLoc=model.course.holes[11].green_location; }
+        if(num==12){ holeLoc=model.course.holes[12].green_location; }
+        if(num==13){ holeLoc=model.course.holes[13].green_location; }
+        if(num==14){ holeLoc=model.course.holes[14].green_location; }
+        if(num==15){ holeLoc=model.course.holes[15].green_location; }
+        if(num==16){ holeLoc=model.course.holes[16].green_location; }
+        if(num==17){ holeLoc=model.course.holes[17].green_location; }
+    }
 }
