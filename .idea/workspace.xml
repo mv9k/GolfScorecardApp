@@ -36,8 +36,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.037037037">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.1957672">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -52,11 +52,8 @@
         <entry file="file://$PROJECT_DIR$/js/GolfApp.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
-                <element signature="n#!!block;n#onClick#0" expanded="false" />
-                <element signature="e#766#3834#0" expanded="false" />
-                <element signature="n#!!block;n#loadScore#0" expanded="false" />
                 <element signature="n#!!block;n#saveData#0" expanded="false" />
                 <element signature="n#!!block;n#loadData#0" expanded="false" />
                 <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -107,8 +104,8 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/css/switch.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/js/GolfApp.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/GolfApp.js" />
       </list>
     </option>
   </component>
@@ -346,7 +343,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -379,9 +376,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -443,9 +437,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="259" column="19" selection-start-line="259" selection-start-column="19" selection-end-line="259" selection-end-column="19" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -507,9 +498,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -571,9 +559,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="271" column="62" selection-start-line="271" selection-start-column="62" selection-end-line="271" selection-end-column="62" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -635,9 +620,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="271" column="62" selection-start-line="271" selection-start-column="62" selection-end-line="271" selection-end-column="62" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -699,9 +681,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="271" column="62" selection-start-line="271" selection-start-column="62" selection-end-line="271" selection-end-column="62" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -763,9 +742,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -827,9 +803,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="201" column="6" selection-start-line="201" selection-start-column="6" selection-end-line="201" selection-end-column="6" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -891,9 +864,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -955,9 +925,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -1025,11 +992,8 @@
     <entry file="file://$PROJECT_DIR$/js/GolfApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#onClick#0" expanded="false" />
-            <element signature="e#766#3834#0" expanded="false" />
-            <element signature="n#!!block;n#loadScore#0" expanded="false" />
             <element signature="n#!!block;n#saveData#0" expanded="false" />
             <element signature="n#!!block;n#loadData#0" expanded="false" />
             <element signature="n#!!block;n#numOfPlayers#0" expanded="false" />
@@ -1065,8 +1029,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037037037">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.1957672">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
           <folding>
             <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />

@@ -55,9 +55,9 @@ function onClick() {
         if(playerChoice==4 && player4tee==0){
             loadScore(0, 4);
             loadScore(0, 4);
-            document.getElementById("p2f9score").innerHTML= "Score: " + p2scoreArr[0];
-            document.getElementById("p2b9score").innerHTML= "Score: " + p2scoreArr[1];
-            document.getElementById("player2totalscore").innerHTML= p2totalscore;
+            document.getElementById("p4f9score").innerHTML= "Score: " + p4scoreArr[0];
+            document.getElementById("p4b9score").innerHTML= "Score: " + p4scoreArr[1];
+            document.getElementById("player4totalscore").innerHTML= p4totalscore;
         }
         if(playerChoice==4 && player4tee==1){
             loadScore(1, 4);
