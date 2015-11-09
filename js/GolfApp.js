@@ -905,15 +905,15 @@ function teeSelect(choice) {
     // 1 - red -women -yards:499 - model.course.holes[0].tee_boxes[1]
     scoringEnabled=true;
     /// Men's Tee select
-    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee "; loadPar(0, 1); loadHCP(0, 1); loadYards(0, 1); }
-    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee "; loadPar(0, 2); loadHCP(0, 2); loadYards(0, 2); }
-    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee "; loadPar(0, 3); loadHCP(0, 3); loadYards(0, 3); }
-    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee "; loadPar(0, 4); loadHCP(0, 4); loadYards(0, 4); }
+    if(choice==0 && playerChoice==1) { player1tee=0; document.getElementById("p1teeselect").innerHTML = "White Tee "; loadPar(0, 1); loadHCP(0, 1); loadYards(1, 1); }
+    if(choice==0 && playerChoice==2) { player2tee=0; document.getElementById("p2teeselect").innerHTML = "White Tee "; loadPar(0, 2); loadHCP(0, 2); loadYards(1, 2); }
+    if(choice==0 && playerChoice==3) { player3tee=0; document.getElementById("p3teeselect").innerHTML = "White Tee "; loadPar(0, 3); loadHCP(0, 3); loadYards(1, 3); }
+    if(choice==0 && playerChoice==4) { player4tee=0; document.getElementById("p4teeselect").innerHTML = "White Tee "; loadPar(0, 4); loadHCP(0, 4); loadYards(1, 4); }
     /// Women's Tee select
-    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee "; loadPar(1, 1); loadHCP(1, 1); loadYards(1, 1); }
-    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee "; loadPar(1, 2); loadHCP(1, 2); loadYards(1, 2); }
-    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee "; loadPar(1, 3); loadHCP(1, 3); loadYards(1, 3); }
-    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee "; loadPar(1, 4); loadHCP(1, 4); loadYards(1, 4); }
+    if(choice==1 && playerChoice==1) { player1tee=1; document.getElementById("p1teeselect").innerHTML = "Red Tee "; loadPar(1, 1); loadHCP(1, 1); loadYards(0, 1); }
+    if(choice==1 && playerChoice==2) { player2tee=1; document.getElementById("p2teeselect").innerHTML = "Red Tee "; loadPar(1, 2); loadHCP(1, 2); loadYards(0, 2); }
+    if(choice==1 && playerChoice==3) { player3tee=1; document.getElementById("p3teeselect").innerHTML = "Red Tee "; loadPar(1, 3); loadHCP(1, 3); loadYards(0, 3); }
+    if(choice==1 && playerChoice==4) { player4tee=1; document.getElementById("p4teeselect").innerHTML = "Red Tee "; loadPar(1, 4); loadHCP(1, 4); loadYards(0, 4); }
 }
 //////// Access Token
 function onload() {
@@ -1496,6 +1496,7 @@ function setMarkers(num, player){
         }
     }
 }
+//////// Displays message depending on player's score, for each player.
 function playerFeedback(){
     /// player 1
     if(p1totalscore > parseInt(-73) && p1totalscore < parseInt(-36)){document.getElementById("p1feedback").innerHTML="So good, you're gonna break the game!"}
